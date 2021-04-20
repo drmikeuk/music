@@ -14,20 +14,20 @@
 
 /* dc.js checkboxes -> row */
 .dc-cbox-group        {list-style-type: none; padding: 0; margin: 0 0 10 0;}
-.dc-cbox-group label  {font-weight: 500; padding: 3px 6px; }
+.dc-cbox-group label  {font-weight: 500; padding: 3px 6px; margin-bottom: 2px}
 .dc-cbox-group input  {display: none}
-.dc-cbox-group input[type=checkbox]:checked + label { background: #85C1E9 } /* active = blue*/
 
 .dc-cbox-group label:hover,
 .dc-cbox-group input:hover {cursor: pointer; background: #ddd}
 
-/* sidebar */
-.dc-cbox-group > li   {line-height: 1}
+/* sidebar list */
+.dc-cbox-group > li   {line-height: 1; }
+.dc-cbox-group input[type=checkbox]:checked + label { background: #85C1E9 } /* active = blue*/
 
-/* top bar -- add more specific targeting */
-.dc-cbox-group label  {/* top bar...  background: #ddd */}
-.dc-cbox-group > li   {/* top bar...  display: inline; padding-right: 15px*/}
-
+/* top bar buttons #selectPlaces  */
+#selectPlaces .dc-cbox-group label  { background: #ddd }
+#selectPlaces .dc-cbox-group > li   { display: inline; padding-right: 10px}
+#selectPlaces .dc-cbox-group input[type=checkbox]:checked + label { background: #85C1E9 } /* active = blue*/
 
 
 /* datatable */

@@ -15,18 +15,11 @@ customjs:
   	<div class="header">
   	 	  	<div class="title">
   					<h1>Places v4</h1>
+            <p>Choose places:</p>
+            <div id="selectPlaces"></div>
+            <p id="datacount"></p>
   				</div>
   	</div>
-
-    <div class="row">
-      <div class="col-md-6">
-        <p>Select two places to compare</p>
-      </div>
-      <div class="col-md-6">
-        <p id="datacount"></p>
-      </div>
-    </div>
-
   </div>
 </div>
 

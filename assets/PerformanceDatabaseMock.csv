@@ -316,11 +316,11 @@ id,Composer,Symphony,Date,Year,Orchestra,City
 15,Franz Lachner,donec pharetra magna,03/11/1890,1895,Weimar Hofkapelle,Frankfurt
 16,Luigi Cherubini,posuere cubilia curae,30/07/1892,1890,Berlin Philharmonic,New York
 17,Niels Gade,suspendisse potenti,12/03/1866,1887,Vienna Philharmonic,London
-18,Emilie Mayer,urna ut tellus nulla,08/09/1841,1889,Berlin Philharmonic,Chicago
+71,Emilie Mayer,ultrices enim lorem,22/11/1853,1854,Berlin Philharmonic,Berlin
 19,Hermann Goetz,nam nulla integer pede,21/10/1846,1891,London Philharmonic,Frankfurt
 20,Georges Onslow,vel sem sed,20/10/1845,1867,London Philharmonic,Paris
-21,Emilie Mayer,at velit eu est,03/04/1866,1870,Frankfurt Museumsorchester,Frankfurt
-22,Emilie Mayer,rutrum nulla,17/03/1897,1855,Chicago Symphony Orchestra,Paris
+22,Emilie Mayer,rutrum nulla,17/03/1897,1855,Berlin Philharmonic,Berlin
+345,Emilie Mayer,justo morbi,13/10/1843,1855,Berlin Philharmonic,Berlin
 23,Bernhard Molique,accumsan tortor,06/12/1893,1898,Crystal Palace orchestra (London),Berlin
 24,Johannes Brahms,tempus vivamus in felis,28/07/1849,1882,Frankfurt Museumsorchester,Paris
 25,Joachim Raff,nisi eu orci mauris,12/09/1884,1868,Vienna Philharmonic,Paris
@@ -356,7 +356,7 @@ id,Composer,Symphony,Date,Year,Orchestra,City
 55,Louise Farrenc,nulla ut erat id,29/08/1858,1872,London Philharmonic,Manchester
 56,Georges Onslow,amet consectetuer,06/04/1881,1857,Chicago Symphony Orchestra,Chicago
 57,Ferdinand Hiller,eu mi,13/10/1879,1845,Boston Symphony Orchestra,Cologne
-58,Emilie Mayer,a suscipit nulla,23/07/1884,1899,Chicago Symphony Orchestra,Leipzig
+160,Emilie Mayer,at velit,21/03/1892,1856,Gürzenich Orchestra Cologne,Cologne
 59,Charles-Camille Saint-Saëns,lacus curabitur at ipsum,23/05/1887,1852,Chicago Symphony Orchestra,Leipzig
 60,Ferdinand Ries,ut massa quis,19/12/1869,1859,Gewandhaus Orchestra (Leipzig),Cologne
 61,Joachim Raff,feugiat et eros vestibulum,24/04/1897,1840,Vienna Philharmonic,Weimar
@@ -369,7 +369,7 @@ id,Composer,Symphony,Date,Year,Orchestra,City
 68,Hermann Bischoff,suspendisse potenti,02/03/1879,1863,London Philharmonic,Berlin
 69,Luigi Cherubini,id lobortis convallis,26/03/1878,1852,Crystal Palace orchestra (London),Berlin
 70,Frederic Cowen,dolor vel,04/10/1868,1857,Hallé orchestra (Manchester),Manchester
-71,Emilie Mayer,ultrices enim lorem,22/11/1853,1854,Vienna Philharmonic,Leipzig
+681,Emilie Mayer,nisi venenatis tristique,05/07/1858,1856,Berlin Philharmonic,Berlin
 72,Hermann Bischoff,velit id pretium,28/02/1872,1879,Berlin Philharmonic,Leipzig
 73,Louise Farrenc,ut dolor,05/03/1875,1861,Gürzenich Orchestra Cologne,New York
 74,Ferdinand Hiller,vestibulum sed magna at,19/07/1885,1841,Weimar Hofkapelle,Frankfurt
@@ -391,7 +391,7 @@ id,Composer,Symphony,Date,Year,Orchestra,City
 90,Hector Berlioz,consequat lectus in,19/07/1851,1867,Gewandhaus Orchestra (Leipzig),Boston
 91,Anton Bruckner,eu nibh quisque id,11/03/1877,1866,Gürzenich Orchestra Cologne,New York
 92,Zdenko Fibich,vivamus metus arcu adipiscing,22/10/1893,1875,Frankfurt Museumsorchester,Cologne
-93,Emilie Mayer,rutrum neque,17/06/1861,1893,Gürzenich Orchestra Cologne,Vienna
+566,Emilie Mayer,convallis tortor risus,25/10/1878,1856,Frankfurt Museumsorchester,Frankfurt
 94,William Sterndale Bennett,sapien cum,17/10/1847,1876,Hallé orchestra (Manchester),New York
 95,Julius Rietz,eget vulputate ut ultrices,27/10/1896,1874,Weimar Hofkapelle,Vienna
 96,Anton Rubinstein,non interdum in,14/10/1844,1885,Frankfurt Museumsorchester,Manchester
@@ -458,7 +458,7 @@ id,Composer,Symphony,Date,Year,Orchestra,City
 157,Hermann Goetz,mauris sit amet eros,20/10/1892,1849,Crystal Palace orchestra (London),Berlin
 158,Hermann Bischoff,odio curabitur convallis duis,08/07/1867,1862,Frankfurt Museumsorchester,Frankfurt
 159,Julius Rietz,at turpis a,07/01/1881,1895,Hallé orchestra (Manchester),Vienna
-160,Emilie Mayer,at velit,21/03/1892,1856,Hallé orchestra (Manchester),Leipzig
+359,Emilie Mayer,tortor sollicitudin mi sit,26/12/1887,1857,Frankfurt Museumsorchester,Frankfurt
 161,Ferdinand David,dapibus dolor vel,01/01/1860,1884,London Philharmonic,Frankfurt
 162,George Macfarren,elit ac nulla sed,28/02/1856,1854,Berlin Philharmonic,Weimar
 163,Joseph Haydn,elementum in hac,24/05/1897,1853,Hallé orchestra (Manchester),Paris
@@ -523,7 +523,7 @@ id,Composer,Symphony,Date,Year,Orchestra,City
 222,Anton Bruckner,penatibus et,22/12/1860,1859,Hallé orchestra (Manchester),New York
 223,Christian Sinding,ut odio,08/05/1879,1897,Gewandhaus Orchestra (Leipzig),Boston
 224,Thomas Täglichsbeck,elit ac nulla sed,15/12/1852,1871,Gewandhaus Orchestra (Leipzig),London
-225,Emilie Mayer,mauris enim leo,27/10/1894,1879,Gürzenich Orchestra Cologne,Weimar
+461,Emilie Mayer,mauris non ligula,11/03/1871,1857,Berlin Philharmonic,Berlin
 226,Louise Farrenc,vulputate nonummy maecenas tincidunt,23/12/1872,1893,Chicago Symphony Orchestra,Frankfurt
 227,Joseph Haydn,ante vestibulum ante ipsum,13/08/1850,1849,Hallé orchestra (Manchester),Paris
 228,Johann Joseph Abert,pede ullamcorper,23/08/1844,1849,Weimar Hofkapelle,Cologne
@@ -643,7 +643,7 @@ id,Composer,Symphony,Date,Year,Orchestra,City
 342,Franz Schubert,eu interdum eu tincidunt,21/01/1855,1863,Gewandhaus Orchestra (Leipzig),Manchester
 343,Georges Onslow,praesent lectus vestibulum,14/08/1897,1868,Frankfurt Museumsorchester,Vienna
 344,Bernhard Molique,dapibus nulla suscipit ligula,10/11/1869,1842,Weimar Hofkapelle,New York
-345,Emilie Mayer,justo morbi,13/10/1843,1855,Boston Symphony Orchestra,Weimar
+485,Emilie Mayer,proin eu,17/08/1877,1857,Berlin Philharmonic,Berlin
 346,Anton Bruckner,ac nulla sed vel,11/09/1848,1898,Berlin Philharmonic,Frankfurt
 347,Johann Wenzel Kalliwoda,imperdiet nullam orci pede,10/02/1876,1852,Gewandhaus Orchestra (Leipzig),Boston
 348,Franz Lachner,nunc proin at turpis,17/01/1857,1878,London Philharmonic,Berlin
@@ -657,7 +657,7 @@ id,Composer,Symphony,Date,Year,Orchestra,City
 356,Thomas Täglichsbeck,hac habitasse platea dictumst,04/06/1870,1855,Weimar Hofkapelle,Frankfurt
 357,Anton Rubinstein,bibendum imperdiet,17/03/1872,1864,Frankfurt Museumsorchester,Leipzig
 358,Sigismund Ritter von Neukomm,sociis natoque penatibus,23/05/1846,1852,Frankfurt Museumsorchester,London
-359,Emilie Mayer,tortor sollicitudin mi sit,26/12/1887,1868,Boston Symphony Orchestra,Weimar
+21,Emilie Mayer,at velit eu est,03/04/1866,1857,Gürzenich Orchestra Cologne,Cologne
 360,Johann Friedrich Kittl,molestie sed,28/06/1866,1900,Crystal Palace orchestra (London),New York
 361,Franz Liszt,natoque penatibus,04/10/1860,1860,Gürzenich Orchestra Cologne,Paris
 362,Ferdinand Hiller,augue quam,04/03/1893,1893,Boston Symphony Orchestra,Paris
@@ -749,7 +749,7 @@ id,Composer,Symphony,Date,Year,Orchestra,City
 448,Julius Rietz,integer non velit donec,15/08/1858,1864,Chicago Symphony Orchestra,London
 449,William Crotch,in hac,17/05/1840,1851,New York Philharmonic,Boston
 450,Johannes Brahms,eget vulputate ut ultrices,11/11/1865,1885,New York Philharmonic,Cologne
-451,Emilie Mayer,ultrices posuere cubilia,26/07/1855,1877,Hallé orchestra (Manchester),Chicago
+451,Emilie Mayer,ultrices posuere cubilia,26/07/1855,1857,Gürzenich Orchestra Cologne,Cologne
 452,William Crotch,vulputate elementum nullam varius,30/03/1881,1860,Crystal Palace orchestra (London),Chicago
 453,Cipriani Potter,nonummy maecenas,23/01/1864,1894,Chicago Symphony Orchestra,Boston
 454,Karl Goldmark,duis mattis egestas,11/02/1898,1900,New York Philharmonic,Weimar
@@ -759,7 +759,7 @@ id,Composer,Symphony,Date,Year,Orchestra,City
 458,Louis Spohr,volutpat sapien arcu,19/04/1875,1857,Gürzenich Orchestra Cologne,New York
 459,Joseph Wölfl,sed nisl nunc,30/01/1841,1873,Gewandhaus Orchestra (Leipzig),Boston
 460,Niels Gade,nec sem duis,31/01/1866,1894,Frankfurt Museumsorchester,New York
-461,Emilie Mayer,mauris non ligula,11/03/1871,1869,Gewandhaus Orchestra (Leipzig),Boston
+225,Emilie Mayer,mauris enim leo,27/10/1894,1857,London Philharmonic,London
 462,Robert Schumann,a ipsum integer a,02/10/1871,1851,Gürzenich Orchestra Cologne,Boston
 463,Christian Sinding,phasellus in felis donec,30/12/1880,1843,Gürzenich Orchestra Cologne,Paris
 464,Joseph Haydn,diam neque vestibulum eget,02/03/1881,1884,Boston Symphony Orchestra,Chicago
@@ -783,7 +783,7 @@ id,Composer,Symphony,Date,Year,Orchestra,City
 482,Hermann Goetz,dui proin leo odio,03/11/1846,1847,Vienna Philharmonic,Manchester
 483,William Sterndale Bennett,mauris vulputate elementum,17/07/1861,1867,Vienna Philharmonic,London
 484,Johann Joseph Abert,lorem quisque ut,02/04/1892,1854,Crystal Palace orchestra (London),Chicago
-485,Emilie Mayer,proin eu,17/08/1877,1869,Vienna Philharmonic,Frankfurt
+501,Emilie Mayer,congue diam id ornare,28/04/1875,1857,London Philharmonic,Paris
 486,Franz Lachner,mauris laoreet,03/12/1851,1892,Vienna Philharmonic,Frankfurt
 487,Sigismund Ritter von Neukomm,ultrices posuere cubilia,04/03/1875,1869,Chicago Symphony Orchestra,Leipzig
 488,Ferdinand Ries,ultrices libero non,02/09/1844,1842,Frankfurt Museumsorchester,Vienna
@@ -799,7 +799,7 @@ id,Composer,Symphony,Date,Year,Orchestra,City
 498,Christian Sinding,varius integer ac leo,02/04/1864,1860,Boston Symphony Orchestra,Paris
 499,Franz Liszt,in felis,12/05/1886,1853,Boston Symphony Orchestra,Vienna
 500,Johann Wenzel Kalliwoda,sed justo,11/09/1867,1859,Gürzenich Orchestra Cologne,Vienna
-501,Emilie Mayer,congue diam id ornare,28/04/1875,1885,Chicago Symphony Orchestra,Frankfurt
+18,Emilie Mayer,urna ut tellus nulla,08/09/1841,1858,Berlin Philharmonic,Berlin
 502,Johannes Brahms,aenean sit amet,19/08/1850,1857,Gürzenich Orchestra Cologne,Leipzig
 503,Ferdinand David,sed augue aliquam,16/07/1897,1890,Chicago Symphony Orchestra,Manchester
 504,Johann Wenzel Kalliwoda,orci eget orci vehicula,22/07/1894,1870,Gürzenich Orchestra Cologne,Cologne
@@ -864,7 +864,7 @@ id,Composer,Symphony,Date,Year,Orchestra,City
 563,Joseph Wölfl,quam sollicitudin,13/11/1874,1877,London Philharmonic,Berlin
 564,Robert Schumann,turpis adipiscing,18/07/1847,1883,Weimar Hofkapelle,Paris
 565,Johann Joseph Abert,vel sem sed sagittis,17/06/1852,1898,Weimar Hofkapelle,Manchester
-566,Emilie Mayer,convallis tortor risus,25/10/1878,1863,Weimar Hofkapelle,Vienna
+627,Emilie Mayer,vivamus in felis,31/05/1872,1858,London Philharmonic,London
 567,Charles-Camille Saint-Saëns,aliquet ultrices,30/08/1845,1868,Gewandhaus Orchestra (Leipzig),Chicago
 568,Frederic Cowen,ipsum praesent blandit,18/02/1892,1891,Boston Symphony Orchestra,Boston
 569,Adolf Hesse,molestie hendrerit at vulputate,05/07/1867,1886,Gürzenich Orchestra Cologne,Manchester
@@ -925,7 +925,7 @@ id,Composer,Symphony,Date,Year,Orchestra,City
 624,Giovanni Pacini,ultrices enim lorem ipsum,07/01/1884,1864,Frankfurt Museumsorchester,Weimar
 625,Hector Berlioz,ligula suspendisse,30/10/1894,1857,Hallé orchestra (Manchester),Cologne
 626,Charles-François Gounod,scelerisque mauris sit,28/11/1887,1847,Gürzenich Orchestra Cologne,Frankfurt
-627,Emilie Mayer,vivamus in felis,31/05/1872,1891,Chicago Symphony Orchestra,Cologne
+93,Emilie Mayer,rutrum neque,17/06/1861,1858,London Philharmonic,Paris
 628,Andreas Romberg,turpis a pede,07/10/1881,1842,Chicago Symphony Orchestra,Boston
 629,Ernst Pauer,eu orci,01/06/1871,1869,Weimar Hofkapelle,Frankfurt
 630,Giovanni Pacini,neque vestibulum eget,02/08/1876,1847,Boston Symphony Orchestra,Manchester
@@ -954,7 +954,7 @@ id,Composer,Symphony,Date,Year,Orchestra,City
 653,William Sterndale Bennett,diam id ornare,16/10/1898,1879,Hallé orchestra (Manchester),Leipzig
 654,Karl Goldmark,justo sit,15/03/1864,1859,London Philharmonic,Vienna
 655,Sigismund Ritter von Neukomm,accumsan tortor quis turpis,16/10/1881,1873,Gewandhaus Orchestra (Leipzig),Leipzig
-656,Emilie Mayer,in imperdiet et,23/10/1886,1898,Gewandhaus Orchestra (Leipzig),Berlin
+656,Emilie Mayer,in imperdiet et,23/10/1886,1859,London Philharmonic,London
 657,Hermann Goetz,nunc viverra dapibus nulla,08/03/1842,1866,London Philharmonic,London
 658,Félicien David,elit proin,20/09/1856,1898,London Philharmonic,Berlin
 659,Ferdinand David,hac habitasse,12/09/1869,1844,Crystal Palace orchestra (London),Weimar
@@ -979,7 +979,7 @@ id,Composer,Symphony,Date,Year,Orchestra,City
 678,Julius Rietz,sem fusce consequat,10/12/1878,1853,Crystal Palace orchestra (London),London
 679,William Sterndale Bennett,a feugiat,13/11/1854,1875,Chicago Symphony Orchestra,London
 680,Adolf Hesse,nec nisi volutpat,09/08/1898,1887,London Philharmonic,Berlin
-681,Emilie Mayer,nisi venenatis tristique,05/07/1858,1861,Berlin Philharmonic,Weimar
+58,Emilie Mayer,a suscipit nulla,23/07/1884,1862,London Philharmonic,Paris
 682,Andreas Romberg,porttitor lacus,09/05/1855,1880,Boston Symphony Orchestra,New York
 683,Franz Liszt,etiam pretium iaculis justo,04/10/1869,1895,Weimar Hofkapelle,Boston
 684,Louise Farrenc,turpis sed ante vivamus,13/11/1897,1863,Gewandhaus Orchestra (Leipzig),Frankfurt

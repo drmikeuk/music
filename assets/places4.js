@@ -118,7 +118,6 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
     cityComposerDim = ndx.dimension(d => [d.City, d.Composer]),
 		all = ndx.groupAll(),
     composerGroup = composerDim.group(),
-    //composerGroup2 = composerDim.group(),                               // test
     orchestraGroup = orchestraDim.group(),
     cityGroup = cityDim.group(),
     citySearchGroup = citySearchDim.group(),
@@ -204,15 +203,16 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 
 
    // PLACES FILTERS
-/* //one set of checkbox / buttons
+  //one set of checkbox / buttons
    var selectPlaces = new dc.CboxMenu("#selectPlaces")
       .dimension(citySearchDim)
       .group(citySearchGroup)
       //.title(d => d.key)       // DOESNT WORK
       //.filter("London")          // DOESNT WORK
+      .on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
       .multiple(true);
       //.controlsUseVisibility(true);
-*/
+
 
 
 
