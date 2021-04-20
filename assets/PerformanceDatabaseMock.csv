@@ -1,0 +1,1001 @@
+id,Composer,Symphony,Date,Year,Orchestra,City
+1,Felix Mendelssohn,lorem id ligula suspendisse,22/08/1873,1844,New York Philharmonic,Chicago
+2,Felix Mendelssohn,vestibulum ante,02/07/1871,1856,Berlin Philharmonic,Cologne
+3,Ludwig Van Beethoven,ligula nec sem duis,24/01/1843,1861,Berlin Philharmonic,Leipzig
+4,Felix Mendelssohn,duis bibendum,13/11/1848,1847,Gürzenich Orchestra Cologne,Vienna
+5,Wolfgang Amadeus Mozart,et ultrices,24/02/1862,1856,Crystal Palace orchestra (London),Manchester
+6,Wolfgang Amadeus Mozart,libero rutrum,03/11/1854,1884,Gürzenich Orchestra Cologne,Weimar
+7,Wolfgang Amadeus Mozart,lacinia eget,22/12/1898,1884,Chicago Symphony Orchestra,Berlin
+8,Ludwig Van Beethoven,risus dapibus augue,04/07/1868,1852,Gewandhaus Orchestra (Leipzig),London
+9,Wolfgang Amadeus Mozart,dolor morbi,25/11/1860,1899,Hallé orchestra (Manchester),New York
+10,Ludwig Van Beethoven,sit amet cursus,04/10/1893,1900,New York Philharmonic,Paris
+11,Ludwig Van Beethoven,eget congue,06/08/1884,1854,Gewandhaus Orchestra (Leipzig),Chicago
+12,Felix Mendelssohn,eget eleifend,13/12/1886,1882,Frankfurt Museumsorchester,Berlin
+13,Felix Mendelssohn,amet nunc,13/12/1847,1889,Weimar Hofkapelle,Paris
+14,Ludwig Van Beethoven,ultrices posuere cubilia,17/04/1846,1842,London Philharmonic,Chicago
+15,Felix Mendelssohn,viverra eget congue eget,28/02/1864,1897,Berlin Philharmonic,Cologne
+16,Wolfgang Amadeus Mozart,quisque porta volutpat erat,09/01/1842,1845,Berlin Philharmonic,London
+17,Ludwig Van Beethoven,non velit,21/10/1894,1844,Weimar Hofkapelle,Berlin
+18,Ludwig Van Beethoven,morbi vel lectus,25/06/1853,1872,London Philharmonic,New York
+19,Wolfgang Amadeus Mozart,elit proin interdum,24/08/1861,1874,London Philharmonic,Paris
+20,Ludwig Van Beethoven,enim sit,15/06/1895,1888,Boston Symphony Orchestra,Berlin
+21,Wolfgang Amadeus Mozart,odio in hac,17/01/1889,1851,Chicago Symphony Orchestra,Chicago
+22,Ludwig Van Beethoven,eget nunc donec quis,02/09/1847,1850,Hallé orchestra (Manchester),New York
+23,Wolfgang Amadeus Mozart,vel augue vestibulum ante,22/08/1899,1870,New York Philharmonic,Weimar
+24,Wolfgang Amadeus Mozart,elit ac nulla,03/12/1848,1878,Weimar Hofkapelle,Chicago
+25,Felix Mendelssohn,morbi ut,18/10/1850,1857,Crystal Palace orchestra (London),Frankfurt
+26,Wolfgang Amadeus Mozart,sed nisl,02/02/1853,1874,Gürzenich Orchestra Cologne,Cologne
+27,Ludwig Van Beethoven,etiam faucibus cursus urna,23/09/1881,1871,Vienna Philharmonic,Paris
+28,Wolfgang Amadeus Mozart,habitasse platea,05/09/1840,1877,Vienna Philharmonic,Manchester
+29,Ludwig Van Beethoven,luctus et ultrices posuere,02/09/1878,1863,Vienna Philharmonic,Berlin
+30,Ludwig Van Beethoven,semper rutrum nulla nunc,17/12/1853,1898,Boston Symphony Orchestra,Vienna
+31,Wolfgang Amadeus Mozart,eu magna vulputate,01/03/1846,1847,Crystal Palace orchestra (London),Frankfurt
+32,Felix Mendelssohn,augue vestibulum ante ipsum,09/04/1857,1879,Hallé orchestra (Manchester),Berlin
+33,Ludwig Van Beethoven,etiam vel augue vestibulum,28/06/1863,1883,Crystal Palace orchestra (London),London
+34,Wolfgang Amadeus Mozart,vestibulum ante,23/11/1857,1894,Weimar Hofkapelle,Vienna
+35,Ludwig Van Beethoven,metus aenean fermentum,02/08/1899,1860,Berlin Philharmonic,Weimar
+36,Ludwig Van Beethoven,neque vestibulum eget,21/04/1852,1843,Gürzenich Orchestra Cologne,New York
+37,Ludwig Van Beethoven,eu magna vulputate luctus,03/05/1857,1886,Boston Symphony Orchestra,Weimar
+38,Felix Mendelssohn,gravida nisi,27/10/1858,1850,New York Philharmonic,Paris
+39,Wolfgang Amadeus Mozart,quis turpis,01/03/1869,1841,Berlin Philharmonic,London
+40,Ludwig Van Beethoven,turpis nec euismod,13/10/1869,1896,Weimar Hofkapelle,Cologne
+41,Wolfgang Amadeus Mozart,ut tellus nulla ut,01/10/1858,1869,New York Philharmonic,Vienna
+42,Wolfgang Amadeus Mozart,primis in,13/10/1870,1866,Chicago Symphony Orchestra,Vienna
+43,Ludwig Van Beethoven,magnis dis,03/06/1893,1899,Gürzenich Orchestra Cologne,Weimar
+44,Ludwig Van Beethoven,vestibulum eget vulputate ut,27/10/1866,1842,New York Philharmonic,Boston
+45,Felix Mendelssohn,rutrum neque,22/05/1843,1857,Boston Symphony Orchestra,Cologne
+46,Wolfgang Amadeus Mozart,neque libero convallis eget,16/04/1870,1898,Frankfurt Museumsorchester,London
+47,Felix Mendelssohn,integer ac neque duis,04/10/1876,1881,Vienna Philharmonic,Leipzig
+48,Wolfgang Amadeus Mozart,nullam porttitor lacus,27/11/1886,1878,Gewandhaus Orchestra (Leipzig),Boston
+49,Ludwig Van Beethoven,rutrum at,03/08/1896,1867,Vienna Philharmonic,Manchester
+50,Wolfgang Amadeus Mozart,suscipit nulla,13/02/1843,1876,Gewandhaus Orchestra (Leipzig),London
+51,Wolfgang Amadeus Mozart,blandit mi in,16/08/1892,1868,Hallé orchestra (Manchester),Berlin
+52,Felix Mendelssohn,lacinia nisi venenatis,04/07/1854,1843,Vienna Philharmonic,Manchester
+53,Ludwig Van Beethoven,massa id nisl venenatis,15/08/1850,1881,Crystal Palace orchestra (London),New York
+54,Wolfgang Amadeus Mozart,eleifend donec ut dolor,23/05/1867,1863,Crystal Palace orchestra (London),Chicago
+55,Wolfgang Amadeus Mozart,volutpat in,18/04/1861,1846,Hallé orchestra (Manchester),Manchester
+56,Ludwig Van Beethoven,non mattis,16/05/1844,1848,Weimar Hofkapelle,Boston
+57,Ludwig Van Beethoven,in lectus pellentesque at,08/08/1880,1875,Weimar Hofkapelle,Cologne
+58,Felix Mendelssohn,mattis nibh ligula nec,21/02/1878,1887,New York Philharmonic,London
+59,Wolfgang Amadeus Mozart,quis turpis sed,08/03/1843,1851,Weimar Hofkapelle,Leipzig
+60,Felix Mendelssohn,potenti cras,29/06/1854,1878,Gürzenich Orchestra Cologne,Vienna
+61,Felix Mendelssohn,viverra pede,31/12/1891,1869,Berlin Philharmonic,Frankfurt
+62,Ludwig Van Beethoven,ipsum primis in,06/03/1872,1871,Gürzenich Orchestra Cologne,Boston
+63,Ludwig Van Beethoven,lectus in est,15/10/1858,1893,Boston Symphony Orchestra,Weimar
+64,Felix Mendelssohn,cursus urna ut,04/05/1841,1856,Vienna Philharmonic,Cologne
+65,Ludwig Van Beethoven,leo odio,21/07/1849,1842,Gürzenich Orchestra Cologne,London
+66,Wolfgang Amadeus Mozart,condimentum neque sapien placerat,25/11/1856,1843,New York Philharmonic,Frankfurt
+67,Ludwig Van Beethoven,quis turpis,06/10/1870,1898,Weimar Hofkapelle,Chicago
+68,Felix Mendelssohn,enim leo rhoncus sed,27/11/1859,1860,Hallé orchestra (Manchester),Berlin
+69,Felix Mendelssohn,nec molestie,18/08/1876,1855,Gewandhaus Orchestra (Leipzig),Leipzig
+70,Ludwig Van Beethoven,luctus et,05/04/1878,1881,Frankfurt Museumsorchester,Manchester
+71,Wolfgang Amadeus Mozart,curae duis faucibus accumsan,10/07/1851,1871,Frankfurt Museumsorchester,Manchester
+72,Felix Mendelssohn,tincidunt eu felis,12/09/1880,1848,Hallé orchestra (Manchester),Vienna
+73,Felix Mendelssohn,luctus et ultrices,05/03/1851,1847,Gewandhaus Orchestra (Leipzig),Boston
+74,Ludwig Van Beethoven,aliquet pulvinar sed nisl,02/06/1863,1891,Frankfurt Museumsorchester,Cologne
+75,Wolfgang Amadeus Mozart,augue vestibulum rutrum rutrum,05/09/1860,1856,Frankfurt Museumsorchester,Boston
+76,Wolfgang Amadeus Mozart,molestie nibh in,16/01/1890,1892,New York Philharmonic,London
+77,Ludwig Van Beethoven,suspendisse potenti in eleifend,19/02/1880,1854,Hallé orchestra (Manchester),London
+78,Felix Mendelssohn,scelerisque quam turpis adipiscing,08/05/1899,1859,Frankfurt Museumsorchester,Frankfurt
+79,Wolfgang Amadeus Mozart,nisl duis,15/02/1888,1893,Vienna Philharmonic,Vienna
+80,Wolfgang Amadeus Mozart,metus aenean fermentum,12/09/1850,1880,Berlin Philharmonic,Paris
+81,Ludwig Van Beethoven,venenatis turpis,20/05/1868,1896,Crystal Palace orchestra (London),Vienna
+82,Ludwig Van Beethoven,convallis nunc,01/08/1891,1864,Boston Symphony Orchestra,Vienna
+83,Felix Mendelssohn,orci luctus et ultrices,29/08/1864,1881,London Philharmonic,Manchester
+84,Felix Mendelssohn,parturient montes nascetur,19/02/1847,1873,Gürzenich Orchestra Cologne,Boston
+85,Felix Mendelssohn,quam pede lobortis,13/12/1843,1875,Berlin Philharmonic,Berlin
+86,Ludwig Van Beethoven,ac leo,15/08/1865,1874,Vienna Philharmonic,Boston
+87,Wolfgang Amadeus Mozart,amet sapien,17/04/1877,1845,Weimar Hofkapelle,Weimar
+88,Felix Mendelssohn,vestibulum vestibulum ante ipsum,19/12/1879,1889,London Philharmonic,Leipzig
+89,Ludwig Van Beethoven,ac tellus semper,14/07/1878,1866,Gewandhaus Orchestra (Leipzig),Chicago
+90,Wolfgang Amadeus Mozart,pede justo eu,18/04/1868,1860,Chicago Symphony Orchestra,Paris
+91,Ludwig Van Beethoven,ut at,10/06/1879,1890,Berlin Philharmonic,Boston
+92,Wolfgang Amadeus Mozart,sem fusce consequat nulla,19/04/1884,1846,Berlin Philharmonic,New York
+93,Wolfgang Amadeus Mozart,volutpat dui,30/05/1848,1842,Hallé orchestra (Manchester),London
+94,Wolfgang Amadeus Mozart,nunc proin,17/06/1898,1879,Boston Symphony Orchestra,Manchester
+95,Felix Mendelssohn,odio elementum,21/05/1850,1877,Chicago Symphony Orchestra,Boston
+96,Ludwig Van Beethoven,amet nunc viverra dapibus,08/04/1840,1849,Weimar Hofkapelle,Weimar
+97,Ludwig Van Beethoven,ante ipsum,17/07/1846,1844,Gewandhaus Orchestra (Leipzig),New York
+98,Wolfgang Amadeus Mozart,quis augue,10/03/1855,1841,Weimar Hofkapelle,Frankfurt
+99,Ludwig Van Beethoven,ante vestibulum ante ipsum,18/05/1850,1843,Gewandhaus Orchestra (Leipzig),Chicago
+100,Wolfgang Amadeus Mozart,mollis molestie lorem quisque,11/05/1887,1853,Chicago Symphony Orchestra,Paris
+101,Wolfgang Amadeus Mozart,sit amet eros,24/01/1871,1867,Gürzenich Orchestra Cologne,Berlin
+102,Wolfgang Amadeus Mozart,pulvinar sed,30/06/1897,1900,Berlin Philharmonic,Leipzig
+103,Wolfgang Amadeus Mozart,sem mauris,13/08/1875,1885,Vienna Philharmonic,Manchester
+104,Ludwig Van Beethoven,volutpat quam pede,23/03/1886,1872,London Philharmonic,Boston
+105,Felix Mendelssohn,quisque porta volutpat,08/11/1877,1890,New York Philharmonic,Leipzig
+106,Wolfgang Amadeus Mozart,sit amet nulla,12/01/1887,1856,Gürzenich Orchestra Cologne,Leipzig
+107,Felix Mendelssohn,non sodales,06/10/1894,1860,Boston Symphony Orchestra,Frankfurt
+108,Ludwig Van Beethoven,montes nascetur ridiculus mus,13/07/1856,1845,Frankfurt Museumsorchester,Paris
+109,Ludwig Van Beethoven,condimentum id,05/01/1885,1879,New York Philharmonic,Berlin
+110,Wolfgang Amadeus Mozart,duis ac,04/07/1840,1872,Vienna Philharmonic,Boston
+111,Wolfgang Amadeus Mozart,sapien in sapien,10/10/1877,1848,Boston Symphony Orchestra,Boston
+112,Wolfgang Amadeus Mozart,in quam fringilla,20/03/1844,1845,Chicago Symphony Orchestra,Boston
+113,Ludwig Van Beethoven,semper interdum,29/06/1869,1866,Gewandhaus Orchestra (Leipzig),Berlin
+114,Wolfgang Amadeus Mozart,quisque ut erat curabitur,21/03/1879,1846,Berlin Philharmonic,Chicago
+115,Wolfgang Amadeus Mozart,pretium nisl,16/12/1895,1894,Frankfurt Museumsorchester,Berlin
+116,Ludwig Van Beethoven,augue a,24/06/1888,1899,Boston Symphony Orchestra,Leipzig
+117,Ludwig Van Beethoven,vestibulum quam,21/05/1868,1861,Vienna Philharmonic,Berlin
+118,Ludwig Van Beethoven,ultrices vel augue vestibulum,19/01/1856,1841,Vienna Philharmonic,Chicago
+119,Wolfgang Amadeus Mozart,felis fusce,17/09/1870,1855,London Philharmonic,Chicago
+120,Ludwig Van Beethoven,in hac,18/08/1878,1869,Hallé orchestra (Manchester),Weimar
+121,Wolfgang Amadeus Mozart,lacinia aenean sit amet,01/08/1889,1875,Gewandhaus Orchestra (Leipzig),Berlin
+122,Felix Mendelssohn,arcu sed augue,30/04/1892,1857,New York Philharmonic,Weimar
+123,Ludwig Van Beethoven,volutpat erat quisque erat,27/11/1895,1897,Vienna Philharmonic,Boston
+124,Ludwig Van Beethoven,venenatis turpis enim,27/07/1859,1892,Weimar Hofkapelle,Boston
+125,Felix Mendelssohn,vestibulum velit id pretium,25/11/1860,1869,Crystal Palace orchestra (London),Paris
+126,Ludwig Van Beethoven,viverra eget congue,20/05/1867,1876,Crystal Palace orchestra (London),New York
+127,Wolfgang Amadeus Mozart,nisi at nibh,08/05/1849,1847,Hallé orchestra (Manchester),New York
+128,Felix Mendelssohn,eget semper rutrum,08/12/1878,1877,London Philharmonic,London
+129,Wolfgang Amadeus Mozart,nullam porttitor,24/09/1846,1879,Berlin Philharmonic,Frankfurt
+130,Felix Mendelssohn,massa id,23/12/1875,1878,Weimar Hofkapelle,New York
+131,Wolfgang Amadeus Mozart,donec quis,15/10/1886,1881,London Philharmonic,Paris
+132,Felix Mendelssohn,vel lectus,25/08/1857,1842,London Philharmonic,New York
+133,Felix Mendelssohn,libero ut,18/11/1878,1890,Vienna Philharmonic,Boston
+134,Wolfgang Amadeus Mozart,massa quis augue luctus,17/06/1870,1867,Weimar Hofkapelle,Manchester
+135,Felix Mendelssohn,vulputate elementum nullam varius,08/08/1892,1848,Vienna Philharmonic,Berlin
+136,Ludwig Van Beethoven,nonummy maecenas tincidunt lacus,05/10/1848,1880,Berlin Philharmonic,London
+137,Wolfgang Amadeus Mozart,cum sociis natoque,28/11/1862,1855,Vienna Philharmonic,New York
+138,Ludwig Van Beethoven,condimentum curabitur,04/02/1886,1894,New York Philharmonic,Manchester
+139,Felix Mendelssohn,dis parturient montes nascetur,27/02/1860,1889,Berlin Philharmonic,New York
+140,Felix Mendelssohn,nunc proin at turpis,25/02/1854,1893,Hallé orchestra (Manchester),Vienna
+141,Ludwig Van Beethoven,cras pellentesque volutpat,28/08/1894,1877,Vienna Philharmonic,London
+142,Wolfgang Amadeus Mozart,condimentum id,20/11/1884,1898,Vienna Philharmonic,New York
+143,Ludwig Van Beethoven,dictumst morbi,23/04/1880,1844,Gürzenich Orchestra Cologne,Boston
+144,Ludwig Van Beethoven,adipiscing elit proin risus,03/02/1865,1866,Boston Symphony Orchestra,New York
+145,Felix Mendelssohn,laoreet ut rhoncus aliquet,19/09/1860,1857,Berlin Philharmonic,Berlin
+146,Felix Mendelssohn,vulputate elementum nullam,01/10/1887,1889,Hallé orchestra (Manchester),Vienna
+147,Ludwig Van Beethoven,quisque porta,08/03/1888,1840,Weimar Hofkapelle,Vienna
+148,Felix Mendelssohn,a feugiat,19/10/1880,1891,Crystal Palace orchestra (London),Paris
+149,Wolfgang Amadeus Mozart,quis orci eget orci,21/07/1878,1887,Crystal Palace orchestra (London),Weimar
+150,Felix Mendelssohn,nulla sed vel,20/10/1885,1864,Gewandhaus Orchestra (Leipzig),Berlin
+151,Ludwig Van Beethoven,erat fermentum justo nec,31/08/1896,1856,London Philharmonic,Cologne
+152,Felix Mendelssohn,massa volutpat,11/10/1849,1858,London Philharmonic,Leipzig
+153,Wolfgang Amadeus Mozart,tristique tortor eu,05/05/1874,1896,Boston Symphony Orchestra,Frankfurt
+154,Felix Mendelssohn,mi integer ac neque,15/05/1883,1876,Weimar Hofkapelle,Frankfurt
+155,Felix Mendelssohn,potenti nullam,26/03/1877,1896,Boston Symphony Orchestra,Vienna
+156,Ludwig Van Beethoven,nibh fusce lacus purus,01/02/1886,1869,London Philharmonic,Paris
+157,Ludwig Van Beethoven,felis donec semper sapien,05/05/1858,1878,Crystal Palace orchestra (London),Frankfurt
+158,Felix Mendelssohn,ut blandit non,14/03/1900,1859,Gewandhaus Orchestra (Leipzig),Boston
+159,Felix Mendelssohn,in lectus,09/12/1897,1865,Chicago Symphony Orchestra,Leipzig
+160,Wolfgang Amadeus Mozart,congue eget semper rutrum,15/11/1842,1863,Weimar Hofkapelle,Frankfurt
+161,Felix Mendelssohn,non mattis,23/03/1873,1873,Crystal Palace orchestra (London),Chicago
+162,Wolfgang Amadeus Mozart,nulla pede,20/05/1899,1870,Berlin Philharmonic,London
+163,Ludwig Van Beethoven,vel pede,08/08/1858,1894,Hallé orchestra (Manchester),Berlin
+164,Felix Mendelssohn,urna pretium nisl,17/01/1896,1879,Boston Symphony Orchestra,Vienna
+165,Felix Mendelssohn,platea dictumst maecenas ut,30/04/1848,1882,Berlin Philharmonic,New York
+166,Wolfgang Amadeus Mozart,aliquet at feugiat non,21/08/1897,1844,London Philharmonic,Cologne
+167,Ludwig Van Beethoven,posuere felis sed lacus,18/11/1842,1891,Boston Symphony Orchestra,London
+168,Wolfgang Amadeus Mozart,sit amet consectetuer,24/12/1851,1872,Vienna Philharmonic,Weimar
+169,Felix Mendelssohn,in hac habitasse platea,30/03/1893,1850,Weimar Hofkapelle,Manchester
+170,Ludwig Van Beethoven,ac tellus semper,04/11/1842,1891,Chicago Symphony Orchestra,Weimar
+171,Wolfgang Amadeus Mozart,eu orci mauris,27/11/1889,1850,New York Philharmonic,London
+172,Felix Mendelssohn,auctor sed tristique,14/10/1893,1896,Hallé orchestra (Manchester),New York
+173,Wolfgang Amadeus Mozart,vivamus vel nulla,09/09/1861,1845,New York Philharmonic,Manchester
+174,Felix Mendelssohn,suspendisse ornare consequat lectus,09/05/1877,1882,Frankfurt Museumsorchester,Vienna
+175,Wolfgang Amadeus Mozart,potenti cras,22/01/1857,1848,Berlin Philharmonic,Frankfurt
+176,Wolfgang Amadeus Mozart,sit amet diam,24/01/1862,1847,Gürzenich Orchestra Cologne,Paris
+177,Ludwig Van Beethoven,aliquam convallis,20/06/1861,1866,Crystal Palace orchestra (London),Vienna
+178,Wolfgang Amadeus Mozart,luctus et,25/02/1848,1871,Frankfurt Museumsorchester,Boston
+179,Ludwig Van Beethoven,quis orci,10/08/1893,1880,Boston Symphony Orchestra,New York
+180,Felix Mendelssohn,consequat lectus in est,12/02/1875,1876,Vienna Philharmonic,Weimar
+181,Ludwig Van Beethoven,amet eleifend,17/12/1894,1882,Weimar Hofkapelle,Frankfurt
+182,Ludwig Van Beethoven,mi pede,06/05/1897,1871,Chicago Symphony Orchestra,Frankfurt
+183,Felix Mendelssohn,pede lobortis ligula,21/01/1882,1862,Gewandhaus Orchestra (Leipzig),Berlin
+184,Wolfgang Amadeus Mozart,eu mi nulla,16/06/1870,1879,Gewandhaus Orchestra (Leipzig),Frankfurt
+185,Felix Mendelssohn,convallis nunc proin at,31/08/1895,1882,Gewandhaus Orchestra (Leipzig),Paris
+186,Wolfgang Amadeus Mozart,sapien in,25/05/1842,1883,Gewandhaus Orchestra (Leipzig),Frankfurt
+187,Felix Mendelssohn,lectus vestibulum quam sapien,17/11/1868,1896,Boston Symphony Orchestra,Leipzig
+188,Felix Mendelssohn,morbi vel lectus,25/05/1855,1891,Crystal Palace orchestra (London),London
+189,Felix Mendelssohn,amet sem fusce,30/11/1887,1844,New York Philharmonic,New York
+190,Wolfgang Amadeus Mozart,sit amet consectetuer adipiscing,14/05/1873,1863,Vienna Philharmonic,Frankfurt
+191,Wolfgang Amadeus Mozart,accumsan tortor,17/07/1871,1882,Chicago Symphony Orchestra,Vienna
+192,Wolfgang Amadeus Mozart,velit donec diam,13/04/1861,1885,Frankfurt Museumsorchester,Berlin
+193,Ludwig Van Beethoven,consequat ut nulla,16/05/1876,1900,Hallé orchestra (Manchester),Paris
+194,Felix Mendelssohn,bibendum morbi non quam,21/09/1888,1840,Hallé orchestra (Manchester),Paris
+195,Felix Mendelssohn,rutrum ac lobortis,20/10/1848,1866,Crystal Palace orchestra (London),Cologne
+196,Ludwig Van Beethoven,ac enim in,14/04/1851,1892,Gürzenich Orchestra Cologne,London
+197,Felix Mendelssohn,pellentesque eget nunc,19/07/1862,1882,Chicago Symphony Orchestra,Paris
+198,Felix Mendelssohn,massa id lobortis,09/08/1897,1880,Weimar Hofkapelle,Paris
+199,Wolfgang Amadeus Mozart,eget eleifend luctus ultricies,19/03/1883,1843,Crystal Palace orchestra (London),London
+200,Felix Mendelssohn,sed tristique in tempus,06/11/1847,1899,Berlin Philharmonic,Boston
+201,Ludwig Van Beethoven,faucibus orci,28/09/1894,1871,Crystal Palace orchestra (London),Vienna
+202,Ludwig Van Beethoven,hac habitasse platea dictumst,12/06/1893,1864,London Philharmonic,Vienna
+203,Felix Mendelssohn,ultricies eu nibh,10/09/1871,1845,Berlin Philharmonic,Cologne
+204,Ludwig Van Beethoven,vel enim sit,01/09/1847,1880,Weimar Hofkapelle,Frankfurt
+205,Wolfgang Amadeus Mozart,tristique fusce,17/06/1864,1884,Chicago Symphony Orchestra,Manchester
+206,Ludwig Van Beethoven,sed magna,09/04/1872,1859,Berlin Philharmonic,Vienna
+207,Ludwig Van Beethoven,velit donec diam neque,10/06/1853,1893,New York Philharmonic,Berlin
+208,Ludwig Van Beethoven,nec nisi,20/11/1851,1897,Chicago Symphony Orchestra,New York
+209,Felix Mendelssohn,imperdiet sapien,13/07/1854,1843,Weimar Hofkapelle,Leipzig
+210,Ludwig Van Beethoven,justo etiam,24/06/1899,1883,Frankfurt Museumsorchester,Frankfurt
+211,Felix Mendelssohn,congue vivamus,26/11/1891,1875,Gewandhaus Orchestra (Leipzig),Weimar
+212,Felix Mendelssohn,eu interdum eu tincidunt,20/08/1880,1845,Boston Symphony Orchestra,Vienna
+213,Felix Mendelssohn,nulla nunc purus,24/04/1861,1885,Crystal Palace orchestra (London),Vienna
+214,Felix Mendelssohn,fusce congue diam id,12/11/1851,1851,Boston Symphony Orchestra,Manchester
+215,Wolfgang Amadeus Mozart,consequat nulla,08/11/1873,1849,Berlin Philharmonic,London
+216,Ludwig Van Beethoven,mus vivamus,18/11/1879,1878,Frankfurt Museumsorchester,London
+217,Felix Mendelssohn,odio elementum eu,06/04/1844,1871,London Philharmonic,Vienna
+218,Ludwig Van Beethoven,donec diam neque vestibulum,25/10/1864,1852,Boston Symphony Orchestra,Weimar
+219,Felix Mendelssohn,ac est lacinia nisi,18/09/1843,1857,London Philharmonic,Leipzig
+220,Wolfgang Amadeus Mozart,sociis natoque,11/02/1879,1841,Vienna Philharmonic,Berlin
+221,Felix Mendelssohn,ac nibh fusce,30/10/1844,1884,Gewandhaus Orchestra (Leipzig),Weimar
+222,Felix Mendelssohn,ut ultrices,23/02/1900,1850,London Philharmonic,Frankfurt
+223,Ludwig Van Beethoven,nisl ut volutpat,21/06/1845,1862,Hallé orchestra (Manchester),Boston
+224,Wolfgang Amadeus Mozart,lectus aliquam,19/08/1846,1855,Vienna Philharmonic,Leipzig
+225,Felix Mendelssohn,in quis justo maecenas,08/10/1890,1859,Frankfurt Museumsorchester,Paris
+226,Ludwig Van Beethoven,ipsum primis in faucibus,22/07/1859,1860,Boston Symphony Orchestra,Chicago
+227,Felix Mendelssohn,libero convallis,16/12/1868,1846,New York Philharmonic,London
+228,Ludwig Van Beethoven,ipsum primis in faucibus,14/10/1866,1887,Boston Symphony Orchestra,Paris
+229,Ludwig Van Beethoven,ipsum dolor sit amet,01/09/1886,1864,New York Philharmonic,Cologne
+230,Felix Mendelssohn,libero rutrum ac,29/07/1890,1842,New York Philharmonic,Berlin
+231,Felix Mendelssohn,integer ac neque,30/09/1856,1842,Vienna Philharmonic,New York
+232,Felix Mendelssohn,a pede,22/01/1867,1891,Gewandhaus Orchestra (Leipzig),Weimar
+233,Felix Mendelssohn,sed vel enim sit,13/06/1881,1853,Berlin Philharmonic,Paris
+234,Felix Mendelssohn,elit proin risus,23/02/1880,1843,Vienna Philharmonic,Paris
+235,Ludwig Van Beethoven,vitae mattis nibh,16/11/1878,1846,Gürzenich Orchestra Cologne,Paris
+236,Ludwig Van Beethoven,magna ac,05/06/1869,1869,London Philharmonic,Chicago
+237,Felix Mendelssohn,vel lectus in quam,24/04/1895,1849,Crystal Palace orchestra (London),Leipzig
+238,Felix Mendelssohn,nullam molestie nibh in,17/03/1865,1870,Crystal Palace orchestra (London),Boston
+239,Wolfgang Amadeus Mozart,scelerisque quam,07/02/1878,1885,Hallé orchestra (Manchester),Berlin
+240,Ludwig Van Beethoven,et tempus semper,19/04/1898,1900,Hallé orchestra (Manchester),Leipzig
+241,Wolfgang Amadeus Mozart,nec molestie,26/06/1861,1865,New York Philharmonic,Frankfurt
+242,Felix Mendelssohn,ultrices aliquet maecenas leo,03/12/1874,1849,Crystal Palace orchestra (London),Boston
+243,Wolfgang Amadeus Mozart,duis bibendum morbi,08/10/1850,1873,Hallé orchestra (Manchester),London
+244,Felix Mendelssohn,habitasse platea dictumst etiam,27/03/1896,1888,Vienna Philharmonic,Paris
+245,Wolfgang Amadeus Mozart,lacus morbi quis tortor,24/07/1859,1889,Weimar Hofkapelle,Boston
+246,Wolfgang Amadeus Mozart,amet cursus,12/02/1862,1840,Weimar Hofkapelle,Frankfurt
+247,Wolfgang Amadeus Mozart,ipsum primis in,17/04/1871,1882,Gewandhaus Orchestra (Leipzig),Manchester
+248,Wolfgang Amadeus Mozart,duis bibendum morbi non,13/03/1856,1842,London Philharmonic,Berlin
+249,Ludwig Van Beethoven,eu tincidunt,18/06/1890,1898,Boston Symphony Orchestra,Leipzig
+250,Felix Mendelssohn,vestibulum ac,21/08/1898,1877,Chicago Symphony Orchestra,New York
+251,Ludwig Van Beethoven,diam id ornare imperdiet,26/02/1883,1861,London Philharmonic,Berlin
+252,Felix Mendelssohn,metus sapien ut,18/12/1897,1876,Berlin Philharmonic,Weimar
+253,Ludwig Van Beethoven,etiam pretium,16/11/1849,1897,Boston Symphony Orchestra,Leipzig
+254,Ludwig Van Beethoven,faucibus accumsan odio curabitur,07/01/1893,1866,Crystal Palace orchestra (London),Frankfurt
+255,Wolfgang Amadeus Mozart,sodales sed,18/11/1840,1870,Gürzenich Orchestra Cologne,Weimar
+256,Felix Mendelssohn,duis faucibus accumsan odio,12/03/1865,1857,Weimar Hofkapelle,New York
+257,Wolfgang Amadeus Mozart,augue quam sollicitudin,01/02/1844,1856,London Philharmonic,Berlin
+258,Ludwig Van Beethoven,justo lacinia eget tincidunt,13/12/1891,1885,Vienna Philharmonic,Vienna
+259,Felix Mendelssohn,id consequat in consequat,25/11/1887,1857,Berlin Philharmonic,Leipzig
+260,Felix Mendelssohn,libero convallis,05/11/1871,1885,London Philharmonic,London
+261,Felix Mendelssohn,odio donec vitae nisi,07/10/1868,1896,Gewandhaus Orchestra (Leipzig),Manchester
+262,Felix Mendelssohn,maecenas tincidunt lacus at,08/05/1883,1843,Frankfurt Museumsorchester,New York
+263,Wolfgang Amadeus Mozart,consequat lectus,13/09/1877,1865,Gürzenich Orchestra Cologne,New York
+264,Wolfgang Amadeus Mozart,libero nullam sit,06/08/1892,1884,Chicago Symphony Orchestra,Cologne
+265,Ludwig Van Beethoven,arcu adipiscing molestie hendrerit,21/10/1883,1843,Crystal Palace orchestra (London),London
+266,Ludwig Van Beethoven,elit proin,17/12/1879,1866,Weimar Hofkapelle,Cologne
+267,Ludwig Van Beethoven,quam sapien,11/12/1847,1872,Chicago Symphony Orchestra,London
+268,Wolfgang Amadeus Mozart,nulla integer,23/05/1846,1882,Frankfurt Museumsorchester,Paris
+269,Felix Mendelssohn,eget orci,10/03/1880,1867,Vienna Philharmonic,New York
+270,Ludwig Van Beethoven,in faucibus orci luctus,16/05/1876,1862,Berlin Philharmonic,Frankfurt
+271,Felix Mendelssohn,justo maecenas,09/09/1893,1875,New York Philharmonic,London
+272,Felix Mendelssohn,eu mi nulla ac,05/04/1888,1858,Vienna Philharmonic,Chicago
+273,Felix Mendelssohn,dictumst aliquam augue,14/04/1841,1882,Gürzenich Orchestra Cologne,Chicago
+274,Wolfgang Amadeus Mozart,venenatis lacinia,02/10/1868,1847,Frankfurt Museumsorchester,Chicago
+275,Wolfgang Amadeus Mozart,lacinia nisi venenatis tristique,12/07/1896,1855,London Philharmonic,Boston
+276,Wolfgang Amadeus Mozart,natoque penatibus et,29/01/1851,1881,Gewandhaus Orchestra (Leipzig),Vienna
+277,Ludwig Van Beethoven,eu orci mauris lacinia,05/10/1866,1886,Crystal Palace orchestra (London),Paris
+278,Wolfgang Amadeus Mozart,in porttitor pede justo,14/09/1899,1854,Vienna Philharmonic,London
+279,Wolfgang Amadeus Mozart,sed vel enim,17/03/1864,1878,Gürzenich Orchestra Cologne,Leipzig
+280,Ludwig Van Beethoven,velit id pretium iaculis,19/01/1842,1860,Gewandhaus Orchestra (Leipzig),Manchester
+281,Wolfgang Amadeus Mozart,rhoncus dui vel,28/06/1852,1861,New York Philharmonic,Berlin
+282,Ludwig Van Beethoven,ac est lacinia nisi,14/08/1859,1868,New York Philharmonic,Manchester
+283,Wolfgang Amadeus Mozart,nisl duis bibendum felis,21/03/1849,1870,New York Philharmonic,Chicago
+284,Felix Mendelssohn,eget elit,11/07/1898,1896,Gürzenich Orchestra Cologne,Leipzig
+285,Ludwig Van Beethoven,dis parturient montes nascetur,28/06/1899,1864,Gewandhaus Orchestra (Leipzig),Weimar
+286,Ludwig Van Beethoven,sapien a libero nam,13/12/1872,1849,Boston Symphony Orchestra,Berlin
+287,Ludwig Van Beethoven,integer a nibh,24/11/1877,1857,Crystal Palace orchestra (London),Vienna
+288,Felix Mendelssohn,natoque penatibus,20/08/1864,1880,Chicago Symphony Orchestra,Frankfurt
+289,Felix Mendelssohn,nec sem duis aliquam,24/10/1850,1865,Crystal Palace orchestra (London),Berlin
+290,Felix Mendelssohn,mi integer ac neque,04/01/1888,1843,Hallé orchestra (Manchester),London
+291,Ludwig Van Beethoven,pulvinar sed nisl,26/11/1852,1896,Boston Symphony Orchestra,Manchester
+292,Ludwig Van Beethoven,odio in hac habitasse,12/08/1850,1847,Gürzenich Orchestra Cologne,Manchester
+293,Ludwig Van Beethoven,egestas metus aenean fermentum,26/12/1891,1866,Hallé orchestra (Manchester),Leipzig
+294,Felix Mendelssohn,vel ipsum praesent,11/08/1870,1876,Boston Symphony Orchestra,Berlin
+295,Ludwig Van Beethoven,sociis natoque,19/01/1863,1842,Berlin Philharmonic,Manchester
+296,Ludwig Van Beethoven,arcu sed augue,30/04/1845,1854,Weimar Hofkapelle,Berlin
+297,Wolfgang Amadeus Mozart,justo etiam pretium iaculis,12/03/1863,1891,Gewandhaus Orchestra (Leipzig),Cologne
+298,Wolfgang Amadeus Mozart,et magnis,08/12/1893,1851,Berlin Philharmonic,London
+299,Ludwig Van Beethoven,lobortis est phasellus sit,08/08/1860,1882,Berlin Philharmonic,Cologne
+300,Ludwig Van Beethoven,magnis dis parturient montes,19/12/1858,1883,Berlin Philharmonic,Leipzig
+1,Johannes Brahms,lorem integer tincidunt ante,21/10/1844,1850,Gewandhaus Orchestra (Leipzig),Frankfurt
+2,Cipriani Potter,lobortis ligula sit amet,07/09/1844,1895,Gewandhaus Orchestra (Leipzig),Frankfurt
+3,Luigi Cherubini,eu felis,13/10/1883,1845,Vienna Philharmonic,Berlin
+4,George Macfarren,nulla tellus in,09/10/1897,1857,Hallé orchestra (Manchester),Berlin
+5,Cesar Franck,et ultrices posuere,25/11/1890,1855,Boston Symphony Orchestra,Cologne
+6,Joseph Wölfl,ut massa,05/10/1884,1887,Frankfurt Museumsorchester,Chicago
+7,Franz Schubert,rutrum rutrum neque aenean,11/04/1845,1857,Weimar Hofkapelle,New York
+8,Charles Lucas,iaculis congue vivamus metus,25/01/1899,1874,Frankfurt Museumsorchester,Weimar
+9,Félicien David,turpis adipiscing lorem,27/01/1845,1880,Gewandhaus Orchestra (Leipzig),London
+10,Zdenko Fibich,nisi eu,20/06/1873,1858,Berlin Philharmonic,Paris
+11,Robert Volkmann,proin leo,12/07/1880,1861,London Philharmonic,Manchester
+12,Johann Friedrich Kittl,blandit lacinia erat vestibulum,04/09/1896,1894,Frankfurt Museumsorchester,Vienna
+13,Zdenko Fibich,cursus id turpis,06/03/1867,1898,Chicago Symphony Orchestra,Paris
+14,William Sterndale Bennett,mauris vulputate elementum,19/10/1864,1893,Chicago Symphony Orchestra,Berlin
+15,Franz Lachner,donec pharetra magna,03/11/1890,1895,Weimar Hofkapelle,Frankfurt
+16,Luigi Cherubini,posuere cubilia curae,30/07/1892,1890,Berlin Philharmonic,New York
+17,Niels Gade,suspendisse potenti,12/03/1866,1887,Vienna Philharmonic,London
+18,Emilie Mayer,urna ut tellus nulla,08/09/1841,1889,Berlin Philharmonic,Chicago
+19,Hermann Goetz,nam nulla integer pede,21/10/1846,1891,London Philharmonic,Frankfurt
+20,Georges Onslow,vel sem sed,20/10/1845,1867,London Philharmonic,Paris
+21,Emilie Mayer,at velit eu est,03/04/1866,1870,Frankfurt Museumsorchester,Frankfurt
+22,Emilie Mayer,rutrum nulla,17/03/1897,1855,Chicago Symphony Orchestra,Paris
+23,Bernhard Molique,accumsan tortor,06/12/1893,1898,Crystal Palace orchestra (London),Berlin
+24,Johannes Brahms,tempus vivamus in felis,28/07/1849,1882,Frankfurt Museumsorchester,Paris
+25,Joachim Raff,nisi eu orci mauris,12/09/1884,1868,Vienna Philharmonic,Paris
+26,Ferdinand Hiller,a libero nam dui,19/03/1849,1869,London Philharmonic,Leipzig
+27,Gustav Mahler,enim lorem ipsum dolor,20/03/1857,1849,Weimar Hofkapelle,Leipzig
+28,Adolf Hesse,vel lectus in,29/01/1896,1862,Weimar Hofkapelle,Paris
+29,Cesar Franck,sollicitudin vitae consectetuer eget,05/07/1851,1888,Weimar Hofkapelle,Weimar
+30,Ferdinand Ries,donec semper,16/01/1881,1841,Weimar Hofkapelle,London
+31,William Sterndale Bennett,est risus,17/01/1900,1869,Frankfurt Museumsorchester,London
+32,Cipriani Potter,sodales sed,10/12/1854,1877,Hallé orchestra (Manchester),Boston
+33,Sigismund Ritter von Neukomm,tellus semper interdum,15/01/1895,1887,Berlin Philharmonic,Paris
+34,Andreas Romberg,phasellus id sapien in,29/06/1850,1892,Berlin Philharmonic,Cologne
+35,William Crotch,pellentesque volutpat dui maecenas,22/12/1872,1881,Berlin Philharmonic,Weimar
+36,Karl Goldmark,felis eu sapien cursus,30/09/1852,1882,New York Philharmonic,New York
+37,Hermann Bischoff,imperdiet nullam,18/12/1854,1872,Berlin Philharmonic,Cologne
+38,Charles Lucas,orci vehicula condimentum curabitur,06/05/1877,1893,Gürzenich Orchestra Cologne,Vienna
+39,Frederic Cowen,nec condimentum,22/04/1893,1890,Weimar Hofkapelle,London
+40,Frederic Cowen,mauris morbi non lectus,18/09/1891,1896,London Philharmonic,Vienna
+41,Johann Friedrich Kittl,facilisi cras,25/06/1842,1859,Weimar Hofkapelle,Vienna
+42,Johann Joseph Abert,iaculis congue vivamus metus,16/01/1864,1865,Crystal Palace orchestra (London),Vienna
+43,William Sterndale Bennett,nisl ut volutpat,24/11/1899,1870,Boston Symphony Orchestra,New York
+44,Frederic Cowen,dolor sit,18/09/1868,1896,Vienna Philharmonic,Chicago
+45,Hermann Bischoff,pede venenatis,06/11/1869,1867,Chicago Symphony Orchestra,Frankfurt
+46,Robert Volkmann,in felis eu,22/04/1850,1854,Chicago Symphony Orchestra,Weimar
+47,Hector Berlioz,eu sapien cursus vestibulum,21/02/1842,1885,London Philharmonic,Berlin
+48,Anton Rubinstein,nisi volutpat,08/07/1874,1842,London Philharmonic,New York
+49,Jacob Rosenhain,enim leo rhoncus sed,19/11/1849,1879,Crystal Palace orchestra (London),New York
+50,Anton Bruckner,eget tempus vel,05/10/1842,1846,Gewandhaus Orchestra (Leipzig),Weimar
+51,Joseph Haydn,et ultrices posuere,29/10/1847,1881,Gewandhaus Orchestra (Leipzig),Paris
+52,Niels Gade,duis bibendum felis,17/10/1889,1897,Chicago Symphony Orchestra,Cologne
+53,Charles-Camille Saint-Saëns,justo sit,12/07/1869,1857,Gewandhaus Orchestra (Leipzig),Leipzig
+54,Giovanni Sgambati,amet sem fusce consequat,21/08/1895,1877,Crystal Palace orchestra (London),Leipzig
+55,Louise Farrenc,nulla ut erat id,29/08/1858,1872,London Philharmonic,Manchester
+56,Georges Onslow,amet consectetuer,06/04/1881,1857,Chicago Symphony Orchestra,Chicago
+57,Ferdinand Hiller,eu mi,13/10/1879,1845,Boston Symphony Orchestra,Cologne
+58,Emilie Mayer,a suscipit nulla,23/07/1884,1899,Chicago Symphony Orchestra,Leipzig
+59,Charles-Camille Saint-Saëns,lacus curabitur at ipsum,23/05/1887,1852,Chicago Symphony Orchestra,Leipzig
+60,Ferdinand Ries,ut massa quis,19/12/1869,1859,Gewandhaus Orchestra (Leipzig),Cologne
+61,Joachim Raff,feugiat et eros vestibulum,24/04/1897,1840,Vienna Philharmonic,Weimar
+62,Robert Schumann,proin eu,29/04/1860,1871,Crystal Palace orchestra (London),Weimar
+63,George Macfarren,vel nisl,13/07/1850,1888,Frankfurt Museumsorchester,Boston
+64,Félicien David,at nibh,07/09/1871,1897,Gewandhaus Orchestra (Leipzig),Weimar
+65,Niels Gade,ultrices libero non,27/05/1853,1845,Hallé orchestra (Manchester),Weimar
+66,Hector Berlioz,volutpat sapien arcu sed,06/09/1850,1844,Boston Symphony Orchestra,Paris
+67,Hector Berlioz,vitae consectetuer eget rutrum,01/12/1856,1897,Frankfurt Museumsorchester,Manchester
+68,Hermann Bischoff,suspendisse potenti,02/03/1879,1863,London Philharmonic,Berlin
+69,Luigi Cherubini,id lobortis convallis,26/03/1878,1852,Crystal Palace orchestra (London),Berlin
+70,Frederic Cowen,dolor vel,04/10/1868,1857,Hallé orchestra (Manchester),Manchester
+71,Emilie Mayer,ultrices enim lorem,22/11/1853,1854,Vienna Philharmonic,Leipzig
+72,Hermann Bischoff,velit id pretium,28/02/1872,1879,Berlin Philharmonic,Leipzig
+73,Louise Farrenc,ut dolor,05/03/1875,1861,Gürzenich Orchestra Cologne,New York
+74,Ferdinand Hiller,vestibulum sed magna at,19/07/1885,1841,Weimar Hofkapelle,Frankfurt
+75,Franz Lachner,dapibus dolor vel,23/06/1868,1887,Gewandhaus Orchestra (Leipzig),Paris
+76,Franz Lachner,habitasse platea dictumst,12/08/1860,1867,Gürzenich Orchestra Cologne,Manchester
+77,Charles-Camille Saint-Saëns,felis sed lacus morbi,30/03/1843,1850,Vienna Philharmonic,Chicago
+78,Ferdinand Hiller,mattis nibh ligula nec,31/08/1884,1865,Gewandhaus Orchestra (Leipzig),Weimar
+79,Cesar Franck,volutpat dui maecenas tristique,14/03/1880,1887,New York Philharmonic,Vienna
+80,William Crotch,sodales sed,03/12/1895,1871,Gürzenich Orchestra Cologne,Weimar
+81,Johann Wenzel Kalliwoda,vel ipsum praesent,04/01/1846,1890,Frankfurt Museumsorchester,Vienna
+82,Jacob Rosenhain,magnis dis parturient montes,04/08/1866,1866,Crystal Palace orchestra (London),Manchester
+83,Julius Rietz,nisi at,16/05/1872,1860,Frankfurt Museumsorchester,Manchester
+84,Zdenko Fibich,quam a,05/03/1878,1857,Gürzenich Orchestra Cologne,Boston
+85,Giovanni Pacini,in faucibus orci,20/02/1842,1894,Chicago Symphony Orchestra,Berlin
+86,Robert Volkmann,vel augue vestibulum,20/03/1842,1847,Crystal Palace orchestra (London),Vienna
+87,Johannes Brahms,vestibulum ac,28/08/1845,1896,New York Philharmonic,Paris
+88,Félicien David,eu felis,19/05/1868,1880,Boston Symphony Orchestra,Chicago
+89,Hermann Goetz,venenatis turpis,01/05/1897,1874,Chicago Symphony Orchestra,Vienna
+90,Hector Berlioz,consequat lectus in,19/07/1851,1867,Gewandhaus Orchestra (Leipzig),Boston
+91,Anton Bruckner,eu nibh quisque id,11/03/1877,1866,Gürzenich Orchestra Cologne,New York
+92,Zdenko Fibich,vivamus metus arcu adipiscing,22/10/1893,1875,Frankfurt Museumsorchester,Cologne
+93,Emilie Mayer,rutrum neque,17/06/1861,1893,Gürzenich Orchestra Cologne,Vienna
+94,William Sterndale Bennett,sapien cum,17/10/1847,1876,Hallé orchestra (Manchester),New York
+95,Julius Rietz,eget vulputate ut ultrices,27/10/1896,1874,Weimar Hofkapelle,Vienna
+96,Anton Rubinstein,non interdum in,14/10/1844,1885,Frankfurt Museumsorchester,Manchester
+97,Ferdinand David,penatibus et,10/03/1876,1865,Gewandhaus Orchestra (Leipzig),London
+98,Bernhard Molique,at diam nam,11/09/1869,1844,Weimar Hofkapelle,New York
+99,Ferdinand Hiller,nunc donec quis orci,14/02/1878,1888,New York Philharmonic,London
+100,Cipriani Potter,sodales scelerisque,28/08/1848,1871,Gürzenich Orchestra Cologne,Leipzig
+101,Johann Ritter von Herbeck,mattis egestas,18/04/1848,1843,Chicago Symphony Orchestra,Paris
+102,Joseph Wölfl,non sodales sed tincidunt,28/12/1854,1846,London Philharmonic,Vienna
+103,Ernst Pauer,tincidunt eget tempus vel,20/04/1863,1884,Chicago Symphony Orchestra,Vienna
+104,Johann Friedrich Kittl,ut massa,08/04/1898,1842,Berlin Philharmonic,Berlin
+105,Joseph Wölfl,vel dapibus,18/09/1874,1872,New York Philharmonic,Frankfurt
+106,Christian Sinding,sed accumsan felis,23/08/1868,1878,Vienna Philharmonic,Cologne
+107,Cesar Franck,velit vivamus vel nulla,07/11/1896,1900,Crystal Palace orchestra (London),New York
+108,Giovanni Sgambati,erat volutpat,24/01/1884,1855,Hallé orchestra (Manchester),Boston
+109,Johannes Brahms,in sapien iaculis congue,14/11/1866,1848,New York Philharmonic,Manchester
+110,William Sterndale Bennett,nibh quisque id,01/09/1874,1891,Chicago Symphony Orchestra,Leipzig
+111,Anton Bruckner,et ultrices posuere cubilia,23/03/1849,1880,Vienna Philharmonic,Frankfurt
+112,Bernhard Molique,fusce posuere felis,18/01/1865,1857,Chicago Symphony Orchestra,Berlin
+113,William Crotch,mus vivamus vestibulum,02/01/1874,1869,Gewandhaus Orchestra (Leipzig),Boston
+114,Johann Joseph Abert,venenatis tristique fusce,09/06/1845,1879,London Philharmonic,Frankfurt
+115,Adolf Hesse,potenti cras in,18/12/1897,1870,Boston Symphony Orchestra,Vienna
+116,Jacob Rosenhain,at vulputate,29/12/1889,1841,Berlin Philharmonic,Frankfurt
+117,Robert Volkmann,quis tortor,25/10/1843,1851,Weimar Hofkapelle,Vienna
+118,Zdenko Fibich,vitae quam suspendisse,26/10/1877,1848,Hallé orchestra (Manchester),New York
+119,Adolf Hesse,in imperdiet,26/02/1852,1855,Vienna Philharmonic,Weimar
+120,Zdenko Fibich,praesent blandit nam nulla,05/12/1862,1888,Gewandhaus Orchestra (Leipzig),Cologne
+121,Ferdinand Hiller,habitasse platea,03/08/1857,1900,Weimar Hofkapelle,Weimar
+122,Ferdinand Ries,ultricies eu nibh,11/03/1857,1866,Weimar Hofkapelle,Chicago
+123,Niels Gade,phasellus in,18/04/1870,1843,Boston Symphony Orchestra,Leipzig
+124,Anton Rubinstein,ac enim,30/11/1847,1870,Weimar Hofkapelle,Manchester
+125,Anton Bruckner,viverra eget,22/04/1867,1898,Gewandhaus Orchestra (Leipzig),Berlin
+126,Johannes Brahms,convallis tortor risus dapibus,20/01/1873,1840,Vienna Philharmonic,Paris
+127,Adolf Hesse,ante ipsum,25/12/1885,1844,Crystal Palace orchestra (London),Chicago
+128,Anton Bruckner,tristique in tempus,23/09/1854,1872,Hallé orchestra (Manchester),Manchester
+129,Giovanni Pacini,amet erat nulla,11/03/1865,1882,Gürzenich Orchestra Cologne,Berlin
+130,Robert Schumann,posuere nonummy integer,24/07/1887,1893,Crystal Palace orchestra (London),Leipzig
+131,Ferdinand Hiller,integer pede justo lacinia,16/07/1878,1872,Frankfurt Museumsorchester,Boston
+132,Joseph Wölfl,blandit lacinia,01/09/1885,1900,London Philharmonic,London
+133,Hector Berlioz,fusce lacus purus aliquet,27/10/1878,1844,Frankfurt Museumsorchester,Leipzig
+134,Louis Spohr,tristique est,21/08/1857,1857,New York Philharmonic,Leipzig
+135,Johannes Brahms,donec vitae,07/06/1899,1883,Vienna Philharmonic,Manchester
+136,Hector Berlioz,in sagittis dui vel,16/04/1885,1868,London Philharmonic,Boston
+137,Cipriani Potter,lobortis ligula sit amet,06/02/1844,1860,Gewandhaus Orchestra (Leipzig),Frankfurt
+138,Joseph Wölfl,primis in faucibus orci,22/03/1878,1890,Boston Symphony Orchestra,Vienna
+139,Luigi Cherubini,nullam porttitor lacus at,15/05/1883,1875,Berlin Philharmonic,Cologne
+140,Ferdinand David,tincidunt nulla mollis molestie,02/10/1848,1896,Gewandhaus Orchestra (Leipzig),Boston
+141,William Sterndale Bennett,cursus urna ut tellus,10/02/1882,1851,Frankfurt Museumsorchester,Frankfurt
+142,Hermann Goetz,quam a odio,15/02/1856,1870,Vienna Philharmonic,Chicago
+143,Luigi Cherubini,odio odio elementum eu,03/10/1869,1875,Chicago Symphony Orchestra,Leipzig
+144,William Crotch,eleifend luctus,29/10/1850,1895,Crystal Palace orchestra (London),London
+145,Adolf Hesse,at turpis donec posuere,04/03/1846,1867,Gewandhaus Orchestra (Leipzig),London
+146,Anton Bruckner,nisl venenatis lacinia,24/02/1870,1890,Gewandhaus Orchestra (Leipzig),Leipzig
+147,Johann Friedrich Kittl,neque libero convallis eget,11/08/1853,1846,Chicago Symphony Orchestra,Weimar
+148,Zdenko Fibich,fusce congue diam,15/07/1864,1890,Gürzenich Orchestra Cologne,Chicago
+149,Julius Rietz,tellus nulla ut erat,12/03/1856,1855,Frankfurt Museumsorchester,Paris
+150,Thomas Täglichsbeck,imperdiet sapien urna,06/12/1845,1878,Boston Symphony Orchestra,Leipzig
+151,Anton Bruckner,in lacus curabitur,24/03/1883,1859,Berlin Philharmonic,Paris
+152,Anton Bruckner,duis consequat dui nec,22/02/1843,1895,New York Philharmonic,Weimar
+153,Johann Friedrich Kittl,ipsum dolor sit amet,26/07/1879,1867,Crystal Palace orchestra (London),Leipzig
+154,Joseph Haydn,erat id mauris vulputate,21/11/1849,1869,Gürzenich Orchestra Cologne,Vienna
+155,Hector Berlioz,turpis enim,10/10/1882,1872,Gürzenich Orchestra Cologne,Leipzig
+156,Louis Spohr,venenatis turpis,16/02/1894,1874,Crystal Palace orchestra (London),Vienna
+157,Hermann Goetz,mauris sit amet eros,20/10/1892,1849,Crystal Palace orchestra (London),Berlin
+158,Hermann Bischoff,odio curabitur convallis duis,08/07/1867,1862,Frankfurt Museumsorchester,Frankfurt
+159,Julius Rietz,at turpis a,07/01/1881,1895,Hallé orchestra (Manchester),Vienna
+160,Emilie Mayer,at velit,21/03/1892,1856,Hallé orchestra (Manchester),Leipzig
+161,Ferdinand David,dapibus dolor vel,01/01/1860,1884,London Philharmonic,Frankfurt
+162,George Macfarren,elit ac nulla sed,28/02/1856,1854,Berlin Philharmonic,Weimar
+163,Joseph Haydn,elementum in hac,24/05/1897,1853,Hallé orchestra (Manchester),Paris
+164,Anton Bruckner,risus auctor sed tristique,03/11/1873,1884,Weimar Hofkapelle,Berlin
+165,Johann Wenzel Kalliwoda,vel ipsum praesent,26/04/1846,1849,Gürzenich Orchestra Cologne,Frankfurt
+166,Hermann Goetz,justo nec condimentum neque,11/11/1861,1860,London Philharmonic,London
+167,Giovanni Sgambati,odio porttitor id consequat,05/12/1874,1857,Gürzenich Orchestra Cologne,Paris
+168,Johannes Brahms,id justo,17/03/1870,1900,Vienna Philharmonic,Vienna
+169,Luigi Cherubini,penatibus et magnis,20/04/1864,1845,Crystal Palace orchestra (London),Chicago
+170,Johann Ritter von Herbeck,tincidunt lacus,04/03/1891,1840,Boston Symphony Orchestra,Berlin
+171,Andreas Romberg,fusce lacus purus,11/12/1886,1877,New York Philharmonic,Berlin
+172,Anton Rubinstein,et ultrices posuere cubilia,15/04/1844,1878,Weimar Hofkapelle,Chicago
+173,Johannes Brahms,in hac,05/08/1844,1844,Vienna Philharmonic,Leipzig
+174,Franz Liszt,ante vestibulum,27/11/1892,1861,Hallé orchestra (Manchester),Vienna
+175,Ferdinand David,odio curabitur convallis duis,13/01/1873,1841,Crystal Palace orchestra (London),New York
+176,Robert Schumann,vulputate elementum nullam varius,25/11/1848,1885,Berlin Philharmonic,Weimar
+177,William Sterndale Bennett,felis sed lacus morbi,29/11/1876,1870,Chicago Symphony Orchestra,Chicago
+178,Karl Goldmark,id ligula,19/02/1875,1898,Chicago Symphony Orchestra,Manchester
+179,Niels Gade,quisque erat eros,11/09/1876,1859,Frankfurt Museumsorchester,Leipzig
+180,Gustav Mahler,leo maecenas,09/09/1863,1890,New York Philharmonic,Chicago
+181,Ernst Pauer,in tempor turpis nec,14/11/1887,1879,Gewandhaus Orchestra (Leipzig),Paris
+182,Johann Ritter von Herbeck,sapien a,03/06/1860,1851,Vienna Philharmonic,Vienna
+183,Andreas Romberg,condimentum curabitur in,30/08/1848,1891,Gewandhaus Orchestra (Leipzig),Boston
+184,Charles Lucas,id ligula suspendisse ornare,12/03/1869,1869,Hallé orchestra (Manchester),Leipzig
+185,Thomas Täglichsbeck,condimentum curabitur in,03/02/1865,1869,Gewandhaus Orchestra (Leipzig),Cologne
+186,Charles-Camille Saint-Saëns,aliquam lacus morbi quis,11/10/1873,1843,Weimar Hofkapelle,Boston
+187,Hector Berlioz,et ultrices posuere cubilia,04/12/1844,1898,Boston Symphony Orchestra,Frankfurt
+188,Thomas Täglichsbeck,maecenas ut massa quis,16/08/1841,1873,London Philharmonic,Cologne
+189,William Sterndale Bennett,blandit ultrices enim,16/02/1870,1846,Boston Symphony Orchestra,Berlin
+190,Louis Spohr,semper est quam,25/04/1890,1852,Chicago Symphony Orchestra,Berlin
+191,George Macfarren,morbi ut,21/05/1844,1868,London Philharmonic,Cologne
+192,Johannes Brahms,in faucibus,26/12/1840,1866,Crystal Palace orchestra (London),Weimar
+193,Jacob Rosenhain,justo sollicitudin ut,10/11/1852,1897,Hallé orchestra (Manchester),Leipzig
+194,Louise Farrenc,sem mauris,25/05/1889,1895,Gürzenich Orchestra Cologne,Vienna
+195,Hermann Goetz,quisque porta,20/05/1857,1871,Weimar Hofkapelle,Chicago
+196,Anton Bruckner,vel pede,11/07/1863,1862,Crystal Palace orchestra (London),Weimar
+197,Andreas Romberg,non quam nec,02/04/1861,1843,Frankfurt Museumsorchester,Leipzig
+198,Jacob Rosenhain,mauris sit amet eros,26/11/1890,1865,Chicago Symphony Orchestra,Leipzig
+199,Ferdinand Hiller,eget tincidunt eget tempus,17/11/1897,1855,Gürzenich Orchestra Cologne,Weimar
+200,Ferdinand Ries,diam id ornare imperdiet,26/02/1875,1890,Hallé orchestra (Manchester),Manchester
+201,Giovanni Sgambati,vestibulum sit amet cursus,13/03/1860,1850,Hallé orchestra (Manchester),Leipzig
+202,Hermann Goetz,nunc proin at turpis,11/03/1900,1889,Gürzenich Orchestra Cologne,New York
+203,Georges Onslow,in purus eu magna,04/04/1870,1897,Crystal Palace orchestra (London),Frankfurt
+204,Joachim Raff,vestibulum quam sapien varius,07/07/1865,1868,Gewandhaus Orchestra (Leipzig),Boston
+205,Cipriani Potter,in hac,19/05/1845,1882,Berlin Philharmonic,Paris
+206,Joseph Wölfl,ac neque duis,11/03/1891,1854,Boston Symphony Orchestra,New York
+207,Luigi Cherubini,volutpat sapien,22/05/1872,1890,Boston Symphony Orchestra,London
+208,Julius Rietz,magnis dis parturient,12/04/1844,1844,Gürzenich Orchestra Cologne,New York
+209,Cipriani Potter,nam congue,18/03/1847,1864,Gewandhaus Orchestra (Leipzig),Boston
+210,Johann Wenzel Kalliwoda,tristique tortor,23/01/1867,1877,London Philharmonic,Cologne
+211,Julius Zellner,ipsum primis,23/06/1876,1895,Weimar Hofkapelle,Chicago
+212,Cipriani Potter,duis mattis egestas,25/05/1878,1860,Chicago Symphony Orchestra,Vienna
+213,Ernst Pauer,amet eros suspendisse accumsan,16/03/1857,1883,Gewandhaus Orchestra (Leipzig),Cologne
+214,Félicien David,blandit mi in,10/03/1876,1887,Hallé orchestra (Manchester),Chicago
+215,Niels Gade,ipsum dolor sit amet,11/04/1843,1855,Crystal Palace orchestra (London),Boston
+216,Félicien David,eleifend pede libero quis,30/05/1847,1859,London Philharmonic,London
+217,Joseph Wölfl,varius ut,18/02/1878,1898,Weimar Hofkapelle,Paris
+218,Johann Wenzel Kalliwoda,ultrices posuere cubilia,30/07/1886,1874,New York Philharmonic,New York
+219,Frederic Cowen,facilisi cras,09/06/1848,1894,Hallé orchestra (Manchester),Berlin
+220,Ferdinand Hiller,nunc nisl,30/06/1888,1888,Gürzenich Orchestra Cologne,Chicago
+221,Hermann Bischoff,integer a,20/08/1874,1892,New York Philharmonic,Manchester
+222,Anton Bruckner,penatibus et,22/12/1860,1859,Hallé orchestra (Manchester),New York
+223,Christian Sinding,ut odio,08/05/1879,1897,Gewandhaus Orchestra (Leipzig),Boston
+224,Thomas Täglichsbeck,elit ac nulla sed,15/12/1852,1871,Gewandhaus Orchestra (Leipzig),London
+225,Emilie Mayer,mauris enim leo,27/10/1894,1879,Gürzenich Orchestra Cologne,Weimar
+226,Louise Farrenc,vulputate nonummy maecenas tincidunt,23/12/1872,1893,Chicago Symphony Orchestra,Frankfurt
+227,Joseph Haydn,ante vestibulum ante ipsum,13/08/1850,1849,Hallé orchestra (Manchester),Paris
+228,Johann Joseph Abert,pede ullamcorper,23/08/1844,1849,Weimar Hofkapelle,Cologne
+229,Julius Rietz,in eleifend quam a,21/02/1846,1898,Gürzenich Orchestra Cologne,Leipzig
+230,Louis Spohr,nulla mollis,21/01/1846,1875,Weimar Hofkapelle,Vienna
+231,Louis Spohr,lacinia eget,07/01/1879,1897,Weimar Hofkapelle,Chicago
+232,Jacob Rosenhain,magnis dis parturient,25/05/1883,1898,Chicago Symphony Orchestra,London
+233,Gustav Mahler,morbi a ipsum,12/10/1859,1866,Vienna Philharmonic,Berlin
+234,Andreas Romberg,eget nunc,18/08/1858,1893,Vienna Philharmonic,Vienna
+235,Johannes Brahms,malesuada in imperdiet et,15/01/1844,1857,Weimar Hofkapelle,Chicago
+236,Anton Rubinstein,nulla nunc,15/12/1899,1882,Chicago Symphony Orchestra,Weimar
+237,George Macfarren,nulla tempus vivamus in,07/12/1892,1879,Gewandhaus Orchestra (Leipzig),New York
+238,Giovanni Sgambati,vivamus tortor duis mattis,23/07/1869,1855,Boston Symphony Orchestra,Boston
+239,Gustav Mahler,platea dictumst maecenas,21/03/1844,1852,Gewandhaus Orchestra (Leipzig),Vienna
+240,Ernst Pauer,volutpat sapien,26/05/1890,1867,Chicago Symphony Orchestra,New York
+241,Cipriani Potter,proin at turpis,29/11/1845,1840,Boston Symphony Orchestra,Cologne
+242,Cipriani Potter,eget tincidunt eget,31/10/1855,1851,Crystal Palace orchestra (London),Paris
+243,Ferdinand David,neque sapien placerat ante,26/10/1865,1844,Gewandhaus Orchestra (Leipzig),Vienna
+244,Ferdinand Hiller,nulla suspendisse potenti,02/06/1851,1883,Crystal Palace orchestra (London),Chicago
+245,Ferdinand Ries,vestibulum proin,09/02/1870,1873,Vienna Philharmonic,New York
+246,Jacob Rosenhain,ac diam cras,21/11/1896,1844,Hallé orchestra (Manchester),Manchester
+247,Ferdinand David,odio justo,10/02/1842,1876,London Philharmonic,London
+248,Cesar Franck,mauris non ligula pellentesque,31/05/1865,1853,London Philharmonic,New York
+249,Franz Schubert,at turpis donec posuere,07/08/1874,1856,Weimar Hofkapelle,Manchester
+250,Zdenko Fibich,at turpis a pede,04/08/1881,1893,London Philharmonic,Boston
+251,Robert Volkmann,nisi venenatis,28/10/1840,1865,Gürzenich Orchestra Cologne,Cologne
+252,Charles Lucas,tristique est et,29/04/1893,1879,Gürzenich Orchestra Cologne,New York
+253,Anton Rubinstein,morbi non quam nec,09/11/1848,1896,Chicago Symphony Orchestra,Berlin
+254,Giovanni Pacini,at feugiat non pretium,25/02/1896,1853,Crystal Palace orchestra (London),Paris
+255,Sigismund Ritter von Neukomm,non velit nec,04/11/1844,1891,Berlin Philharmonic,Manchester
+256,Gustav Mahler,id luctus,15/09/1884,1857,Gewandhaus Orchestra (Leipzig),Leipzig
+257,Louis Spohr,ac enim,04/01/1880,1886,Gewandhaus Orchestra (Leipzig),Paris
+258,Franz Schubert,potenti in eleifend quam,14/11/1846,1855,New York Philharmonic,Berlin
+259,Sigismund Ritter von Neukomm,sed justo,13/04/1850,1848,Vienna Philharmonic,New York
+260,Robert Volkmann,nam nulla integer pede,06/06/1897,1877,New York Philharmonic,Manchester
+261,Ferdinand David,erat eros,10/11/1859,1896,Hallé orchestra (Manchester),New York
+262,Franz Lachner,in leo,16/07/1885,1840,Hallé orchestra (Manchester),Vienna
+263,Hermann Bischoff,luctus et ultrices posuere,12/05/1896,1865,Vienna Philharmonic,Vienna
+264,Hermann Goetz,eu tincidunt,20/11/1853,1859,Berlin Philharmonic,New York
+265,Hermann Bischoff,donec posuere metus vitae,17/12/1859,1872,Weimar Hofkapelle,Leipzig
+266,Giovanni Pacini,non velit donec,21/05/1884,1870,Vienna Philharmonic,Chicago
+267,Johannes Brahms,ipsum primis in faucibus,20/10/1854,1865,Gewandhaus Orchestra (Leipzig),Frankfurt
+268,Franz Lachner,sollicitudin vitae consectetuer eget,13/12/1898,1872,New York Philharmonic,Boston
+269,Ernst Pauer,ultrices mattis,06/11/1884,1900,Chicago Symphony Orchestra,Frankfurt
+270,Ferdinand Ries,imperdiet et,19/12/1856,1842,New York Philharmonic,Leipzig
+271,Cesar Franck,est donec odio justo,04/04/1875,1876,Boston Symphony Orchestra,Weimar
+272,Karl Goldmark,aliquet maecenas leo,13/04/1848,1887,Boston Symphony Orchestra,Paris
+273,Georges Onslow,a libero nam dui,08/06/1893,1860,Gewandhaus Orchestra (Leipzig),Manchester
+274,Louis Spohr,elit proin,21/07/1890,1864,Berlin Philharmonic,Frankfurt
+275,Johannes Brahms,primis in faucibus orci,16/10/1886,1855,London Philharmonic,London
+276,Johannes Brahms,tempus vivamus,28/06/1889,1894,Gewandhaus Orchestra (Leipzig),Leipzig
+277,Giovanni Sgambati,etiam pretium iaculis justo,16/05/1859,1887,Gewandhaus Orchestra (Leipzig),Vienna
+278,Johann Friedrich Kittl,at nunc,03/05/1885,1875,Vienna Philharmonic,Boston
+279,Niels Gade,in hac habitasse platea,30/07/1844,1849,Vienna Philharmonic,Manchester
+280,Félicien David,penatibus et magnis dis,14/12/1883,1850,Berlin Philharmonic,Frankfurt
+281,William Sterndale Bennett,curae nulla dapibus dolor,24/01/1846,1847,Boston Symphony Orchestra,Leipzig
+282,Karl Goldmark,amet turpis elementum ligula,08/04/1853,1862,Vienna Philharmonic,Manchester
+283,Giovanni Pacini,velit id pretium,15/03/1889,1898,Boston Symphony Orchestra,Manchester
+284,Giovanni Pacini,in lectus,01/05/1867,1885,Berlin Philharmonic,New York
+285,William Sterndale Bennett,eu est,01/04/1894,1864,Chicago Symphony Orchestra,Leipzig
+286,Ferdinand Hiller,dui luctus rutrum,27/04/1852,1855,Weimar Hofkapelle,Vienna
+287,Johann Joseph Abert,erat volutpat in congue,01/11/1879,1885,Berlin Philharmonic,Frankfurt
+288,Hermann Bischoff,bibendum imperdiet,29/11/1872,1882,Chicago Symphony Orchestra,Chicago
+289,Anton Bruckner,rutrum ac,28/12/1884,1849,Vienna Philharmonic,Vienna
+290,Hermann Goetz,sapien non mi,08/07/1887,1867,Frankfurt Museumsorchester,Manchester
+291,Thomas Täglichsbeck,donec semper,17/04/1877,1874,Gürzenich Orchestra Cologne,Cologne
+292,Niels Gade,orci nullam,18/06/1876,1886,Chicago Symphony Orchestra,Vienna
+293,Frederic Cowen,fermentum justo,15/04/1887,1848,New York Philharmonic,Cologne
+294,George Macfarren,ridiculus mus,15/04/1840,1880,Crystal Palace orchestra (London),Manchester
+295,Sigismund Ritter von Neukomm,posuere nonummy integer,02/04/1848,1896,London Philharmonic,Weimar
+296,Giovanni Sgambati,eget eleifend,16/05/1847,1855,Frankfurt Museumsorchester,New York
+297,Zdenko Fibich,sagittis sapien,04/03/1848,1892,Gürzenich Orchestra Cologne,Manchester
+298,Johann Joseph Abert,pretium quis lectus,16/11/1856,1896,Frankfurt Museumsorchester,Frankfurt
+299,Anton Bruckner,venenatis non,27/08/1869,1884,Vienna Philharmonic,Cologne
+300,Charles Lucas,sapien dignissim,29/04/1863,1869,Frankfurt Museumsorchester,Vienna
+301,Giovanni Sgambati,eu massa,09/06/1863,1857,Berlin Philharmonic,Cologne
+302,Frederic Cowen,feugiat non,07/04/1842,1890,Boston Symphony Orchestra,Weimar
+303,Joseph Haydn,congue elementum in,06/09/1868,1865,Vienna Philharmonic,Cologne
+304,Karl Goldmark,leo odio,29/06/1890,1878,Weimar Hofkapelle,Leipzig
+305,Johannes Brahms,luctus tincidunt nulla,23/10/1848,1856,Chicago Symphony Orchestra,Leipzig
+306,Charles Lucas,mauris non ligula pellentesque,19/11/1846,1899,Weimar Hofkapelle,Paris
+307,Hermann Bischoff,nibh in,11/03/1860,1872,Crystal Palace orchestra (London),Frankfurt
+308,George Macfarren,eget orci,11/08/1879,1854,Berlin Philharmonic,Chicago
+309,Frederic Cowen,sed augue,23/11/1840,1878,London Philharmonic,Chicago
+310,Cipriani Potter,consectetuer adipiscing,25/09/1867,1855,New York Philharmonic,Leipzig
+311,Johann Friedrich Kittl,orci eget,29/07/1898,1882,New York Philharmonic,Chicago
+312,Cesar Franck,libero non,14/09/1846,1859,Hallé orchestra (Manchester),Frankfurt
+313,Hermann Bischoff,donec ut dolor morbi,22/03/1897,1851,New York Philharmonic,Cologne
+314,William Crotch,consectetuer adipiscing elit,19/04/1880,1894,New York Philharmonic,Weimar
+315,Cesar Franck,in felis eu,28/10/1848,1867,Gewandhaus Orchestra (Leipzig),Cologne
+316,Joachim Raff,curabitur gravida nisi,15/03/1863,1888,Frankfurt Museumsorchester,London
+317,Zdenko Fibich,euismod scelerisque quam turpis,08/05/1894,1883,Vienna Philharmonic,Frankfurt
+318,Christian Sinding,in lectus pellentesque at,17/09/1893,1867,Crystal Palace orchestra (London),Boston
+319,Karl Goldmark,non interdum in ante,18/03/1896,1842,Gürzenich Orchestra Cologne,Paris
+320,Joachim Raff,adipiscing molestie,12/06/1854,1845,Boston Symphony Orchestra,Paris
+321,Charles Lucas,nunc vestibulum,11/11/1846,1875,Gürzenich Orchestra Cologne,Cologne
+322,Charles Lucas,gravida nisi,15/04/1868,1882,Gürzenich Orchestra Cologne,Leipzig
+323,Christian Sinding,erat tortor sollicitudin mi,13/11/1886,1869,London Philharmonic,Boston
+324,Robert Volkmann,odio porttitor id consequat,12/10/1892,1881,Frankfurt Museumsorchester,New York
+325,Robert Volkmann,ornare imperdiet,19/04/1888,1885,Gürzenich Orchestra Cologne,Berlin
+326,George Macfarren,tellus nisi eu orci,13/04/1876,1883,Gewandhaus Orchestra (Leipzig),Cologne
+327,Hermann Bischoff,duis at,16/02/1900,1871,Vienna Philharmonic,New York
+328,Ferdinand Ries,quis augue luctus tincidunt,08/05/1883,1885,New York Philharmonic,Chicago
+329,Robert Schumann,enim in tempor turpis,20/04/1844,1842,New York Philharmonic,Frankfurt
+330,George Macfarren,semper sapien,11/11/1881,1869,Frankfurt Museumsorchester,Frankfurt
+331,Andreas Romberg,congue risus semper porta,04/11/1897,1891,Vienna Philharmonic,Paris
+332,George Macfarren,ante ipsum,08/03/1860,1892,Crystal Palace orchestra (London),Cologne
+333,Louis Spohr,proin eu mi nulla,23/01/1856,1851,Gewandhaus Orchestra (Leipzig),Frankfurt
+334,Johann Wenzel Kalliwoda,et eros vestibulum ac,29/07/1846,1853,Frankfurt Museumsorchester,Frankfurt
+335,Thomas Täglichsbeck,ut dolor,25/02/1876,1884,Hallé orchestra (Manchester),New York
+336,Giovanni Sgambati,et tempus,21/08/1880,1891,Berlin Philharmonic,Boston
+337,Charles Lucas,in blandit ultrices,16/05/1895,1878,Frankfurt Museumsorchester,New York
+338,Thomas Täglichsbeck,sem fusce consequat,16/05/1870,1878,New York Philharmonic,Paris
+339,William Crotch,vulputate justo in blandit,12/05/1899,1840,Gürzenich Orchestra Cologne,Berlin
+340,Georges Onslow,sed magna at nunc,29/04/1850,1865,Boston Symphony Orchestra,New York
+341,Joachim Raff,erat vestibulum sed magna,15/02/1882,1868,Weimar Hofkapelle,New York
+342,Franz Schubert,eu interdum eu tincidunt,21/01/1855,1863,Gewandhaus Orchestra (Leipzig),Manchester
+343,Georges Onslow,praesent lectus vestibulum,14/08/1897,1868,Frankfurt Museumsorchester,Vienna
+344,Bernhard Molique,dapibus nulla suscipit ligula,10/11/1869,1842,Weimar Hofkapelle,New York
+345,Emilie Mayer,justo morbi,13/10/1843,1855,Boston Symphony Orchestra,Weimar
+346,Anton Bruckner,ac nulla sed vel,11/09/1848,1898,Berlin Philharmonic,Frankfurt
+347,Johann Wenzel Kalliwoda,imperdiet nullam orci pede,10/02/1876,1852,Gewandhaus Orchestra (Leipzig),Boston
+348,Franz Lachner,nunc proin at turpis,17/01/1857,1878,London Philharmonic,Berlin
+349,Andreas Romberg,in faucibus,12/10/1862,1876,Boston Symphony Orchestra,Berlin
+350,Franz Liszt,magna bibendum imperdiet nullam,07/01/1845,1895,London Philharmonic,London
+351,Robert Schumann,eu massa,04/03/1841,1843,Hallé orchestra (Manchester),Chicago
+352,Robert Schumann,odio porttitor id consequat,20/10/1849,1855,Weimar Hofkapelle,Berlin
+353,Jacob Rosenhain,a odio in hac,02/12/1883,1882,Frankfurt Museumsorchester,Vienna
+354,Christian Sinding,fermentum donec ut mauris,02/11/1841,1848,Crystal Palace orchestra (London),Weimar
+355,Zdenko Fibich,ipsum ac,03/10/1856,1882,Weimar Hofkapelle,Berlin
+356,Thomas Täglichsbeck,hac habitasse platea dictumst,04/06/1870,1855,Weimar Hofkapelle,Frankfurt
+357,Anton Rubinstein,bibendum imperdiet,17/03/1872,1864,Frankfurt Museumsorchester,Leipzig
+358,Sigismund Ritter von Neukomm,sociis natoque penatibus,23/05/1846,1852,Frankfurt Museumsorchester,London
+359,Emilie Mayer,tortor sollicitudin mi sit,26/12/1887,1868,Boston Symphony Orchestra,Weimar
+360,Johann Friedrich Kittl,molestie sed,28/06/1866,1900,Crystal Palace orchestra (London),New York
+361,Franz Liszt,natoque penatibus,04/10/1860,1860,Gürzenich Orchestra Cologne,Paris
+362,Ferdinand Hiller,augue quam,04/03/1893,1893,Boston Symphony Orchestra,Paris
+363,Anton Rubinstein,cras non,13/02/1859,1853,Berlin Philharmonic,Paris
+364,Franz Lachner,eget semper rutrum,23/10/1855,1846,Gewandhaus Orchestra (Leipzig),Manchester
+365,Johann Ritter von Herbeck,integer ac,17/08/1894,1888,Vienna Philharmonic,Berlin
+366,Joachim Raff,vitae mattis,08/12/1875,1881,Crystal Palace orchestra (London),Chicago
+367,Johann Friedrich Kittl,ut tellus,10/08/1881,1893,Crystal Palace orchestra (London),Leipzig
+368,Cesar Franck,suspendisse ornare consequat,18/01/1881,1846,Hallé orchestra (Manchester),Berlin
+369,George Macfarren,sit amet diam in,03/08/1879,1885,Berlin Philharmonic,Weimar
+370,Charles-Camille Saint-Saëns,fusce posuere,19/04/1858,1876,Weimar Hofkapelle,Chicago
+371,Julius Rietz,nulla sed accumsan felis,27/09/1867,1881,Weimar Hofkapelle,Chicago
+372,Johann Joseph Abert,a suscipit,10/11/1865,1895,New York Philharmonic,Frankfurt
+373,Luigi Cherubini,primis in faucibus orci,25/11/1857,1844,Berlin Philharmonic,Berlin
+374,Johannes Brahms,luctus et ultrices posuere,15/07/1852,1871,Gewandhaus Orchestra (Leipzig),Manchester
+375,Charles-Camille Saint-Saëns,vitae consectetuer,26/11/1881,1888,Boston Symphony Orchestra,Vienna
+376,Johann Joseph Abert,orci nullam molestie,13/05/1895,1874,Hallé orchestra (Manchester),Cologne
+377,Franz Schubert,diam nam,26/02/1858,1844,Boston Symphony Orchestra,Frankfurt
+378,Louis Spohr,maecenas tristique est,08/12/1880,1887,Hallé orchestra (Manchester),Boston
+379,Georges Onslow,felis donec,20/02/1863,1890,Hallé orchestra (Manchester),Boston
+380,Luigi Cherubini,sed vestibulum sit amet,27/12/1892,1855,Weimar Hofkapelle,London
+381,Robert Schumann,lorem integer tincidunt ante,06/05/1866,1862,New York Philharmonic,Berlin
+382,Anton Bruckner,vel accumsan tellus nisi,21/05/1877,1882,Crystal Palace orchestra (London),Cologne
+383,Adolf Hesse,amet turpis elementum,07/01/1862,1893,Gewandhaus Orchestra (Leipzig),Chicago
+384,Johannes Brahms,potenti cras,29/01/1870,1865,New York Philharmonic,Vienna
+385,George Macfarren,nisi vulputate nonummy,01/04/1898,1846,London Philharmonic,Cologne
+386,Charles-Camille Saint-Saëns,congue risus semper,10/01/1882,1886,Frankfurt Museumsorchester,Vienna
+387,Franz Lachner,nunc vestibulum ante,17/12/1841,1841,Chicago Symphony Orchestra,Manchester
+388,William Crotch,viverra eget,07/05/1870,1845,London Philharmonic,Weimar
+389,William Sterndale Bennett,nec euismod scelerisque quam,30/03/1846,1840,Crystal Palace orchestra (London),New York
+390,Louis Spohr,nisi venenatis tristique fusce,17/10/1843,1900,London Philharmonic,Manchester
+391,Cipriani Potter,hendrerit at,29/05/1876,1862,New York Philharmonic,Vienna
+392,Joseph Haydn,sapien arcu sed augue,03/11/1865,1900,Frankfurt Museumsorchester,Vienna
+393,Christian Sinding,justo sollicitudin,01/06/1887,1880,Chicago Symphony Orchestra,Weimar
+394,Robert Volkmann,accumsan tortor quis,26/03/1887,1840,London Philharmonic,Weimar
+395,Cesar Franck,nulla quisque arcu,12/02/1844,1853,Weimar Hofkapelle,Chicago
+396,Sigismund Ritter von Neukomm,ante vel ipsum,29/08/1883,1879,Vienna Philharmonic,New York
+397,Louis Spohr,orci luctus et,18/08/1848,1880,London Philharmonic,Manchester
+398,Niels Gade,sit amet,29/10/1851,1845,Weimar Hofkapelle,Weimar
+399,Cesar Franck,fusce posuere,01/01/1898,1873,Berlin Philharmonic,Cologne
+400,Giovanni Pacini,fusce congue,23/03/1874,1870,London Philharmonic,Manchester
+401,Zdenko Fibich,mauris laoreet,27/09/1888,1883,Hallé orchestra (Manchester),Berlin
+402,Anton Rubinstein,erat volutpat in congue,28/11/1850,1895,New York Philharmonic,Paris
+403,Louise Farrenc,est lacinia,17/05/1890,1883,Gürzenich Orchestra Cologne,New York
+404,Johann Joseph Abert,purus aliquet at feugiat,22/06/1869,1861,Chicago Symphony Orchestra,New York
+405,Giovanni Pacini,ligula pellentesque ultrices phasellus,05/06/1886,1883,New York Philharmonic,Weimar
+406,Johann Wenzel Kalliwoda,nulla suscipit,29/08/1856,1864,Chicago Symphony Orchestra,Chicago
+407,Félicien David,ac tellus,22/12/1844,1875,Frankfurt Museumsorchester,Weimar
+408,Sigismund Ritter von Neukomm,posuere nonummy integer,26/11/1885,1854,Gürzenich Orchestra Cologne,Boston
+409,Hector Berlioz,odio odio elementum,12/02/1884,1877,Chicago Symphony Orchestra,Berlin
+410,Robert Volkmann,nisl nunc nisl,24/05/1897,1866,Frankfurt Museumsorchester,Boston
+411,Niels Gade,pharetra magna vestibulum,20/03/1859,1874,Gewandhaus Orchestra (Leipzig),Weimar
+412,Louis Spohr,quis tortor id,26/10/1885,1869,Frankfurt Museumsorchester,Frankfurt
+413,Charles-François Gounod,aliquam quis,22/09/1885,1878,New York Philharmonic,Leipzig
+414,Louis Spohr,proin risus,12/09/1871,1899,Frankfurt Museumsorchester,Chicago
+415,Joseph Haydn,sed tristique,11/07/1863,1865,Frankfurt Museumsorchester,Berlin
+416,Christian Sinding,consequat varius integer ac,25/04/1890,1880,New York Philharmonic,Weimar
+417,Franz Liszt,duis at,16/04/1899,1886,Weimar Hofkapelle,Frankfurt
+418,Franz Schubert,sit amet eros,15/04/1848,1867,Gewandhaus Orchestra (Leipzig),Manchester
+419,Franz Lachner,lacinia aenean,01/04/1883,1881,Frankfurt Museumsorchester,Boston
+420,Johann Friedrich Kittl,ante ipsum,10/01/1857,1887,New York Philharmonic,Cologne
+421,Ferdinand Ries,luctus cum sociis,15/10/1861,1869,London Philharmonic,Weimar
+422,Zdenko Fibich,proin interdum mauris,14/06/1871,1862,Hallé orchestra (Manchester),Leipzig
+423,Félicien David,mi nulla ac enim,15/10/1841,1872,London Philharmonic,Berlin
+424,Hermann Bischoff,eget elit sodales,21/12/1866,1881,Berlin Philharmonic,Cologne
+425,Ferdinand Ries,nonummy integer non velit,27/01/1883,1853,Berlin Philharmonic,Frankfurt
+426,Félicien David,integer pede justo,28/02/1874,1867,London Philharmonic,Cologne
+427,Louis Spohr,vel pede morbi,13/02/1882,1883,Gürzenich Orchestra Cologne,Boston
+428,Sigismund Ritter von Neukomm,ante ipsum primis,21/05/1844,1851,Chicago Symphony Orchestra,Boston
+429,Ferdinand Hiller,ipsum primis,31/07/1862,1845,Gewandhaus Orchestra (Leipzig),Berlin
+430,Luigi Cherubini,a nibh,24/03/1847,1859,Crystal Palace orchestra (London),Frankfurt
+431,Ernst Pauer,sodales sed tincidunt eu,29/01/1879,1847,Boston Symphony Orchestra,Manchester
+432,Zdenko Fibich,mauris viverra diam vitae,18/01/1843,1853,Frankfurt Museumsorchester,Vienna
+433,Andreas Romberg,diam id,28/07/1850,1873,Frankfurt Museumsorchester,Chicago
+434,Joachim Raff,nisi venenatis tristique fusce,06/09/1847,1854,Frankfurt Museumsorchester,Leipzig
+435,Jacob Rosenhain,venenatis turpis enim blandit,14/05/1855,1884,Chicago Symphony Orchestra,Weimar
+436,Franz Schubert,id sapien in,26/01/1899,1877,Gürzenich Orchestra Cologne,Boston
+437,Charles Lucas,justo nec condimentum,23/07/1844,1891,London Philharmonic,Frankfurt
+438,Hermann Goetz,vitae nisl aenean lectus,28/10/1861,1892,Crystal Palace orchestra (London),London
+439,Cesar Franck,turpis sed,26/08/1868,1858,Vienna Philharmonic,Weimar
+440,Johann Wenzel Kalliwoda,aliquam lacus,09/02/1841,1865,Crystal Palace orchestra (London),Cologne
+441,Giovanni Sgambati,nisl ut volutpat sapien,08/04/1856,1870,Vienna Philharmonic,Frankfurt
+442,Thomas Täglichsbeck,aliquam sit amet,12/06/1865,1878,Gewandhaus Orchestra (Leipzig),Weimar
+443,Ferdinand Ries,quis orci,06/06/1896,1880,Hallé orchestra (Manchester),Weimar
+444,Karl Goldmark,integer non,26/02/1865,1881,Gewandhaus Orchestra (Leipzig),Weimar
+445,Cesar Franck,quis turpis sed ante,03/12/1862,1894,Chicago Symphony Orchestra,London
+446,Louise Farrenc,non ligula pellentesque ultrices,05/03/1868,1850,Berlin Philharmonic,Boston
+447,Luigi Cherubini,cursus id turpis,02/03/1896,1862,New York Philharmonic,Paris
+448,Julius Rietz,integer non velit donec,15/08/1858,1864,Chicago Symphony Orchestra,London
+449,William Crotch,in hac,17/05/1840,1851,New York Philharmonic,Boston
+450,Johannes Brahms,eget vulputate ut ultrices,11/11/1865,1885,New York Philharmonic,Cologne
+451,Emilie Mayer,ultrices posuere cubilia,26/07/1855,1877,Hallé orchestra (Manchester),Chicago
+452,William Crotch,vulputate elementum nullam varius,30/03/1881,1860,Crystal Palace orchestra (London),Chicago
+453,Cipriani Potter,nonummy maecenas,23/01/1864,1894,Chicago Symphony Orchestra,Boston
+454,Karl Goldmark,duis mattis egestas,11/02/1898,1900,New York Philharmonic,Weimar
+455,Johann Ritter von Herbeck,sed accumsan felis,27/03/1877,1855,Berlin Philharmonic,Berlin
+456,Robert Schumann,morbi porttitor,06/09/1894,1867,London Philharmonic,Boston
+457,Joseph Wölfl,luctus et ultrices posuere,20/05/1875,1870,Frankfurt Museumsorchester,London
+458,Louis Spohr,volutpat sapien arcu,19/04/1875,1857,Gürzenich Orchestra Cologne,New York
+459,Joseph Wölfl,sed nisl nunc,30/01/1841,1873,Gewandhaus Orchestra (Leipzig),Boston
+460,Niels Gade,nec sem duis,31/01/1866,1894,Frankfurt Museumsorchester,New York
+461,Emilie Mayer,mauris non ligula,11/03/1871,1869,Gewandhaus Orchestra (Leipzig),Boston
+462,Robert Schumann,a ipsum integer a,02/10/1871,1851,Gürzenich Orchestra Cologne,Boston
+463,Christian Sinding,phasellus in felis donec,30/12/1880,1843,Gürzenich Orchestra Cologne,Paris
+464,Joseph Haydn,diam neque vestibulum eget,02/03/1881,1884,Boston Symphony Orchestra,Chicago
+465,Cipriani Potter,quam pede,19/08/1854,1890,Chicago Symphony Orchestra,London
+466,Luigi Cherubini,id ornare imperdiet,13/06/1846,1889,Frankfurt Museumsorchester,Manchester
+467,Sigismund Ritter von Neukomm,enim in,16/02/1892,1844,Berlin Philharmonic,Weimar
+468,Franz Lachner,tellus nisi eu,29/01/1892,1849,Berlin Philharmonic,Berlin
+469,Luigi Cherubini,lobortis vel dapibus,17/07/1853,1895,Boston Symphony Orchestra,Chicago
+470,Giovanni Pacini,nisl nunc,30/06/1899,1898,London Philharmonic,Leipzig
+471,Jacob Rosenhain,morbi porttitor,17/03/1893,1874,Berlin Philharmonic,Cologne
+472,Joseph Haydn,bibendum imperdiet,08/10/1849,1852,Gewandhaus Orchestra (Leipzig),Paris
+473,Ferdinand Ries,lacinia aenean sit amet,17/02/1842,1871,New York Philharmonic,Leipzig
+474,Hermann Goetz,enim in,14/04/1880,1845,London Philharmonic,Manchester
+475,Georges Onslow,cras pellentesque volutpat,18/04/1895,1865,Gürzenich Orchestra Cologne,New York
+476,Joseph Wölfl,ornare consequat,13/09/1867,1875,Frankfurt Museumsorchester,Vienna
+477,Luigi Cherubini,ultrices vel augue,26/11/1859,1900,New York Philharmonic,Cologne
+478,Andreas Romberg,pede ullamcorper augue,26/06/1843,1860,Frankfurt Museumsorchester,Leipzig
+479,Joseph Haydn,nullam sit amet,18/01/1898,1884,Vienna Philharmonic,Berlin
+480,Charles Lucas,commodo placerat,26/02/1890,1875,Berlin Philharmonic,Leipzig
+481,Gustav Mahler,non ligula,03/12/1887,1892,Hallé orchestra (Manchester),Paris
+482,Hermann Goetz,dui proin leo odio,03/11/1846,1847,Vienna Philharmonic,Manchester
+483,William Sterndale Bennett,mauris vulputate elementum,17/07/1861,1867,Vienna Philharmonic,London
+484,Johann Joseph Abert,lorem quisque ut,02/04/1892,1854,Crystal Palace orchestra (London),Chicago
+485,Emilie Mayer,proin eu,17/08/1877,1869,Vienna Philharmonic,Frankfurt
+486,Franz Lachner,mauris laoreet,03/12/1851,1892,Vienna Philharmonic,Frankfurt
+487,Sigismund Ritter von Neukomm,ultrices posuere cubilia,04/03/1875,1869,Chicago Symphony Orchestra,Leipzig
+488,Ferdinand Ries,ultrices libero non,02/09/1844,1842,Frankfurt Museumsorchester,Vienna
+489,Adolf Hesse,nulla ut,26/11/1872,1878,London Philharmonic,Leipzig
+490,Johannes Brahms,enim in tempor turpis,14/06/1867,1869,Frankfurt Museumsorchester,Leipzig
+491,Louise Farrenc,habitasse platea,02/01/1842,1841,Hallé orchestra (Manchester),Leipzig
+492,Hermann Bischoff,fringilla rhoncus,16/03/1862,1845,Berlin Philharmonic,Chicago
+493,Robert Volkmann,praesent id massa id,26/10/1893,1890,New York Philharmonic,Berlin
+494,Luigi Cherubini,non velit nec,11/12/1858,1890,London Philharmonic,Boston
+495,Andreas Romberg,ullamcorper purus sit amet,15/08/1867,1875,Chicago Symphony Orchestra,Berlin
+496,Julius Zellner,id pretium,09/08/1896,1856,Weimar Hofkapelle,Chicago
+497,William Sterndale Bennett,imperdiet sapien,21/12/1883,1884,Vienna Philharmonic,London
+498,Christian Sinding,varius integer ac leo,02/04/1864,1860,Boston Symphony Orchestra,Paris
+499,Franz Liszt,in felis,12/05/1886,1853,Boston Symphony Orchestra,Vienna
+500,Johann Wenzel Kalliwoda,sed justo,11/09/1867,1859,Gürzenich Orchestra Cologne,Vienna
+501,Emilie Mayer,congue diam id ornare,28/04/1875,1885,Chicago Symphony Orchestra,Frankfurt
+502,Johannes Brahms,aenean sit amet,19/08/1850,1857,Gürzenich Orchestra Cologne,Leipzig
+503,Ferdinand David,sed augue aliquam,16/07/1897,1890,Chicago Symphony Orchestra,Manchester
+504,Johann Wenzel Kalliwoda,orci eget orci vehicula,22/07/1894,1870,Gürzenich Orchestra Cologne,Cologne
+505,Charles-Camille Saint-Saëns,eu nibh quisque,16/03/1896,1853,Gürzenich Orchestra Cologne,Manchester
+506,Gustav Mahler,orci vehicula,16/09/1884,1871,New York Philharmonic,Paris
+507,Zdenko Fibich,nibh fusce lacus,12/07/1870,1887,Weimar Hofkapelle,Leipzig
+508,Ferdinand David,sodales sed tincidunt eu,08/09/1855,1867,Hallé orchestra (Manchester),Leipzig
+509,Jacob Rosenhain,posuere nonummy integer non,12/11/1845,1849,Vienna Philharmonic,New York
+510,Félicien David,mauris vulputate,14/05/1849,1868,Boston Symphony Orchestra,Chicago
+511,Thomas Täglichsbeck,integer ac neque duis,15/08/1888,1869,Frankfurt Museumsorchester,Weimar
+512,Frederic Cowen,lacinia aenean,17/07/1860,1872,Chicago Symphony Orchestra,New York
+513,Charles-François Gounod,eros vestibulum ac est,24/01/1889,1850,Gewandhaus Orchestra (Leipzig),Paris
+514,Sigismund Ritter von Neukomm,dolor sit amet,28/07/1865,1871,London Philharmonic,New York
+515,Johann Ritter von Herbeck,leo pellentesque,15/02/1891,1874,Hallé orchestra (Manchester),Cologne
+516,Hermann Bischoff,tempor turpis nec,14/03/1893,1861,Frankfurt Museumsorchester,Paris
+517,Johannes Brahms,morbi vel,27/02/1880,1874,Hallé orchestra (Manchester),Paris
+518,Julius Zellner,neque aenean auctor gravida,01/10/1856,1885,London Philharmonic,Paris
+519,Karl Goldmark,tellus nisi eu orci,06/08/1892,1871,Gürzenich Orchestra Cologne,Paris
+520,Adolf Hesse,sit amet erat nulla,20/12/1859,1877,London Philharmonic,Leipzig
+521,Hermann Bischoff,nisi at nibh in,21/02/1868,1868,Vienna Philharmonic,Boston
+522,Frederic Cowen,nunc purus phasellus in,10/01/1890,1888,Berlin Philharmonic,Manchester
+523,George Macfarren,amet erat nulla tempus,03/01/1865,1877,Crystal Palace orchestra (London),New York
+524,Charles-François Gounod,mattis odio,17/10/1879,1889,Vienna Philharmonic,Frankfurt
+525,Bernhard Molique,ultricies eu nibh,16/10/1897,1894,Gewandhaus Orchestra (Leipzig),Cologne
+526,Joseph Haydn,et ultrices posuere cubilia,04/07/1845,1885,Frankfurt Museumsorchester,Leipzig
+527,Ferdinand Hiller,justo in,18/09/1895,1876,New York Philharmonic,Vienna
+528,Georges Onslow,turpis enim,29/11/1858,1863,Chicago Symphony Orchestra,London
+529,Anton Bruckner,vel accumsan,05/04/1849,1854,Gewandhaus Orchestra (Leipzig),Paris
+530,Julius Zellner,pede malesuada in imperdiet,05/11/1847,1880,Boston Symphony Orchestra,London
+531,Julius Zellner,ac tellus,05/09/1880,1863,Chicago Symphony Orchestra,Chicago
+532,Ferdinand Hiller,fusce consequat nulla nisl,27/04/1891,1881,Vienna Philharmonic,New York
+533,Cipriani Potter,cubilia curae mauris,17/06/1861,1849,Frankfurt Museumsorchester,Weimar
+534,Robert Volkmann,lorem integer,04/06/1869,1898,Gürzenich Orchestra Cologne,Berlin
+535,Ferdinand Hiller,eu pede,07/12/1890,1844,Hallé orchestra (Manchester),Paris
+536,Georges Onslow,est donec odio,13/09/1853,1877,New York Philharmonic,Berlin
+537,Giovanni Pacini,rutrum neque,07/08/1841,1840,New York Philharmonic,Chicago
+538,Cesar Franck,dolor sit amet,22/01/1897,1887,London Philharmonic,Berlin
+539,Julius Rietz,consectetuer adipiscing,29/07/1877,1865,Frankfurt Museumsorchester,New York
+540,Robert Volkmann,cras mi pede malesuada,16/11/1891,1846,Berlin Philharmonic,London
+541,Ferdinand David,consequat varius integer,02/10/1848,1855,Boston Symphony Orchestra,Berlin
+542,Robert Schumann,parturient montes,01/10/1894,1899,Berlin Philharmonic,London
+543,Adolf Hesse,faucibus orci luctus,29/09/1897,1893,Gürzenich Orchestra Cologne,Chicago
+544,Andreas Romberg,magna ac,01/12/1880,1870,Weimar Hofkapelle,Cologne
+545,Hermann Bischoff,ipsum aliquam,19/04/1869,1852,Vienna Philharmonic,Paris
+546,Ferdinand Hiller,in faucibus orci,30/10/1856,1860,Berlin Philharmonic,Cologne
+547,Bernhard Molique,erat eros viverra,15/09/1851,1889,Vienna Philharmonic,Weimar
+548,Franz Schubert,fermentum justo nec,20/10/1852,1855,London Philharmonic,Paris
+549,Georges Onslow,consequat varius integer ac,04/02/1856,1868,Berlin Philharmonic,London
+550,Johann Ritter von Herbeck,quisque id justo sit,04/12/1866,1883,Weimar Hofkapelle,Boston
+551,Anton Rubinstein,nisl aenean lectus pellentesque,05/03/1874,1872,Boston Symphony Orchestra,Boston
+552,Zdenko Fibich,phasellus in,21/07/1847,1882,Vienna Philharmonic,Weimar
+553,Johannes Brahms,proin risus praesent lectus,27/11/1848,1846,Vienna Philharmonic,Manchester
+554,Christian Sinding,posuere felis sed lacus,28/11/1861,1855,Berlin Philharmonic,Cologne
+555,Johann Wenzel Kalliwoda,maecenas ut,29/09/1865,1893,London Philharmonic,New York
+556,Cesar Franck,tempus vivamus,22/12/1866,1888,Crystal Palace orchestra (London),Cologne
+557,Cesar Franck,lacus morbi,04/11/1869,1840,Berlin Philharmonic,Vienna
+558,Louis Spohr,nonummy maecenas tincidunt lacus,26/01/1874,1870,Weimar Hofkapelle,Berlin
+559,Anton Rubinstein,felis sed lacus,28/11/1894,1875,Frankfurt Museumsorchester,New York
+560,Robert Schumann,nulla suscipit ligula,12/06/1842,1898,Gürzenich Orchestra Cologne,New York
+561,Johann Friedrich Kittl,ultrices mattis,26/05/1890,1867,Berlin Philharmonic,London
+562,Ferdinand Ries,quis libero,04/04/1894,1866,Boston Symphony Orchestra,Leipzig
+563,Joseph Wölfl,quam sollicitudin,13/11/1874,1877,London Philharmonic,Berlin
+564,Robert Schumann,turpis adipiscing,18/07/1847,1883,Weimar Hofkapelle,Paris
+565,Johann Joseph Abert,vel sem sed sagittis,17/06/1852,1898,Weimar Hofkapelle,Manchester
+566,Emilie Mayer,convallis tortor risus,25/10/1878,1863,Weimar Hofkapelle,Vienna
+567,Charles-Camille Saint-Saëns,aliquet ultrices,30/08/1845,1868,Gewandhaus Orchestra (Leipzig),Chicago
+568,Frederic Cowen,ipsum praesent blandit,18/02/1892,1891,Boston Symphony Orchestra,Boston
+569,Adolf Hesse,molestie hendrerit at vulputate,05/07/1867,1886,Gürzenich Orchestra Cologne,Manchester
+570,Georges Onslow,dictumst etiam faucibus cursus,23/09/1857,1883,New York Philharmonic,London
+571,Andreas Romberg,luctus nec,21/02/1853,1880,London Philharmonic,Boston
+572,William Crotch,cubilia curae,21/10/1851,1897,Vienna Philharmonic,Vienna
+573,Louise Farrenc,cursus id,06/05/1850,1861,Hallé orchestra (Manchester),Boston
+574,Sigismund Ritter von Neukomm,imperdiet et commodo vulputate,30/11/1853,1890,New York Philharmonic,Vienna
+575,George Macfarren,nisl ut volutpat sapien,21/04/1880,1842,London Philharmonic,Chicago
+576,Franz Lachner,magnis dis,19/01/1859,1895,Boston Symphony Orchestra,New York
+577,Ferdinand David,ipsum integer,23/05/1860,1879,Frankfurt Museumsorchester,Paris
+578,William Crotch,laoreet ut rhoncus aliquet,01/01/1865,1841,Gürzenich Orchestra Cologne,Frankfurt
+579,Louis Spohr,id lobortis convallis,26/07/1852,1845,New York Philharmonic,Chicago
+580,Franz Lachner,venenatis tristique fusce,11/01/1874,1873,Chicago Symphony Orchestra,New York
+581,Cesar Franck,pretium nisl ut,03/06/1885,1853,London Philharmonic,London
+582,Luigi Cherubini,luctus et,06/11/1896,1893,Vienna Philharmonic,Frankfurt
+583,Hermann Bischoff,luctus tincidunt nulla,22/10/1870,1860,London Philharmonic,London
+584,Joseph Haydn,orci luctus et ultrices,11/10/1848,1896,Hallé orchestra (Manchester),Manchester
+585,Ferdinand Hiller,congue elementum in,14/09/1896,1893,Weimar Hofkapelle,London
+586,Joseph Wölfl,id ligula,20/07/1885,1858,Gewandhaus Orchestra (Leipzig),Frankfurt
+587,Louise Farrenc,auctor gravida sem praesent,28/06/1895,1891,New York Philharmonic,New York
+588,Robert Schumann,quam pede lobortis ligula,28/09/1865,1848,Gewandhaus Orchestra (Leipzig),London
+589,George Macfarren,augue quam,29/01/1892,1880,Weimar Hofkapelle,Cologne
+590,Franz Lachner,rhoncus aliquet,28/04/1873,1866,Weimar Hofkapelle,Berlin
+591,Charles-Camille Saint-Saëns,elit proin risus,25/04/1882,1842,Gürzenich Orchestra Cologne,Chicago
+592,Joachim Raff,metus sapien,07/09/1856,1850,New York Philharmonic,Paris
+593,Cesar Franck,integer a,02/04/1893,1853,Boston Symphony Orchestra,Vienna
+594,Christian Sinding,nullam porttitor,01/03/1890,1895,New York Philharmonic,Paris
+595,Franz Lachner,mattis nibh ligula,23/10/1892,1871,Gewandhaus Orchestra (Leipzig),Cologne
+596,Adolf Hesse,vestibulum sed magna,04/06/1840,1855,New York Philharmonic,Leipzig
+597,Anton Bruckner,erat volutpat,29/06/1876,1848,London Philharmonic,Paris
+598,Johann Joseph Abert,donec posuere metus vitae,22/06/1866,1882,Hallé orchestra (Manchester),Paris
+599,Bernhard Molique,nisl ut volutpat,26/05/1895,1879,Hallé orchestra (Manchester),Leipzig
+600,Ferdinand Hiller,dolor vel,23/09/1873,1878,New York Philharmonic,Weimar
+601,Joachim Raff,feugiat non,22/05/1840,1894,Gürzenich Orchestra Cologne,Berlin
+602,Ferdinand Ries,amet cursus id turpis,04/03/1894,1889,Gürzenich Orchestra Cologne,New York
+603,Hermann Goetz,nam dui proin leo,13/06/1894,1861,Weimar Hofkapelle,Leipzig
+604,Ferdinand David,ligula pellentesque ultrices phasellus,11/03/1856,1887,Berlin Philharmonic,Cologne
+605,Franz Liszt,vestibulum vestibulum ante,09/09/1890,1866,New York Philharmonic,Weimar
+606,Joseph Haydn,elementum eu interdum,17/10/1875,1844,Hallé orchestra (Manchester),Berlin
+607,Joachim Raff,ante vel ipsum praesent,26/07/1860,1842,Frankfurt Museumsorchester,Paris
+608,Andreas Romberg,quisque id,27/05/1893,1896,Gürzenich Orchestra Cologne,New York
+609,Johann Ritter von Herbeck,feugiat non,01/10/1849,1852,Gürzenich Orchestra Cologne,Vienna
+610,Anton Rubinstein,at ipsum ac,14/09/1862,1845,Berlin Philharmonic,Cologne
+611,Ferdinand Ries,eu mi,23/09/1870,1893,Frankfurt Museumsorchester,Cologne
+612,Félicien David,blandit non interdum in,16/08/1860,1899,Gewandhaus Orchestra (Leipzig),Vienna
+613,Johann Wenzel Kalliwoda,orci luctus,20/08/1897,1898,Gewandhaus Orchestra (Leipzig),Weimar
+614,Hermann Goetz,quis libero,06/01/1885,1851,Chicago Symphony Orchestra,Vienna
+615,Robert Volkmann,tempor turpis,15/06/1887,1888,Berlin Philharmonic,Boston
+616,Robert Volkmann,felis donec semper sapien,28/08/1862,1893,Vienna Philharmonic,Berlin
+617,Joachim Raff,porttitor lorem id,29/03/1874,1896,Weimar Hofkapelle,Manchester
+618,Joseph Wölfl,eget massa tempor,23/06/1840,1860,New York Philharmonic,Vienna
+619,Franz Liszt,justo eu massa,01/04/1883,1866,Frankfurt Museumsorchester,Vienna
+620,Adolf Hesse,tempor convallis nulla neque,22/12/1855,1894,Vienna Philharmonic,Paris
+621,Cipriani Potter,sociis natoque,05/11/1879,1858,New York Philharmonic,London
+622,Christian Sinding,ornare imperdiet,11/01/1870,1898,Chicago Symphony Orchestra,Weimar
+623,Julius Zellner,a feugiat et,19/08/1876,1896,Berlin Philharmonic,Manchester
+624,Giovanni Pacini,ultrices enim lorem ipsum,07/01/1884,1864,Frankfurt Museumsorchester,Weimar
+625,Hector Berlioz,ligula suspendisse,30/10/1894,1857,Hallé orchestra (Manchester),Cologne
+626,Charles-François Gounod,scelerisque mauris sit,28/11/1887,1847,Gürzenich Orchestra Cologne,Frankfurt
+627,Emilie Mayer,vivamus in felis,31/05/1872,1891,Chicago Symphony Orchestra,Cologne
+628,Andreas Romberg,turpis a pede,07/10/1881,1842,Chicago Symphony Orchestra,Boston
+629,Ernst Pauer,eu orci,01/06/1871,1869,Weimar Hofkapelle,Frankfurt
+630,Giovanni Pacini,neque vestibulum eget,02/08/1876,1847,Boston Symphony Orchestra,Manchester
+631,Christian Sinding,id pretium iaculis diam,20/07/1878,1881,Gewandhaus Orchestra (Leipzig),Frankfurt
+632,Jacob Rosenhain,at nulla suspendisse,06/11/1883,1866,Chicago Symphony Orchestra,Manchester
+633,Robert Schumann,congue etiam justo etiam,28/06/1851,1892,Crystal Palace orchestra (London),Manchester
+634,Johannes Brahms,morbi odio,20/12/1849,1896,Boston Symphony Orchestra,Leipzig
+635,Louise Farrenc,dictumst maecenas ut,13/04/1874,1881,Frankfurt Museumsorchester,Berlin
+636,Johann Ritter von Herbeck,cras in purus,20/12/1872,1888,London Philharmonic,New York
+637,William Sterndale Bennett,elementum in hac,03/10/1842,1887,Gürzenich Orchestra Cologne,Weimar
+638,Franz Schubert,eu sapien,06/12/1880,1886,New York Philharmonic,Paris
+639,Gustav Mahler,neque aenean,08/07/1898,1854,Gewandhaus Orchestra (Leipzig),New York
+640,Andreas Romberg,luctus et ultrices,05/02/1879,1894,Gewandhaus Orchestra (Leipzig),Manchester
+641,Ferdinand Hiller,dapibus nulla suscipit ligula,13/11/1891,1846,Crystal Palace orchestra (London),Boston
+642,Franz Liszt,fermentum donec ut,07/03/1849,1867,Chicago Symphony Orchestra,Leipzig
+643,Charles Lucas,in ante vestibulum,16/03/1841,1862,London Philharmonic,Boston
+644,Franz Schubert,purus aliquet at,23/08/1891,1866,New York Philharmonic,Chicago
+645,Luigi Cherubini,eu magna,03/11/1898,1846,New York Philharmonic,Manchester
+646,Johann Friedrich Kittl,eget rutrum at lorem,09/11/1885,1884,Vienna Philharmonic,Vienna
+647,Hermann Bischoff,fusce congue diam,16/01/1891,1876,Vienna Philharmonic,Paris
+648,Sigismund Ritter von Neukomm,scelerisque quam turpis,19/10/1886,1847,Hallé orchestra (Manchester),Vienna
+649,George Macfarren,sem duis aliquam,18/12/1890,1872,Crystal Palace orchestra (London),Cologne
+650,Ferdinand David,ipsum primis in faucibus,29/11/1880,1844,Frankfurt Museumsorchester,Boston
+651,Giovanni Sgambati,enim blandit mi,04/10/1898,1882,Weimar Hofkapelle,Paris
+652,Cesar Franck,sapien cum sociis,27/10/1874,1841,Boston Symphony Orchestra,Chicago
+653,William Sterndale Bennett,diam id ornare,16/10/1898,1879,Hallé orchestra (Manchester),Leipzig
+654,Karl Goldmark,justo sit,15/03/1864,1859,London Philharmonic,Vienna
+655,Sigismund Ritter von Neukomm,accumsan tortor quis turpis,16/10/1881,1873,Gewandhaus Orchestra (Leipzig),Leipzig
+656,Emilie Mayer,in imperdiet et,23/10/1886,1898,Gewandhaus Orchestra (Leipzig),Berlin
+657,Hermann Goetz,nunc viverra dapibus nulla,08/03/1842,1866,London Philharmonic,London
+658,Félicien David,elit proin,20/09/1856,1898,London Philharmonic,Berlin
+659,Ferdinand David,hac habitasse,12/09/1869,1844,Crystal Palace orchestra (London),Weimar
+660,Cipriani Potter,ac leo pellentesque ultrices,17/01/1873,1880,Crystal Palace orchestra (London),Paris
+661,Cesar Franck,pellentesque volutpat dui maecenas,23/08/1882,1866,Chicago Symphony Orchestra,Frankfurt
+662,George Macfarren,at diam nam tristique,21/03/1870,1900,Gewandhaus Orchestra (Leipzig),Manchester
+663,Joseph Haydn,integer pede justo lacinia,12/03/1900,1873,Weimar Hofkapelle,Leipzig
+664,Karl Goldmark,velit nec nisi vulputate,10/12/1860,1850,Frankfurt Museumsorchester,Cologne
+665,Frederic Cowen,nisl nunc nisl duis,08/08/1861,1896,Frankfurt Museumsorchester,Chicago
+666,Karl Goldmark,metus aenean fermentum,07/01/1870,1873,Boston Symphony Orchestra,Cologne
+667,Ferdinand Hiller,sit amet consectetuer,08/12/1866,1900,Boston Symphony Orchestra,Berlin
+668,Luigi Cherubini,iaculis justo in hac,02/10/1851,1844,New York Philharmonic,Berlin
+669,Gustav Mahler,sagittis sapien cum,21/01/1872,1890,Hallé orchestra (Manchester),Weimar
+670,Charles Lucas,erat curabitur gravida,09/04/1874,1858,Berlin Philharmonic,Boston
+671,Bernhard Molique,nunc donec quis orci,26/02/1844,1873,Vienna Philharmonic,Berlin
+672,Anton Bruckner,varius integer ac,12/06/1867,1851,Crystal Palace orchestra (London),Manchester
+673,Charles Lucas,convallis duis consequat,30/06/1871,1895,London Philharmonic,Berlin
+674,Karl Goldmark,interdum in ante,05/01/1842,1853,Boston Symphony Orchestra,London
+675,Gustav Mahler,ultrices posuere cubilia curae,08/11/1847,1900,Gewandhaus Orchestra (Leipzig),Chicago
+676,Cipriani Potter,potenti in eleifend quam,27/10/1891,1849,Frankfurt Museumsorchester,Boston
+677,Anton Rubinstein,at diam nam,04/06/1866,1873,Chicago Symphony Orchestra,Chicago
+678,Julius Rietz,sem fusce consequat,10/12/1878,1853,Crystal Palace orchestra (London),London
+679,William Sterndale Bennett,a feugiat,13/11/1854,1875,Chicago Symphony Orchestra,London
+680,Adolf Hesse,nec nisi volutpat,09/08/1898,1887,London Philharmonic,Berlin
+681,Emilie Mayer,nisi venenatis tristique,05/07/1858,1861,Berlin Philharmonic,Weimar
+682,Andreas Romberg,porttitor lacus,09/05/1855,1880,Boston Symphony Orchestra,New York
+683,Franz Liszt,etiam pretium iaculis justo,04/10/1869,1895,Weimar Hofkapelle,Boston
+684,Louise Farrenc,turpis sed ante vivamus,13/11/1897,1863,Gewandhaus Orchestra (Leipzig),Frankfurt
+685,Karl Goldmark,varius nulla facilisi cras,25/03/1848,1842,Frankfurt Museumsorchester,New York
+686,Christian Sinding,erat nulla tempus vivamus,11/10/1876,1878,Gewandhaus Orchestra (Leipzig),Vienna
+687,Franz Lachner,donec dapibus duis,19/04/1840,1887,Gürzenich Orchestra Cologne,Berlin
+688,Christian Sinding,hac habitasse,14/08/1847,1889,Weimar Hofkapelle,Weimar
+689,Julius Rietz,ridiculus mus vivamus,14/02/1846,1869,Chicago Symphony Orchestra,Manchester
+690,William Sterndale Bennett,velit nec nisi vulputate,15/05/1882,1882,Berlin Philharmonic,Manchester
+691,Robert Schumann,nulla ultrices aliquet maecenas,04/08/1876,1894,Frankfurt Museumsorchester,London
+692,Franz Liszt,nunc purus phasellus in,07/01/1889,1860,Chicago Symphony Orchestra,New York
+693,Joachim Raff,in faucibus,06/02/1866,1880,New York Philharmonic,Chicago
+694,Charles Lucas,orci luctus,23/12/1853,1868,Hallé orchestra (Manchester),London
+695,Luigi Cherubini,turpis eget elit,27/02/1874,1865,Frankfurt Museumsorchester,Boston
+696,Félicien David,lobortis convallis,23/09/1898,1850,New York Philharmonic,Boston
+697,Georges Onslow,imperdiet et commodo vulputate,15/03/1894,1852,Vienna Philharmonic,Chicago
+698,Joachim Raff,nisi eu orci mauris,23/01/1849,1862,Berlin Philharmonic,Cologne
+699,Hector Berlioz,tellus semper interdum mauris,12/11/1872,1860,New York Philharmonic,Cologne
+700,Félicien David,nulla mollis,20/08/1877,1898,Weimar Hofkapelle,Leipzig

@@ -1,0 +1,93 @@
+/* my styles */
+.footer {background: #efefef; padding: 3em 0 2em;   margin-top: 2em}
+
+.banner                 {background: #D6EAF8}
+#filter                 {margin-bottom: 6px; margin-top: 3px; width:100%; border-color: #ccc}
+#filter::placeholder    {font-style: italic}
+#triangle-down          {width: 0; height: 0; margin-left: 30px; border-left: 15px solid transparent; border-right: 15px solid transparent; border-top: 30px solid #D6EAF8;  }
+
+
+/* chart  elements*/
+/* black text on rows (else cant read white when extends beyond bar)  */
+.dc-chart g.row text			{ fill: #000;}
+
+
+/* dc.js checkboxes -> row */
+.dc-cbox-group        {list-style-type: none; padding: 0; margin: 0 0 10 0;}
+.dc-cbox-group label  {font-weight: 500; padding: 3px 6px; }
+.dc-cbox-group input  {display: none}
+.dc-cbox-group input[type=checkbox]:checked + label { background: #85C1E9 } /* active = blue*/
+
+.dc-cbox-group label:hover,
+.dc-cbox-group input:hover {cursor: pointer; background: #ddd}
+
+/* sidebar */
+.dc-cbox-group > li   {line-height: 1}
+
+/* top bar -- add more specific targeting */
+.dc-cbox-group label  {/* top bar...  background: #ddd */}
+.dc-cbox-group > li   {/* top bar...  display: inline; padding-right: 15px*/}
+
+
+
+/* datatable */
+.table 			          {margin-top: 20px}
+.filter-count,
+.total-count 	        {font-weight: bold}
+
+.table-striped>tbody>tr:nth-of-type(odd) { background-color: #EDEDED; /* was f9f9f9 */}
+
+/* hide the group label rows */
+.dc-table-group        { visibility: collapse; display: none;}
+
+/* remove top border */
+table>tbody+tbody      { border-top: 0px !important; }
+
+#download              {float: right;}
+
+
+
+
+
+
+
+
+
+
+/*
+ * Font Awesome Free 5.8.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ Need to include /vendor/fontawesome-5.8.1.min.css too
+ */
+@font-face {
+ font-family: 'Font Awesome 5 Free';
+ font-style: normal;
+ font-weight: 400;
+ font-display: auto;
+ src: url("../vendor/fa-regular-400.eot");
+ src: url("../vendor/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../vendor/fa-regular-400.woff2") format("woff2"), url("../vendor/fa-regular-400.woff") format("woff"), url("../vendor/fa-regular-400.ttf") format("truetype"), url("../vendor/fa-regular-400.svg#fontawesome") format("svg"); }
+.far {
+ font-family: 'Font Awesome 5 Free';
+ font-weight: 400; }
+
+@font-face {
+ font-family: 'Font Awesome 5 Free';
+ font-style: normal;
+ font-weight: 900;
+ font-display: auto;
+ src: url("../vendor/fa-solid-900.eot");
+ src: url("../vendor/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../vendor/fa-solid-900.woff2") format("woff2"), url("../vendor/fa-solid-900.woff") format("woff"), url("../vendor/fa-solid-900.ttf") format("truetype"), url("../vendor/fa-solid-900.svg#fontawesome") format("svg"); }
+.fa,
+.fas {
+ font-family: 'Font Awesome 5 Free';
+ font-weight: 900; }
+
+@font-face {
+ font-family: 'Font Awesome 5 Brands';
+ font-style: normal;
+ font-weight: normal;
+ font-display: auto;
+ src: url("../vendor/fa-brands-400.eot");
+ src: url("../vendor/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../vendor/fa-brands-400.woff2") format("woff2"), url("../vendor/fa-brands-400.woff") format("woff"), url("../vendor/fa-brands-400.ttf") format("truetype"), url("../vendor/fa-brands-400.svg#fontawesome") format("svg"); }
+.fab {
+ font-family: 'Font Awesome 5 Brands'; }
