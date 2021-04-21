@@ -82,11 +82,7 @@ var colours4 = ["#ff4f8a",
 
 // CREATE OBJECTS & TIE TO HTML ie match to div IDs in the html
 // composersRowChart = dc.rowChart("#chart-row-composers"),
-var composersRowChart = dc.rowChart("#chart-row-composers"),
-    orchestrasRowChart = dc.rowChart("#chart-row-orchestras"),
-    citiesRowChart = dc.rowChart("#chart-row-cities"),
-    timeSeriesChart = dc.seriesChart("#chart-series-time"),
-    timeBarChart = dc.barChart("#chart-bar-time"),
+var timeBarChart = dc.barChart("#chart-bar-time"),
     dataCount = dc.dataCount("#datacount"),
     dataSummaryTable = dc.dataTable("#table-datasummary");
 
@@ -103,24 +99,26 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 
 
 	// CREATE CROSSFILTER DIMENSIONS AND GROUPS
-
 	ndx = crossfilter(data),
     composerDim = ndx.dimension(d => d.Composer),
-    composerSearchDim = ndx.dimension(d => d.Composer),
-		orchestraDim = ndx.dimension(d => d.Orchestra),
-    cityDim = ndx.dimension(d => d.City),
-    citySearchDim = ndx.dimension(d => d.City),
+    composerYearDim = ndx.dimension(d => [d.Composer, d.Year]),
 		yearDim = ndx.dimension(d => d.Year),
+    cityDim = ndx.dimension(d => d.City),
     cityYearDim = ndx.dimension(d => [d.City, d.Year]),
-    cityComposerDim = ndx.dimension(d => [d.City, d.Composer]),
 		all = ndx.groupAll(),
-    composerGroup = composerDim.group(),
-    orchestraGroup = orchestraDim.group(),
-    cityGroup = cityDim.group(),
-    citySearchGroup = citySearchDim.group(),
+    composerGroup = composerDim.group().reduceCount(),
+    composerYearGroup = composerYearDim.group().reduceCount(),
+    //
+// ---> want to customreduce to get just the MIN Year (ie return 1 row per comopser; not one per year)
+    //
+    //composerYearGroup = composerYearDim.group().reduce(
+    //  function (p, v) { if(v.Year < p || p === null) p = v.Year; return p; },
+    //  function (p, v) { return p; },
+    //  function () { return null; }
+    //),
     yearGroup = yearDim.group().reduceCount(),
-    cityYearGroup = cityYearDim.group().reduceCount(),
-    cityComposerGroup = cityComposerDim.group().reduceCount();
+    cityGroup = cityDim.group().reduceCount(),
+    cityYearGroup = cityYearDim.group().reduceCount();
 
 
 	// CONFIGURE DATA COUNT (x out of y records shown)
@@ -133,58 +131,7 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 
 
 	// CONFIGURE CHART ATTRIBUTES
-  composersRowChart.width(185).height(1000)
-    .dimension(composerDim)
-    .group(composerGroup)              // ** TOTAL ie all cities **
-    .ordinalColors(colours1) 	         // my range of colours
-    .ordering(d => -d.value)           // order by count (not name)
-    .on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
-    .margins({top: 10,bottom: 30,right: 5,left: 5})
-    .elasticX(true)
-    .xAxis().ticks(4);                 // --> less ticks! setter so can't chain ie must be last!
-
-  orchestrasRowChart.width(300).height(250)
-      .dimension(orchestraDim)
-      .group(orchestraGroup)
-      .ordinalColors(colours2) 	         // my range of colours
-      .ordering(d => d.key)              // order by name
-      //.renderVerticalGridLines(false)
-      .gap(2)
-      .elasticX(true)
-      .on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
-      .xAxis().ticks(5);                 // --> less ticks! setter so can't chain ie must be last!
-	    // NB elastic means rescale axis; may want to turn this off
-
-  citiesRowChart.width(300).height(250)
-      .dimension(cityDim)
-      .group(cityGroup)
-      .ordinalColors(colours3) 	         // my range of colours
-      .ordering(d => d.key)              // order by name
-      .gap(2)
-      .elasticX(true)
-      .on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
-      .xAxis().ticks(5);                 // --> less ticks! setter so can't chain ie must be last!
-	    // NB elastic means rescale axis; may want to turn this off
-
-
-  timeSeriesChart.width(600).height(240)
-      .dimension(cityYearDim)
-      .group(cityYearGroup)
-      .seriesAccessor(function(d) {return d.key[0];})   // .sort())   // cities; sorted az
-      .keyAccessor(function(d) {return +d.key[1];})
-      .valueAccessor(function(d) {return +d.value;})
-      .ordinalColors(colours4) 	         // my range of colours
-      .x(d3.scaleLinear().domain([1840, 1900]))
-      .elasticY(true)
-      .on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
-      .legend(dc.legend().x(120).y(0).itemHeight(13).gap(5).horizontal(1).legendWidth(500).itemWidth(80))
-      .margins({top:40,bottom:20,right:20,left:30})   // extra margin at top for legend
-      .xAxis().tickFormat(d3.format('d'));    // 1900 not 1,900
-      // NB elastic means rescale axis; may want to turn this off
-  timeSeriesChart.yAxis().ticks(5);         // --> less ticks! setter so can't chain ie must be last!
-
-
-  timeBarChart.width(600).height(100)
+  timeBarChart.width(800).height(100)
       .dimension(yearDim)
       .group(yearGroup)
       .ordinalColors(colours) 	         // my range of colours
@@ -193,22 +140,25 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
       .centerBar(true)
       .elasticY(true)
       .on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
-      .margins({top:10,bottom:20,right:20,left:30})   // margin to match timeSeriesChart
+      .margins({top:10,bottom:20,right:20,left:70})   // margin to match bubbles
       .xAxis().tickFormat(d3.format('d'));    // 1900 not 1,900
       // NB elastic means rescale axis; may want to turn this off
    timeBarChart.yAxis().ticks(3);         // --> less ticks! setter so can't chain ie must be last!
 
 
-   // PLACES FILTERS
-  //one set of checkbox / buttons
-   var selectPlaces = new dc.CboxMenu("#selectPlaces")
-      .dimension(citySearchDim)
-      .group(citySearchGroup)
-      //.title(d => d.key)       // DOESNT WORK
-      //.filter("London")          // DOESNT WORK
-      .on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
-      .multiple(true);
-      //.controlsUseVisibility(true);
+   // SEARCH COMPOSERS v2: filterable set of checkboxes
+   var filterComposers = new dc.CboxMenu("#filterComposers")
+       //.dimension(composerYearDim)     // new DIM - graph updates BUT loose all
+       //.group(composerYearGroup)
+       //start with just composers
+       .dimension(composerDim)     // new DIM - graph updates BUT loose all
+       .group(composerGroup)
+       .order(function (a,b) {
+         return a.value < b.value ? 1 : b.value < a.value ? -1 : 0; // order by value not group key (label)
+       })
+       //.title(d => d.key)       // DOESNT WORK
+       .on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
+       .multiple(true);
 
 
 
@@ -260,16 +210,27 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 
 
 
+  // MY FIND COMPOSER (ie filter LIs)
+  $(document).ready(function(){
+    $("#filter").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#filterComposers li").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+
+
   // NON DC.JS BUBBLE CHART
   // ======================
   // https://www.d3-graph-gallery.com/graph/bubble_color.html
 
   // set the dimensions and margins of the graph
-  var margin = {top: 10, right: 20, bottom: 30, left: 150},
-    width = 420 - margin.left - margin.right,
-    height = 1000 - margin.top - margin.bottom;
+  var margin = {top: 10, right: 20, bottom: 30, left: 70},
+    width = 800 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
 
-  var svg = d3.select("#chart-bubble-composers")
+  var svg = d3.select("#chart-bubbles-time")
   .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -278,32 +239,22 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
           "translate(" + margin.left + "," + margin.top + ")");
 
   // Add X axis
-  x = d3.scaleBand()
-    .domain(cityComposerGroup.top(Infinity).map(d => d.key[0]).sort())   // cities; sorted az
-    .range([ 0, width])
-    .align(0.5);
+// ---> need to fix auto scale so can make eleastic ie change on update...
+  x = d3.scaleLinear()
+    //.domain(cityYearGroup.top(Infinity).map(d => d.key[1]))   // years   .sort()
+    .domain([1839, 1901])
+    .range([ 0, width]);
+    //.align(0.5);
   svg.append("g")
     .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x));
-  xpad = x.bandwidth() / 2;     // want half the width of the band to ploy in center of band
+    .call(d3.axisBottom(x).tickFormat(d3.format('d')));    // tickformat 1900 not 1,900
 
   // Add Y axis
   y = d3.scaleBand()
-    .domain(composerGroup.top(Infinity).map(d => d.key))        // ALL composers
+    .domain(cityGroup.top(Infinity).map(d => d.key).sort())        // ALL cities
     .range([ 0, height]);                           // biggest total at top (svg 0)
   svg.append("g").call(d3.axisLeft(y));
-
-/*
-    // gridlines  // https://observablehq.com/@d3/styled-axes
-    svg.append("g")
-    .call(d3.axisLeft(y)
-      .ticks(5)
-      .tickSize(-width)
-      .tickFormat(""))
-    .call(g => g.selectAll(".tick")
-      .attr("stroke-opacity", 0.2))   */
-
-  ypad = y.bandwidth() / 2;     // want half the width of the band to ploy in center of band
+  ypad = y.bandwidth() / 2;     // want half the width of the band to plot in center of band
 
   // add gridlines https://bl.ocks.org/wadefagen/ce5d308d8080130de10f21254273e30c
   function make_gridlines() {
@@ -315,21 +266,21 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
   svg.append("g").attr("stroke-opacity", 0.2).call(make_gridlines())
 
 
-
   // Add a scale for bubble size
-  maxZ = Math.max.apply(Math, cityComposerGroup.top(Infinity).map(function(o) { return o.value; }));
+  maxZ = Math.max.apply(Math, cityYearGroup.top(Infinity).map(function(o) { return o.value; }));
   //z = d3.scaleLinear().domain([0, maxZ]).range([0, 10]);
   // want 0=0; 1 = visible; linear not ideal see https://bl.ocks.org/guilhermesimoes/e6356aa90a16163a6f917f53600a2b4a
   z = d3.scaleSqrt()
-     .domain([0, maxZ])   // counts from cityComposerGroup ie per city
+     .domain([0, maxZ])   // counts from cityYearGroup ie per city
      .range([0, 15]);
 
 
-  // Add a scale for bubble color - cities from cityComposerGroup
+  // Add a scale for bubble color - all cities from cityGroup
   myColor = d3.scaleOrdinal()
-      .domain(cityComposerGroup.top(Infinity).map(d => d.key[0]).sort())   // cities; sorted az
+      .domain(cityGroup.top(Infinity).map(d => d.key).sort())   // all cities; sorted az
       .range(colours4);
 
+/*
   // tooltip 1. Create a tooltip div that is hidden by default:
    tooltip = d3.select("#chart-bubble-composers")
      .append("div")
@@ -363,9 +314,7 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
        .duration(200)
        .style("opacity", 0)
    }
-
-
-
+*/
 
 
 
@@ -373,12 +322,12 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
   svg.append('g')
      .attr("id", "dots")
      .selectAll("dot")
-     .data(cityComposerGroup.top(Infinity))       // data = cityComposerGroup
+     .data(cityYearGroup.top(Infinity))       // data = cityYearGroup
      .enter()
      .append("circle")
-       .attr("cx", function (d) { return x(d.key[0]) + xpad; } )  // x = city + pad to center of band
-       .attr("cy", function (d) { return y(d.key[1]) + ypad; } )    // y = composer + pad to center of band
-       //.attr("r", function (d) { return z(d.value); } )         // r = value
+       .attr("cx", function (d) { return x(d.key[1]); } )           // x = year
+       .attr("cy", function (d) { return y(d.key[0]) + ypad; } )    // y = city + pad to center of band
+       //.attr("r", function (d) { return z(d.value); } )           // r = value
        .attr("r", function (d) {
             //console.log(d.key[1], d.key[0], "value ", d.value, " scale ", z(d.value));
             //return d.value * 5})
@@ -388,10 +337,15 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
        .attr("stroke", "white")
        .style("stroke-width", "2px")
        // tooltip3 Trigger the functions
-       .on("mouseover", showTooltip )
-       .on("mousemove", moveTooltip )
-       .on("mouseleave", hideTooltip )
+       //.on("mouseover", showTooltip )
+       //.on("mousemove", moveTooltip )
+       //.on("mouseleave", hideTooltip )
 
+
+
+
+//console.log("composerYearGroup ");
+//console.log(JSON.stringify(composerYearGroup.top(5)));
 
 /*
   console.log("cityComposerGroup raw array ");
@@ -444,9 +398,9 @@ function updateBubbles() {
 
 // redraw x?
 
-  var bubbles = d3.select("#chart-bubble-composers svg")
+  var bubbles = d3.select("#chart-bubbles-time svg")
     .selectAll("circle")
-    .data(cityComposerGroup.top(Infinity));
+    .data(cityYearGroup.top(Infinity));
 
   // enter selection
   //bubbles.enter().append("circle");
@@ -455,14 +409,15 @@ function updateBubbles() {
   bubbles
     .transition()
     .duration(300)
-    .attr("cx", function (d) { return x(d.key[0]) + xpad; } )  // x = city + pad to center of band
-    .attr("cy", function (d) { return y(d.key[1]) + ypad; } )    // y = composer + pad to center of band
-    //.attr("r", function (d) { return z(d.value); } )         // r = value
+    .attr("cx", function (d) { return x(d.key[1]); } )           // x = year
+    .attr("cy", function (d) { return y(d.key[0]) + ypad; } )    // y = city + pad to center of band
+    //.attr("r", function (d) { return z(d.value); } )           // r = value
     .attr("r", function (d) {
          //console.log(d.key[1], d.key[0], "value ", d.value, " scale ", z(d.value));
          //return d.value * 5})
          return z(d.value); } )         // TEST
     .style("fill", function (d) { return myColor(d.key[0]); } )  // colour = city
+
 
   // exit selection
   // bubbles.exit().remove();
