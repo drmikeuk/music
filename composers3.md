@@ -30,7 +30,7 @@ customjs:
 
 
 <!-- DATA -->
-<div class="container-fluid main">
+<div class="container-fluid dashboard">
 	<div class="row">
     <div class="col-md-3">
       <!-- LH -->

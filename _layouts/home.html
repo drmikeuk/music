@@ -1,27 +1,34 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
 
-<!-- Page Header -->
-<header class="intro-header home" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-    <div class="container">
-        <div class="row">
-            <!-- <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> -->
-            <div class="col-md-12">
-                <div class="site-heading">
-                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-                    <!-- 
-                        <hr class="small">
-                        <span class="subheading">{{ page.description }}</span>
-                    -->
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+<body id="home">
+{% include nav.html %}
 
-<!-- Main Content (Home) -->
-{{ content }}
+  <!-- Page Header -->
+  <header class="intro-header home" style="background-image: url('{{ site.baseurl }}/images/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+      <div class="container">
+          <div class="row">
+              <!-- <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> -->
+              <div class="col-md-12">
+                  <div class="site-heading">
+                      <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                          <span class="subheading">{{ page.description }}</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
 
+  <!-- Main -->
+  <div class="container page">
+  	<div class="row">
+  		<div class="col">
+      	{{ content }}
+  		</div>
+  	</div>
+  </div>
 
-<hr>
+{% include footer.html %}
+</body>
+</html>

@@ -173,14 +173,14 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
   timeSeriesChart.width(600).height(240)
       .dimension(cityYearDim)
       .group(cityYearGroup)
-      .seriesAccessor(function(d) {return d.key[0];})
+      .seriesAccessor(function(d) {return d.key[0];})   // .sort())   // cities; sorted az
       .keyAccessor(function(d) {return +d.key[1];})
       .valueAccessor(function(d) {return +d.value;})
       .ordinalColors(colours4) 	         // my range of colours
       .x(d3.scaleLinear().domain([1840, 1900]))
       .elasticY(true)
       .on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
-      .legend(dc.legend().x(300).y(0).itemHeight(13).gap(5).horizontal(1).legendWidth(500).itemWidth(80))
+      .legend(dc.legend().x(120).y(0).itemHeight(13).gap(5).horizontal(1).legendWidth(500).itemWidth(80))
       .margins({top:40,bottom:20,right:20,left:30})   // extra margin at top for legend
       .xAxis().tickFormat(d3.format('d'));    // 1900 not 1,900
       // NB elastic means rescale axis; may want to turn this off
@@ -282,7 +282,7 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 
   // Add X axis
   x = d3.scaleBand()
-    .domain(cityComposerGroup.top(Infinity).map(d => d.key[0]))   // cities
+    .domain(cityComposerGroup.top(Infinity).map(d => d.key[0]).sort())   // cities; sorted az
     .range([ 0, width])
     .align(0.5);
   svg.append("g")
@@ -330,8 +330,8 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 
   // Add a scale for bubble color - cities from cityComposerGroup
   myColor = d3.scaleOrdinal()
-      .domain(cityComposerGroup.top(Infinity).map(d => d.key[0]))
-      .range(d3.schemeSet2);
+      .domain(cityComposerGroup.top(Infinity).map(d => d.key[0]).sort())   // cities; sorted az
+      .range(colours4);
 
   // tooltip 1. Create a tooltip div that is hidden by default:
    tooltip = d3.select("#chart-bubble-composers")
@@ -396,11 +396,22 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
        .on("mouseleave", hideTooltip )
 
 
-
 /*
-  console.log("cityComposerGroup");
-  console.log(cityComposerGroup.top(5));   // .top(Infinity) = all items
+  console.log("cityComposerGroup raw array ");
+  console.log(cityComposerGroup.top(5));
 
+  console.log("cityComposerGroup.map (so just cities)");
+  //console.log(cityComposerGroup.top(5));   // .top(Infinity) = all items
+  console.log(cityComposerGroup.top(5).map(d => d.key[0]).sort());
+
+  var raw = cityComposerGroup.top(5).map(d => d.key[0]);
+  var sorted = raw.sort();
+  console.log("cityComposerGroup.map then sorted ");
+  console.log(sorted);
+
+
+
+ //console.log(cityComposerGroup.top(5));   // .top(Infinity) = all items
   console.log("filtered cityComposerGroup2");
   console.log(cityComposerGroup2.top(5));
 

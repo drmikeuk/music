@@ -1,11 +1,33 @@
 /* my styles */
-.footer {background: #efefef; padding: 3em 0 2em;   margin-top: 2em}
+/*body         {background: #efefef;} */
+.footer       {background: #ACB5BB; padding: 3em 0 2em;   margin-top: 2em}
 
-.banner                 {background: #D6EAF8}
-#filter                 {margin-bottom: 6px; margin-top: 3px; width:100%; border-color: #ccc}
+.navbar                 {padding-left: 0px}
+.banner                 {padding: 0.5rem 0; background: #D6EAF8 /* blue */}
+.banner                 {background: #ACB5BB /* grey from fruits footer */}
+.header p               {margin-bottom: 0.5rem}
+
+#filter                 {margin-bottom: 6px; margin-top: 3px; width:100%; border-color: #ACB5BB}
 #filter::placeholder    {font-style: italic}
-#triangle-down          {width: 0; height: 0; margin-left: 30px; border-left: 15px solid transparent; border-right: 15px solid transparent; border-top: 30px solid #D6EAF8;  }
+#triangle-down          {width: 0; height: 0; margin-top: -0.8rem; margin-left: 20px; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 30px solid #ACB5BB;  }
 
+.dashboard              {margin-top: 0.5rem;}
+
+
+/* basics */
+h1                      {font-size: 2rem}
+h3                      {font-size: 1.5rem}
+h1, h2, h3              {font-weight: 300}
+
+
+/* home */
+#home .navbar-brand     {display: none}
+.intro-header           {background-color: #ccc; min-height: 300px; padding-top: 3rem; margin-bottom: 20px}
+.home h1                {font-size: 3em; }
+.subheading             {font-size: 1.5rem; font-weight: 300; font-style: italic;}
+.fancyLI                {list-style-type: none; }
+.tick li::before     {content: "\f14a"; font-family: 'Font Awesome 5 free'; font-weight: 900; margin:0 10px 0 -20px; color: #6c757d}
+.chevron li::before     {content: "\f138"; font-family: 'Font Awesome 5 free'; font-weight: 900; margin:0 10px 0 -20px; color: #6c757d}
 
 /* chart  elements*/
 /* black text on rows (else cant read white when extends beyond bar)  */
@@ -13,7 +35,7 @@
 
 
 /* dc.js checkboxes -> row */
-.dc-cbox-group        {list-style-type: none; padding: 0; margin: 0 0 10 0;}
+.dc-cbox-group        {list-style-type: none; padding: 0; margin: 0 0 0.5rem 0;}
 .dc-cbox-group label  {font-weight: 500; padding: 3px 6px; margin-bottom: 2px}
 .dc-cbox-group input  {display: none}
 

@@ -198,7 +198,7 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
       .keyAccessor(function(d) {return +d.key[1];})
       .valueAccessor(function(d) {return +d.value;})
       .ordinalColors(colours4) 	         // my range of colours
-      .x(d3.scaleLinear().domain([1840, 1900]))
+      .x(d3.scaleLinear().domain([1839, 1900]))
       .elasticY(true)
       .legend(dc.legend().x(300).y(0).itemHeight(13).gap(5).horizontal(1).legendWidth(500).itemWidth(80))
       .margins({top:40,bottom:20,right:20,left:30})   // extra margin at top for legend
@@ -211,7 +211,7 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
       .group(yearGroup)
       .ordinalColors(colours) 	         // my range of colours
       // old style .x(d3.scale.linear().domain([1840, 1900])) // d3v3 not d3v4
-      .x(d3.scaleLinear().domain([1840, 1900]))
+      .x(d3.scaleLinear().domain([1839, 1901]))   // extra or 1st bar cut off
       .centerBar(true)
       .elasticY(true)
       .margins({top:10,bottom:20,right:20,left:30})   // margin to match timeSeriesChart
@@ -230,6 +230,9 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
       //.group(composerGroup)
       .dimension(composerSearchDim)     // new DIM - graph updates BUT loose all
       .group(composerSearchGroup)
+      .order(function (a,b) {
+        return a.value < b.value ? 1 : b.value < a.value ? -1 : 0; // order by value not group key (label)
+      })
       //.title(d => d.key)       // DOESNT WORK
       .multiple(true);
 
