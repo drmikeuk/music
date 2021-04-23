@@ -136,7 +136,8 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
       .group(yearGroup)
       .ordinalColors(colours) 	         // my range of colours
       // old style .x(d3.scale.linear().domain([1840, 1900])) // d3v3 not d3v4
-      .x(d3.scaleLinear().domain([1839, 1901]))
+      //.x(d3.scaleLinear().domain([1810, 1900]))  // fixed. london data range
+      .x(d3.scaleLinear().domain([1839, 1901]))    // fixed. dummy data range +/- 1
       .centerBar(true)
       .elasticY(true)
       .on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
@@ -157,8 +158,8 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
          return a.value < b.value ? 1 : b.value < a.value ? -1 : 0; // order by value not group key (label)
        })
        //.title(d => d.key)       // DOESNT WORK
-       .on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
-       .multiple(true);
+       .on("filtered", updateTitle)    // update comosper title + bubbles is non-dc.js so update manually
+       .multiple(false);          // only single select aka radio
 
 
 
@@ -242,9 +243,9 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 // ---> need to fix auto scale so can make eleastic ie change on update...
   x = d3.scaleLinear()
     //.domain(cityYearGroup.top(Infinity).map(d => d.key[1]))   // years   .sort()
-    .domain([1839, 1901])
+    //.domain([1810, 1900])                       // fixed. london data range
+    .domain([1839, 1901])                         // fixed. dummy data range +/- 1
     .range([ 0, width]);
-    //.align(0.5);
   svg.append("g")
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x).tickFormat(d3.format('d')));    // tickformat 1900 not 1,900
@@ -344,10 +345,18 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 
 
 
+/*
+console.log("year dim")
+console.log(yearDim.top(5));        // grab top entry
+
+console.log("composer dim")
+console.log(composerDim.top(5));        // grab top entry
+
+
 //console.log("composerYearGroup ");
 //console.log(JSON.stringify(composerYearGroup.top(5)));
 
-/*
+
   console.log("cityComposerGroup raw array ");
   console.log(cityComposerGroup.top(5));
 
@@ -387,6 +396,42 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 
 // FUNCTIONS
 // =========
+
+function updateTitle() {
+
+  // sort by year
+  var data = yearDim.top(Infinity).sort(function(x, y){
+    return d3.ascending(x.Year, y.Year);
+  });
+
+  // sort by date (may be multiple in each year)
+  //   -- Date needs to be "date" not string?
+  // d3.ascending sorts by natural order which includes dates
+  // https://observablehq.com/@d3/d3-ascending
+/*  var data = yearDim.top(Infinity).sort(function(x, y){
+    return d3.ascending(x.Date, y.Date);
+  }); */
+
+  var firstrow = data[0];
+  //console.log("firstrow");
+  //console.log (JSON.stringify(firstrow))
+
+  $("#this-composer").html(firstrow["Composer"]);
+  var firststring = "First performance: <span>" + firstrow["Year"] + " " + firstrow["City"] + ": <i>" + firstrow["Symphony"] + "</i></span>";
+  $("#first").html(firststring);
+
+  updateBubbles();    //bubbles is non-dc.js so update manually
+}
+
+
+
+
+
+
+
+
+
+
 
 function updateBubbles() {
   // bubbles is non DC.JS so have to update manually when other charts are filtered
