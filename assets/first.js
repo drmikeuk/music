@@ -1,101 +1,29 @@
 // based on worked example https://dc-js.github.io/dc.js/docs/stock.html
 
-var colours = ["#5ba965",
-"#ba5fb2",
-"#a6973e",
-"#6a7fcf",
-"#cd6c39",
-"#cc566a"];
-var colours = ["#934acc",
-"#559348",
-"#b74c8e",
-"#a37832",
-"#6574be",
-"#c44c44"]; // pimp
+// colours from from https://medialab.github.io/iwanthue/
+var colours = ["#5ba965","#ba5fb2","#a6973e","#6a7fcf","#cd6c39","#cc566a"];
+var colours = ["#934acc","#559348","#b74c8e","#a37832","#6574be","#c44c44"]; // pimp
+var colours = ["#daecca","#88aee1","#dbc4a4","#8bd0eb","#e7b8b7","#87c7c0","#d6bee2","#abcaa4","#aeb9d5","#baeae5","#a9beaf","#bad7e4"]; // pastel
+var colours1 = ["#a57b87","#d642bc","#e5b6ca","#e545a2","#8f5260","#e03b6f","#aa7796","#b23d84","#de8095","#9b5080","#e386c0","#ad4261"]; // red roses
+var colours2= ["#656d50","#92e63f","#a9ae87","#d9d934","#5e8b54","#5dcf51","#656a26","#97dd89","#a09c3f","#d8dfa9","#4f9437","#c8d766"];  // mint
+var colours3 =  ["#8f7040","#e28c23","#6b4c33","#e1b340","#766949","#e6c392","#705110","#d69a55","#85644a","#a27b1d","#ad906c","#a06829"]; // yellow lime
+var colours4 = ["#ff4f8a","#007e19","#6263ff","#abb13d","#800078","#e37f00","#00a6f0","#c1006e","#aea3e2","#771224","#d18f7c","#6a3557"]; // pimp
 
-var colours = ["#daecca",
-"#88aee1",
-"#dbc4a4",
-"#8bd0eb",
-"#e7b8b7",
-"#87c7c0",
-"#d6bee2",
-"#abcaa4",
-"#aeb9d5",
-"#baeae5",
-"#a9beaf",
-"#bad7e4"]; // pastel
-
-var colours1 = ["#a57b87",
-"#d642bc",
-"#e5b6ca",
-"#e545a2",
-"#8f5260",
-"#e03b6f",
-"#aa7796",
-"#b23d84",
-"#de8095",
-"#9b5080",
-"#e386c0",
-"#ad4261"]; // red roses
-
-var colours2= ["#656d50",
-"#92e63f",
-"#a9ae87",
-"#d9d934",
-"#5e8b54",
-"#5dcf51",
-"#656a26",
-"#97dd89",
-"#a09c3f",
-"#d8dfa9",
-"#4f9437",
-"#c8d766"];  // mint
-
-var colours3 =  ["#8f7040",
-"#e28c23",
-"#6b4c33",
-"#e1b340",
-"#766949",
-"#e6c392",
-"#705110",
-"#d69a55",
-"#85644a",
-"#a27b1d",
-"#ad906c",
-"#a06829"]; // yellow lime
-
-var colours4 = ["#ff4f8a",
-"#007e19",
-"#6263ff",
-"#abb13d",
-"#800078",
-"#e37f00",
-"#00a6f0",
-"#c1006e",
-"#aea3e2",
-"#771224",
-"#d18f7c",
-"#6a3557"]; // pimp
-
-// from https://medialab.github.io/iwanthue/
 
 // CREATE OBJECTS & TIE TO HTML ie match to div IDs in the html
-// composersRowChart = dc.rowChart("#chart-row-composers"),
 var timeBarChart = dc.barChart("#chart-bar-time"),
     dataCount = dc.dataCount("#datacount"),
     dataSummaryTable = dc.dataTable("#table-datasummary");
 
 var ndx;            // NB now paginating need to define outside of load data
-
 var x, y, z, myColor, xpad, ypad, tooltip, xAxis;
 
-// LOAD DATA
 
+// LOAD DATA
+///////////////////////////////////////////////////////////////////////////////
 // NB  special chars so try this? https://stackoverflow.com/questions/38304384/d3-js-read-csv-file-with-special-characters-%C3%A9-%C3%A0-%C3%BC-%C3%A8
 d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
-	// might want to format data a bit here
-	// eg calculate month or year from timestamp
+	// might want to format data a bit here eg calculate month or year from timestamp
 
 
 	// CREATE CROSSFILTER DIMENSIONS AND GROUPS
@@ -103,6 +31,7 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
     composerDim = ndx.dimension(d => d.Composer),
     composerYearDim = ndx.dimension(d => [d.Composer, d.Year]),
 		yearDim = ndx.dimension(d => d.Year),
+    yearSearchDim = ndx.dimension(d => d.Year),
     cityDim = ndx.dimension(d => d.City),
     cityYearDim = ndx.dimension(d => [d.City, d.Year]),
 		all = ndx.groupAll(),
@@ -143,7 +72,6 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
       .on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
       .margins({top:10,bottom:20,right:20,left:70})   // margin to match bubbles
       .xAxis().tickFormat(d3.format('d'));    // 1900 not 1,900
-      // NB elastic means rescale axis; may want to turn this off
    timeBarChart.yAxis().ticks(3);         // --> less ticks! setter so can't chain ie must be last!
 
 
@@ -162,9 +90,6 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
        .multiple(false);          // only single select aka radio
 
 
-
-
-
 	// CONFIGURE DATA TABLE          // yearDIM = sort by year ?
 	dataSummaryTable.dimension(yearDim)
 	    .group(d => d.year)          // group by year??
@@ -178,7 +103,6 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 
   // DOWNLOAD BUTTON ACTION
   // from example https://dc-js.github.io/dc.js/examples/download-table.html
-
   d3.select('#download')
       .on('click', function() {
           var data = originDim.top(Infinity);
@@ -193,7 +117,6 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
                   });
                   return row;
               });
-          //}
 
           //console.log  ("data...");
           //console.log (data); //  -> i have the right data here
@@ -222,8 +145,9 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
   });
 
 
+
   // NON DC.JS BUBBLE CHART
-  // ======================
+  // ===========================================================================
   // https://www.d3-graph-gallery.com/graph/bubble_color.html
 
   // set the dimensions and margins of the graph
@@ -322,7 +246,6 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 */
 
 
-
   // Add dots
   svg.append('g')
      .attr("id", "dots")
@@ -348,16 +271,6 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 
 
 
-
-
-
-
-//console.log("composer year group")
-//console.log(composerYearGroup.top(Infinity).map(d => d.key[1]).sort());
-
-
-
-
 /*
 console.log("composer year DIM")
 //data = composerYearDim.top(Infinity);                    // all rows; all fields
@@ -371,97 +284,67 @@ console.log("1st year ", firstyear, " last year ", lastyear);
 */
 
 
-
-
-//console.log("dim.top", composerYearDim.top(1)[0]["Year"], "dim.bottom", composerYearDim.bottom(1)[0]["Year"] ); // not 1st and last
-
-
-//console.log(d3.map(composerYearDim.top(Infinity).map(d => d.Year)).keys().sort());
-
-
-/*
-
-composerYearDim.top(Infinity)                         // all items (so multiple 1840's)
-composerYearDim.top(Infinity).map(d => d.Year)        // all items; just year
-.keys => unique
-
-console.log("year dim")
-console.log(yearDim.top(5));        // grab top entry
-
-console.log("composer dim")
-console.log(composerDim.top(5));        // grab top entry
-
-
-//console.log("composerYearGroup ");
-//console.log(JSON.stringify(composerYearGroup.top(5)));
-
-
-  console.log("cityComposerGroup raw array ");
-  console.log(cityComposerGroup.top(5));
-
-  console.log("cityComposerGroup.map (so just cities)");
-  //console.log(cityComposerGroup.top(5));   // .top(Infinity) = all items
-  console.log(cityComposerGroup.top(5).map(d => d.key[0]).sort());
-
-  var raw = cityComposerGroup.top(5).map(d => d.key[0]);
-  var sorted = raw.sort();
-  console.log("cityComposerGroup.map then sorted ");
-  console.log(sorted);
-
-
-
- //console.log(cityComposerGroup.top(5));   // .top(Infinity) = all items
-  console.log("filtered cityComposerGroup2");
-  console.log(cityComposerGroup2.top(5));
-
-
-  console.log("composerGroup");
-  console.log(composerGroup.top(5));   // .top(Infinity) = all items
-
-  console.log("filtered / copy composerGroup2");
-  //console.log(composerGroup2.top(5));   // .top is not a function -> not a group? empty?
-  console.log(JSON.stringify(composerGroup2));
-*/
-
 }); /* close load data */
 
 
 
 
 
-
-
-
-
 // FUNCTIONS
-// =========
+// =============================================================================
 
+// UPDATE COMPOSER + FIRST PERFORMANCE TITLE if filtered
 function updateTitle() {
 
-  // sort by year
-  var data = yearDim.top(Infinity).sort(function(x, y){
-    return d3.ascending(x.Year, y.Year);
-  });
+  // check if filtered / has been called as reset filters
+  if (composerDim.currentFilter()) {
+    //console.log("filtered: ", composerDim.currentFilter());
 
-  // sort by date (may be multiple in each year)
-  //   -- Date needs to be "date" not string?
-  // d3.ascending sorts by natural order which includes dates
-  // https://observablehq.com/@d3/d3-ascending
-/*  var data = yearDim.top(Infinity).sort(function(x, y){
-    return d3.ascending(x.Date, y.Date);
-  }); */
+    // sort by year
+    var data = yearDim.top(Infinity).sort(function(x, y){
+      return d3.ascending(x.Year, y.Year);
+    });
 
-  var firstrow = data[0];
-  //console.log("firstrow");
-  //console.log (JSON.stringify(firstrow))
+    // sort by date (may be multiple in each year)
+    //   -- Date needs to be "date" not string?
+    // d3.ascending sorts by natural order which includes dates
+    // https://observablehq.com/@d3/d3-ascending
+  /*  var data = yearDim.top(Infinity).sort(function(x, y){
+      return d3.ascending(x.Date, y.Date);
+    }); */
 
-  $("#this-composer").html(firstrow["Composer"]);
-  var firststring = "First performance: <span>" + firstrow["Year"] + " " + firstrow["City"] + ": <i>" + firstrow["Symphony"] + "</i></span>";
-  $("#first").html(firststring);
+    var firstrow = data[0];
+    //console.log("firstrow");
+    //console.log (JSON.stringify(firstrow))
 
-  // additionally filter by year to start +20 (so more focus)
+    $("#this-composer").html(firstrow["Composer"]);
+    var firststring = "First performance: <span>" + firstrow["Year"] + " " + firstrow["City"] + ": <i>" + firstrow["Symphony"] + "</i></span>";
+    $("#first").html(firststring);
 
 
+    // additionally filter by year to start +30 (so more focus)
+    var distinctYears = [...new Set(composerYearDim.top(Infinity).map(d => d.Year))].sort();
+    var firstyear = Math.floor((distinctYears[0] - 1)/10) * 10;     // floor to decade; -1 incase already decade
+    var lastyear = firstyear + 30;             // extra focus on the start
+
+    yearDim.filterRange([firstyear, lastyear]);
+
+
+    // ^^^^^^ yearSearchDim works (get data i want on cityYear bubbles iem 30 years)
+    //        but get just these 30years on year barChart (ie loose others)
+    //        -- really want comopsite like at top of comospes3?
+
+
+
+
+
+
+
+  } else {
+    // reset
+    $("#this-composer").html("");
+    $("#first").html("");
+  }
 
 
   updateBubbles();    //bubbles is non-dc.js so update manually
@@ -471,12 +354,7 @@ function updateTitle() {
 
 
 
-
-
-
-
-
-
+// UPDATE BUBBLES
 function updateBubbles() {
   // bubbles is non DC.JS so have to update manually when other charts are filtered
   // https://stackoverflow.com/questions/22392134/is-there-a-way-to-attach-callback-what-fires-whenever-a-crossfilter-dimension-fi
@@ -485,9 +363,10 @@ function updateBubbles() {
 
   // rescale and redraw xAxis
   var distinctYears = [...new Set(composerYearDim.top(Infinity).map(d => d.Year))].sort();
-  var firstyear = Math.floor((distinctYears[0] - 1)/10) * 10;     // floor to decade; -1 incase already deacde
-  //var lastyear = distinctYears[distinctYears.length - 1];         // full range
-  var lastyear = firstyear + 30;
+  var firstyear = parseInt(distinctYears[0]);
+  ////var firstyear = Math.floor((distinctYears[0] - 1)/10) * 10;     // floor to decade; -1 incase already deacde
+  var lastyear = parseInt(distinctYears[distinctYears.length - 1]);         // full range
+  //// var lastyear = firstyear + 30;             // dont focus here - filter the year instead
   // set new domain & redraw xAxis
   x.domain([firstyear,lastyear]);
   xAxis
@@ -533,7 +412,9 @@ function updateBubbles() {
 }
 
 
+
 // PAGINATION
+////////////////////////////////////////////////////////////////////////////////
 // https://github.com/dc-js/dc.js/blob/develop/web-src/examples/table-pagination.html
 
 var ofs = 0, pag = 10;          // start 0; 20 per page
