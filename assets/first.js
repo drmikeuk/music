@@ -490,8 +490,16 @@ function updateBubbles() {
   var lastyear = firstyear + 30;
   // set new domain & redraw xAxis
   x.domain([firstyear,lastyear]);
-  xAxis.transition().duration(1000).call(d3.axisBottom(x));
+  xAxis
+    .transition().duration(1000).call(d3.axisBottom(x))     // update new scale
+    .call(d3.axisBottom(x).tickFormat(d3.format('d')));     // tickformat 1900 not 1,900
 
+  // recalculate z scale - bubble size - to max of _current_ selection
+  maxZ = Math.max.apply(Math, cityYearGroup.top(Infinity).map(function(o) { return o.value; }));
+  z = d3.scaleSqrt()
+     .domain([0, maxZ])   // counts from cityYearGroup ie per city
+     .range([0, 15]);
+  //console.log("maxZ ", maxZ);
 
   var bubbles = d3.select("#chart-bubbles-time svg")
     .selectAll("circle")
