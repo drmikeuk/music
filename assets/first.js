@@ -88,7 +88,7 @@ var timeBarChart = dc.barChart("#chart-bar-time"),
 
 var ndx;            // NB now paginating need to define outside of load data
 
-var x, y, z, myColor, xpad, ypad, tooltip;
+var x, y, z, myColor, xpad, ypad, tooltip, xAxis;
 
 // LOAD DATA
 
@@ -240,13 +240,17 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
           "translate(" + margin.left + "," + margin.top + ")");
 
   // Add X axis
-// ---> need to fix auto scale so can make eleastic ie change on update...
+  // want auto scale so can make eleastic ie change on update...
+  var distinctYears = [...new Set(composerYearDim.top(Infinity).map(d => d.Year))].sort();
+  var firstyear = distinctYears[0];
+  var lastyear = distinctYears[distinctYears.length - 1];
   x = d3.scaleLinear()
-    //.domain(cityYearGroup.top(Infinity).map(d => d.key[1]))   // years   .sort()
-    //.domain([1810, 1900])                       // fixed. london data range
-    .domain([1839, 1901])                         // fixed. dummy data range +/- 1
+    //.domain(distinctYears)   //nOPe       // years from current dataset (unique; sorted)
+    .domain([firstyear, lastyear])          // years from current dataset (unique; sorted)
+    //.domain([1810, 1900])                 // fixed. london data range
+    //.domain([1839, 1901])                 // fixed. dummy data range +/- 1
     .range([ 0, width]);
-  svg.append("g")
+  xAxis = svg.append("g")
     .attr("transform", "translate(0," + height + ")")
     .call(d3.axisBottom(x).tickFormat(d3.format('d')));    // tickformat 1900 not 1,900
 
@@ -345,7 +349,42 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 
 
 
+
+
+
+//console.log("composer year group")
+//console.log(composerYearGroup.top(Infinity).map(d => d.key[1]).sort());
+
+
+
+
 /*
+console.log("composer year DIM")
+//data = composerYearDim.top(Infinity);                    // all rows; all fields
+data = composerYearDim.top(Infinity).map(d => d.Year);   // all rows; just years
+distinctYears = [...new Set(data)].sort();
+firstyear = distinctYears[0];
+lastyear = distinctYears[distinctYears.length - 1];
+
+console.log(distinctYears);
+console.log("1st year ", firstyear, " last year ", lastyear);
+*/
+
+
+
+
+//console.log("dim.top", composerYearDim.top(1)[0]["Year"], "dim.bottom", composerYearDim.bottom(1)[0]["Year"] ); // not 1st and last
+
+
+//console.log(d3.map(composerYearDim.top(Infinity).map(d => d.Year)).keys().sort());
+
+
+/*
+
+composerYearDim.top(Infinity)                         // all items (so multiple 1840's)
+composerYearDim.top(Infinity).map(d => d.Year)        // all items; just year
+.keys => unique
+
 console.log("year dim")
 console.log(yearDim.top(5));        // grab top entry
 
@@ -420,6 +459,11 @@ function updateTitle() {
   var firststring = "First performance: <span>" + firstrow["Year"] + " " + firstrow["City"] + ": <i>" + firstrow["Symphony"] + "</i></span>";
   $("#first").html(firststring);
 
+  // additionally filter by year to start +20 (so more focus)
+
+
+
+
   updateBubbles();    //bubbles is non-dc.js so update manually
 }
 
@@ -436,12 +480,18 @@ function updateTitle() {
 function updateBubbles() {
   // bubbles is non DC.JS so have to update manually when other charts are filtered
   // https://stackoverflow.com/questions/22392134/is-there-a-way-to-attach-callback-what-fires-whenever-a-crossfilter-dimension-fi
-  //
-  //console.log("update bubbles. new filtered composerGroup");
-  //console.log(JSON.stringify(cityComposerGroup.top(Infinity)));
+  // update bubbles like https://www.d3-graph-gallery.com/graph/scatter_buttonXlim.html
 
 
-// redraw x?
+  // rescale and redraw xAxis
+  var distinctYears = [...new Set(composerYearDim.top(Infinity).map(d => d.Year))].sort();
+  var firstyear = Math.floor((distinctYears[0] - 1)/10) * 10;     // floor to decade; -1 incase already deacde
+  //var lastyear = distinctYears[distinctYears.length - 1];         // full range
+  var lastyear = firstyear + 30;
+  // set new domain & redraw xAxis
+  x.domain([firstyear,lastyear]);
+  xAxis.transition().duration(1000).call(d3.axisBottom(x));
+
 
   var bubbles = d3.select("#chart-bubbles-time svg")
     .selectAll("circle")
@@ -462,6 +512,11 @@ function updateBubbles() {
          //return d.value * 5})
          return z(d.value); } )         // TEST
     .style("fill", function (d) { return myColor(d.key[0]); } )  // colour = city
+
+
+    // just FYI ...
+    //console.log(distinctYears);
+    //console.log("1st year ", firstyear, " last year ", lastyear);
 
 
   // exit selection

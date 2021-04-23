@@ -45,6 +45,8 @@ customjs:
       <h3>Performances</h3>
       <div id="chart-bubbles-time"></div>
 
+      <div id="chart-stream-time"></div>
+
       <h3>Year</h3>
       <div id="chart-bar-time"></div>
 

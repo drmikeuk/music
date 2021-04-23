@@ -55,6 +55,7 @@ h1, h2, h3              {font-weight: 300}
 /* sidebar list */
 .dc-cbox-group > li   {line-height: 1; }
 .dc-cbox-group input[type=checkbox]:checked + label { background: #85C1E9 } /* active = blue*/
+.dc-cbox-group input[type=radio]:checked + label { background: #85C1E9 } /* active = blue*/
 
 /* top bar buttons #selectPlaces  */
 #selectPlaces .dc-cbox-group label  { background: #ddd }
