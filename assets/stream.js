@@ -35,14 +35,16 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
     cityDim = ndx.dimension(d => d.City),
     cityYearDim = ndx.dimension(d => [d.City, d.Year]),
 		all = ndx.groupAll(),
-    //composerGroup = composerDim.group().reduceCount(),
-    // custom reduce to get just the MIN Year not the total COUNT
-    composerGroup = composerDim.group().reduce(
-      function (p, v) { if(v.Year < p || p === null) p = v.Year; return p; },
-      function (p, v) { return p; },
-      function () { return null; }
-    ),
+    composerGroup = composerDim.group().reduceCount(),
     composerYearGroup = composerYearDim.group().reduceCount(),
+    //
+// ---> want to customreduce to get just the MIN Year (ie return 1 row per comopser; not one per year)
+    //
+    //composerYearGroup = composerYearDim.group().reduce(
+    //  function (p, v) { if(v.Year < p || p === null) p = v.Year; return p; },
+    //  function (p, v) { return p; },
+    //  function () { return null; }
+    //),
     yearGroup = yearDim.group().reduceCount(),
     cityGroup = cityDim.group().reduceCount(),
     cityYearGroup = cityYearDim.group().reduceCount();
@@ -81,7 +83,7 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
        .dimension(composerDim)     // new DIM - graph updates BUT loose all
        .group(composerGroup)
        .order(function (a,b) {
-         return a.value > b.value ? 1 : b.value > a.value ? -1 : 0; // order by value (lowest first) not group key (label)
+         return a.value < b.value ? 1 : b.value < a.value ? -1 : 0; // order by value not group key (label)
        })
        //.title(d => d.key)       // DOESNT WORK
        .on("filtered", updateTitle)    // update comosper title + bubbles is non-dc.js so update manually
@@ -266,6 +268,163 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
        //.on("mouseover", showTooltip )
        //.on("mousemove", moveTooltip )
        //.on("mouseleave", hideTooltip )
+
+
+
+  // NON DC.JS STREAM CHART
+  // ===========================================================================
+  // https://www.d3-graph-gallery.com/graph/streamgraph_basic.html
+
+  // set the dimensions and margins of the graph
+  var margin = {top: 10, right: 20, bottom: 30, left: 70},
+    width = 800 - margin.left - margin.right,
+    height = 300 - margin.top - margin.bottom;
+
+  var svg = d3.select("#chart-stream-time")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
+
+  // Add X axis
+  // want auto scale so can make eleastic ie change on update...
+  var distinctYears = [...new Set(composerYearDim.top(Infinity).map(d => d.Year))].sort();
+  var firstyear = distinctYears[0];
+  var lastyear = distinctYears[distinctYears.length - 1];
+  x = d3.scaleLinear()
+    //.domain(distinctYears)   //nOPe       // years from current dataset (unique; sorted)
+    .domain([firstyear, lastyear])          // years from current dataset (unique; sorted)
+    //.domain([1810, 1900])                 // fixed. london data range
+    //.domain([1839, 1901])                 // fixed. dummy data range +/- 1
+    .range([ 0, width]);
+  xAxis = svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x).tickFormat(d3.format('d')));    // tickformat 1900 not 1,900
+
+  // Add Y axis
+  maxY = Math.max.apply(Math, yearGroup.top(Infinity).map(function(o) { return o.value; })); // max per year (all cities)
+  var y = d3.scaleLinear()
+    .domain([-maxY, maxY])
+    .range([ height, 0 ]);
+  svg.append("g")
+    .call(d3.axisLeft(y));
+
+  // Add a scale for bubble color - all cities from cityGroup
+  color = d3.scaleOrdinal()
+      .domain(cityGroup.top(Infinity).map(d => d.key).sort())   // all cities; sorted az
+      .range(colours4);
+
+  // rearrange data
+  var newData = [];
+  cityYearGroup.top(10).forEach(function (row) {
+      // example row: {key: ["London", "1840"], value: 13}
+      // if no newData[<year>] --> create: newData[<year>]=[]
+      if (!newData[row.key[1]]) {
+        newData[row.key[1]]=[];
+        newData[row.key[1]]["Year"] = row.key[1];
+      }
+      // add data: newData[<year>][<city>] = value
+      newData[row.key[1]][row.key[0]] = row.value;
+      console.log ("row");
+      console.log (row);
+  });
+
+  console.log ("newData");
+  console.log (newData);
+
+  console.log ("keys (cities)");
+  console.log (cityGroup.top(Infinity).map(d => d.key).sort());
+
+
+  //stack the data
+   var stackedData = d3.stack()
+     //.offset(d3.stackOffsetSilhouette)
+     .keys(cityGroup.top(Infinity).map(d => d.key).sort())         // keys = series = cities
+     (newData)
+
+   console.log ("stacked Data");
+   console.log (stackedData);
+
+
+
+  // Show the areas
+  svg
+   .selectAll("mylayers")
+   .data(stackedData)
+   .enter()
+   .append("path")
+     .style("fill", function(d) { return color(d.key); })
+     .attr("d", d3.area()
+       .x(function(d, i) { return x(d.data.year); })
+       .y0(function(d) { return y(d[0]); })
+       .y1(function(d) { return y(d[1]); })
+   )
+
+/*
+console.log ("data = city year group");
+console.log (cityYearGroup.top(5));
+
+var newData = [];
+cityYearGroup.top(5).forEach(function (row) {
+    // example row: {key: ["London", "1840"], value: 13}
+    console.log("value: ", row.value);
+    console.log("key0: ", row.key[0]); // city
+    console.log("key1: ", row.key[1]); // year
+    //newData.push(row.value);    // values: 7, 6, 6, 5, 5
+    //newData[row.key[1]][row.key[0]]=row.value;
+    //newData[row.key[1]]=row.value;
+
+
+    // if no newData[<year>] --> create: newData[<year>]=[]
+    if (!newData[row.key[1]]) {
+      newData[row.key[1]]=[];
+    }
+    // add data: newData[<year>][<city>] = value
+    newData[row.key[1]][row.key[0]] = row.value;
+});
+
+*/
+
+
+
+
+/*
+newData["1842"]=[];                   // how only push if don't exist?
+
+// if no newData[<year>] --> create: newData[<year>]=[]
+if (!newData["1842"]) {
+  newData["1842"]=[];
+}
+
+newData["1842"]["Paris"] = 1;         // error (Cannot set property 'Paris' of undefined) unless created 1842 1st
+
+newData["1842"]["London"] = 10;
+
+// if no newData[<year>] --> create: newData[<year>]=[]
+if (!newData["1844"]) {
+  newData["1844"]=[];
+}
+
+newData["1844"]["Paris"] = 2;
+
+*/
+
+
+
+
+
+
+//console.log ("stack");
+//console.log (stackedData);
+
+
+
+
+
+
+
 
 
 
