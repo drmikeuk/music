@@ -62,7 +62,7 @@ They key research questions the database should be able to answer are:
 ## Prototypes
 <ul>
   {% comment %} pages  in nav{% endcomment %}
-  {% assign pages = (site.pages | where: "nav","yes" | sort: "sortTitle" ) %}
+  {% assign pages = site.pages | where: "nav", "yes" | sort: "sortTitle"  %}
   {% for page in pages %}
   <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
   {% endfor %}
