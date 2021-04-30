@@ -207,9 +207,9 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
       .domain(cityGroup.top(Infinity).map(d => d.key).sort())   // all cities; sorted az
       .range(colours4);
 
-/*
+
   // tooltip 1. Create a tooltip div that is hidden by default:
-   tooltip = d3.select("#chart-bubble-composers")
+   tooltip = d3.select("#chart-bubbles-time")
      .append("div")
        .style("opacity", 0)
        .attr("class", "tooltip")
@@ -226,7 +226,7 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
        .duration(200)
      tooltip
        .style("opacity", 1)
-       .html(d.key[0] + " " + d.value )
+       .html(d.key[0] + " " + d.key[1] + ": " + d.value )         // city: count
        .style("left", (d3.mouse(this)[0]+200) + "px")
        .style("top", (d3.mouse(this)[1]+30) + "px")
    }
@@ -241,7 +241,7 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
        .duration(200)
        .style("opacity", 0)
    }
-*/
+
 
 
   // Add dots
@@ -263,9 +263,9 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
        .attr("stroke", "white")
        .style("stroke-width", "2px")
        // tooltip3 Trigger the functions
-       //.on("mouseover", showTooltip )
-       //.on("mousemove", moveTooltip )
-       //.on("mouseleave", hideTooltip )
+       .on("mouseover", showTooltip )
+       .on("mousemove", moveTooltip )
+       .on("mouseleave", hideTooltip )
 
 
 

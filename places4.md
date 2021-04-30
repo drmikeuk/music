@@ -2,7 +2,7 @@
 layout: dashboard
 title: "Places4"
 nav: "yes"
-sortTitle: "b"
+sortTitle: "d"
 customjs:
   - /vendor/d3-5.16.0.min.js
   - /vendor/crossfilter-1.5.4.min.js

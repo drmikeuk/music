@@ -1,7 +1,7 @@
 ---
 layout: home
 title: "Performances database"
-description: "A database of British Symphonies holding dates and locations of performances"
+description: "A database of 19th century performances of symphonies in Europe and North America"
 header-img: "World_Map_Grayscale.png"
 ---
 
