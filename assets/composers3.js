@@ -198,7 +198,7 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
       .keyAccessor(function(d) {return +d.key[1];})
       .valueAccessor(function(d) {return +d.value;})
       .ordinalColors(colours4) 	         // my range of colours
-      .x(d3.scaleLinear().domain([1839, 1941]))
+      .x(d3.scaleLinear().domain([1839, 1901]))
       .elasticY(true)
       .legend(dc.legend().x(300).y(0).itemHeight(13).gap(5).horizontal(1).legendWidth(500).itemWidth(80))
       .margins({top:40,bottom:20,right:20,left:30})   // extra margin at top for legend
