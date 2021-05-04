@@ -1,6 +1,6 @@
 ---
 layout: dashboard
-title: "First"
+title: "Journeys"
 nav: "yes"
 sortTitle: "e"
 customjs:
@@ -13,7 +13,7 @@ customjs:
 <div class="banner">
   <div class="container-fluid">
   	<div class="header">
-  	 	 <div class="title"><h1>First performance</h1></div>
+  	 	 <div class="title"><h1>Journeys</h1></div>
   	</div>
     <div class="row">
       <div class="col-md-3">
