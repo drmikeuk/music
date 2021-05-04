@@ -19,7 +19,7 @@ var timeBarChart = dc.barChart("#chart-bar-time"),
 var ndx;            // NB now paginating need to define outside of load data
 
 var x, y, z, myColor, xpad, ypad, tooltip;          // bubbles #1
-var x2, y2, z2, myColor2, xpad2, ypad2, tooltip2;   // bubbles #2
+var x2, y2, z2, myColor2, xpad2, ypad2, tooltip2, height2;   // bubbles #2
 
 // LOAD DATA
 
@@ -48,7 +48,8 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
     citySearchGroup = citySearchDim.group(),
     yearGroup = yearDim.group().reduceCount(),
     cityYearGroup = cityYearDim.group().reduceCount(),
-    cityComposerGroup = cityComposerDim.group().reduceCount();
+    cityComposerGroup = cityComposerDim.group().reduceCount()
+    nonEmptyCityGroup = remove_empty_bins(cityGroup);
 
 
 	// CONFIGURE DATA COUNT (x out of y records shown)
@@ -226,13 +227,13 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
      tooltip
        .style("opacity", 1)
        .html(d.key[0] + " " + d.value )
-       .style("left", (d3.mouse(this)[0]+200) + "px")
-       .style("top", (d3.mouse(this)[1]+30) + "px")
+       .style("left", (d3.mouse(this)[0]+170) + "px")
+       .style("top", (d3.mouse(this)[1]+50) + "px")
    }
    var moveTooltip = function(d) {
      tooltip
-       .style("left", (d3.mouse(this)[0]+60) + "px")
-       .style("top", (d3.mouse(this)[1]+5) + "px")
+       .style("left", (d3.mouse(this)[0]+170) + "px")
+       .style("top", (d3.mouse(this)[1]+50) + "px")
    }
    var hideTooltip = function(d) {
      tooltip
@@ -275,13 +276,13 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 
     // set the dimensions and margins of the graph
     var margin = {top: 10, right: 20, bottom: 20, left: 70},
-      width = 800 - margin.left - margin.right,
-      height = 300 - margin.top - margin.bottom;          //100 to match year?
+      width2 = 800 - margin.left - margin.right,
+      height2 = 300 - margin.top - margin.bottom;          //100 to match year?
 
     var svg = d3.select("#chart-bubbles-time")
     .append("svg")
-      .attr("width", width + margin.left + margin.right)
-      .attr("height", height + margin.top + margin.bottom)
+      .attr("width", width2 + margin.left + margin.right)
+      .attr("height", height2 + margin.top + margin.bottom)
     .append("g")
       .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
@@ -296,23 +297,23 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
       .domain([firstyear, lastyear])          // years from current dataset (unique; sorted)
       //.domain([1810, 1900])                 // fixed. london data range
       //.domain([1839, 1901])                 // fixed. dummy data range +/- 1
-      .range([ 0, width]);
-    xAxis = svg.append("g")
-      .attr("transform", "translate(0," + height + ")")
+      .range([ 0, width2]);
+    xAxis2 = svg.append("g")
+      .attr("transform", "translate(0," + height2 + ")")
       .call(d3.axisBottom(x2).tickFormat(d3.format('d')));    // tickformat 1900 not 1,900
 
     // Add Y axis
     y2 = d3.scaleBand()
       .domain(cityGroup.top(Infinity).map(d => d.key).sort())        // ALL cities
-      .range([ 0, height]);                           // biggest total at top (svg 0)
-    svg.append("g").call(d3.axisLeft(y2));
+      .range([ 0, height2]);                           // biggest total at top (svg 0)
+    yAxis2 = svg.append("g").call(d3.axisLeft(y2));
     ypad2 = y2.bandwidth() / 2;     // want half the width of the band to plot in center of band
 
     // add gridlines https://bl.ocks.org/wadefagen/ce5d308d8080130de10f21254273e30c
     function make_gridlines2() {
         return d3.axisLeft(y2)
             .ticks(5)
-            .tickSize(-width)
+            .tickSize(-width2)
             .tickFormat("")
     }
     svg.append("g").attr("stroke-opacity", 0.2).call(make_gridlines2())
@@ -334,33 +335,35 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 
 
     // tooltip 1. Create a tooltip div that is hidden by default:
-     tooltip2 = d3.select("#chart-bubbles-time")
-       .append("div")
-         .style("opacity", 0)
-         .attr("class", "tooltip2")
-         .style("background-color", "black")
-         .style("border-radius", "5px")
-         .style("padding", "10px")
-         .style("color", "white")
-         .style("min-width", "120px")
+    tooltip2 = d3.select("#chart-bubbles-time")
+      .append("div")
+        .style("opacity", 0)
+        .attr("class", "tooltip")
+        .style("background-color", "black")
+        .style("border-radius", "5px")
+        .style("padding", "10px")
+        .style("color", "white")
+        .style("min-width", "120px")
 
      // tooltip 2. Create 3 functions to show / update (when mouse move but stay on same circle) / hide the tooltip
-     var showTooltip = function(d) {
+     var showTooltip2 = function(d) {
+       console.log ("show")
        tooltip2
          .transition()
          .duration(200)
        tooltip2
          .style("opacity", 1)
          .html(d.key[0] + " " + d.key[1] + ": " + d.value )         // city: count
-         .style("left", (d3.mouse(this)[0]+200) + "px")
-         .style("top", (d3.mouse(this)[1]+30) + "px")
+         .style("left", (d3.mouse(this)[0]) + 90 + "px")
+         .style("top", (d3.mouse(this)[1]) + 50 + "px")
      }
-     var moveTooltip = function(d) {
+     var moveTooltip2 = function(d) {
+       //console.log ("move")
        tooltip2
-         .style("left", (d3.mouse(this)[0]+60) + "px")
-         .style("top", (d3.mouse(this)[1]+5) + "px")
+         .style("left", (d3.mouse(this)[0]) + 90 + "px")
+         .style("top", (d3.mouse(this)[1]) + 50 + "px")
      }
-     var hideTooltip = function(d) {
+     var hideTooltip2 = function(d) {
        tooltip2
          .transition()
          .duration(200)
@@ -388,9 +391,9 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
          .attr("stroke", "white")
          .style("stroke-width", "2px")
          // tooltip3 Trigger the functions
-         .on("mouseover", showTooltip )
-         .on("mousemove", moveTooltip )
-         .on("mouseleave", hideTooltip )
+         .on("mouseover", showTooltip2 )
+         .on("mousemove", moveTooltip2 )
+         .on("mouseleave", hideTooltip2 )
 
 
 
@@ -484,9 +487,48 @@ function updateBubbles() {
   //// var lastyear = firstyear + 30;             // dont focus here - filter the year instead
   // set new domain & redraw xAxis
   x2.domain([firstyear,lastyear]);
-  xAxis
+  xAxis2
     .transition().duration(1000).call(d3.axisBottom(x2))     // update new scale
     .call(d3.axisBottom(x2).tickFormat(d3.format('d')));     // tickformat 1900 not 1,900
+
+/*  THIS ISNT WORKING AS EXPECTED
+
+    non-empty: cityGroup.top(Infinity).filter(d => d.value != 0).map(d => d.key)
+      is OK (in conmsole.log) but _fails_ as scale
+
+    fixed scale ie domain(["Manchester", "London"]); looks OK but cY all NaN
+
+
+  // rescale and redraw yAxis
+  y2.domain(["Manchester", "London"]);
+    //.domain(cityGroup.top(Infinity).filter(d => d.value != 0).map(d => d.key).sort())        // filtered cities
+    //.range([ 0, height2]);                                          // biggest total at top (svg 0)
+
+  yAxis2
+    .transition().duration(1000).call(d3.axisLeft(y2));     // update new scale
+
+    //.domain(cityGroup.top(Infinity).filter(d => d.value != 0).map(d => d.key).sort())        // filtered cities
+
+
+/*
+//console.log ("update... cityGroup:")
+//console.log(cityGroup.top(Infinity).sort())                   // cities (inc. zeros) & counts
+//console.log(cityGroup.top(Infinity).map(d => d.key).sort())  // just labels
+//console.log ("update... nonEmpty cityGroup:")
+
+
+nonEmptyCity = cityGroup.top(Infinity).filter(d => d.value != 0).map(d => d.key).sort()
+//onEmptyCity = nonEmptyCityList.map(d => d.key).sort();
+
+console.log ("update... nonEmpty city:")
+console.log(nonEmptyCity);               // removed empty bins (cities)
+
+*/
+
+
+
+
+
 
   // recalculate z scale - bubble size - to max of _current_ selection
   maxZ2 = Math.max.apply(Math, cityYearGroup.top(Infinity).map(function(o) { return o.value; }));
@@ -518,6 +560,24 @@ function updateBubbles() {
 
 
 }
+
+
+
+// REMOVE EMPTY BINS
+// see https://dc-js.github.io/dc.js/examples/filtering-removing.html
+// Example demonstrating using a "Fake Group" to remove the empty bars of an ordinal bar chart when their values drop to zero.
+
+function remove_empty_bins(source_group) {
+    return {
+        all:function () {
+            return source_group.all().filter(function(d) {
+                return d.value != 0;
+            });
+        }
+    };
+}
+
+
 
 
 // PAGINATION

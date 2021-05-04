@@ -29,6 +29,8 @@ h1, h2, h3              {font-weight: 300}
 .tick li::before     {content: "\f14a"; font-family: 'Font Awesome 5 free'; font-weight: 900; margin:0 10px 0 -20px; color: #6c757d}
 .chevron li::before     {content: "\f138"; font-family: 'Font Awesome 5 free'; font-weight: 900; margin:0 10px 0 -20px; color: #6c757d}
 
+/* composer */
+#chart-composite-composers #this-composer     {position: absolute; right: 50%}
 
 /* first */
 #first                  {font-size: 80%; font-weight: 300}
