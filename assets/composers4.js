@@ -90,7 +90,7 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
       .x(d3.scaleLinear().domain([1839, 1901]))   // extra or 1st bar cut off
       .centerBar(true)
       .elasticY(true)
-      .margins({top:10,bottom:20,right:20,left:30})   // margin to match timeSeriesChart
+      .margins({top:10,bottom:20,right:20,left:70})   // margin to match bubbles
       .on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
       .xAxis().tickFormat(d3.format('d'));    // 1900 not 1,900
       // NB elastic means rescale axis; may want to turn this off
