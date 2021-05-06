@@ -30,6 +30,7 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 	ndx = crossfilter(data),
     composerDim = ndx.dimension(d => d.Composer),
     composerYearDim = ndx.dimension(d => [d.Composer, d.Year]),
+    composerCityDim = ndx.dimension(d => [d.Composer, d.City]),
 		yearDim = ndx.dimension(d => d.Year),
     yearSearchDim = ndx.dimension(d => d.Year),
     cityDim = ndx.dimension(d => d.City),
@@ -38,6 +39,12 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
     //composerGroup = composerDim.group().reduceCount(),
     // custom reduce to get just the MIN Year not the total COUNT
     composerGroup = composerDim.group().reduce(
+      function (p, v) { if(v.Year < p || p === null) p = v.Year; return p; },
+      function (p, v) { return p; },
+      function () { return null; }
+    ),
+    //composerCityGroup = composerCityDim.group().reduceCount(),
+    composerCityGroup = composerCityDim.group().reduce(
       function (p, v) { if(v.Year < p || p === null) p = v.Year; return p; },
       function (p, v) { return p; },
       function () { return null; }
@@ -284,10 +291,18 @@ console.log("1st year ", firstyear, " last year ", lastyear);
 
 
 
+console.log("composerCityGroup")
+data = composerCityGroup.top(6);
+console.log (data)
 
+// key[0] = composer; key[1] = city;  value = first year
 
-
-
+newGroup = composerCityGroup.group().map(
+  //function (city, first) {
+  //  if(v.Year < p || p === null) p = v.Year; return p; },
+  //function (p, v) { return p; },
+  //function () { return null; }
+)
 
 
 

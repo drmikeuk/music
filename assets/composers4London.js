@@ -11,40 +11,40 @@ var colours4 = ["#ff4f8a","#007e19","#6263ff","#abb13d","#800078","#e37f00","#00
 
 
 // CREATE OBJECTS & TIE TO HTML ie match to div IDs in the html
+//var composersBarChart1 = dc.barChart("#chart-bar-composers1"),
+//    composersBarChart2 = dc.barChart("#chart-bar-composers2"),
 var timeBarChart = dc.barChart("#chart-bar-time"),
     dataCount = dc.dataCount("#datacount"),
     dataSummaryTable = dc.dataTable("#table-datasummary");
 
-var ndx;            // NB now paginating need to define outside of load data
-var x, y, z, myColor, xpad, ypad, tooltip, xAxis;
+var composite = new dc.CompositeChart("#chart-composite-composers");
 
+
+var ndx;            // NB now paginating need to define outside of load data
+var x2, y2, z2, myColor2, xpad2, ypad2, tooltip2, height2;   // bubbles #2
 
 // LOAD DATA
-///////////////////////////////////////////////////////////////////////////////
+// =========
 // NB  special chars so try this? https://stackoverflow.com/questions/38304384/d3-js-read-csv-file-with-special-characters-%C3%A9-%C3%A0-%C3%BC-%C3%A8
-d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
-	// might want to format data a bit here eg calculate month or year from timestamp
+d3.csv('/assets/PerformanceDatabaseMock.London.csv').then(data => {
+	// might want to format data a bit here
+	// eg calculate month or year from timestamp
 
 
 	// CREATE CROSSFILTER DIMENSIONS AND GROUPS
 	ndx = crossfilter(data),
     composerDim = ndx.dimension(d => d.Composer),
-    composerYearDim = ndx.dimension(d => [d.Composer, d.Year]),
-		yearDim = ndx.dimension(d => d.Year),
-    yearSearchDim = ndx.dimension(d => d.Year),
+    composerSearchDim = ndx.dimension(d => d.Composer),
+		orchestraDim = ndx.dimension(d => d.Orchestra),
     cityDim = ndx.dimension(d => d.City),
+		yearDim = ndx.dimension(d => d.Year),
     cityYearDim = ndx.dimension(d => [d.City, d.Year]),
 		all = ndx.groupAll(),
-    //composerGroup = composerDim.group().reduceCount(),
-    // custom reduce to get just the MIN Year not the total COUNT
-    composerGroup = composerDim.group().reduce(
-      function (p, v) { if(v.Year < p || p === null) p = v.Year; return p; },
-      function (p, v) { return p; },
-      function () { return null; }
-    ),
-    composerYearGroup = composerYearDim.group().reduceCount(),
+    composerGroup = composerDim.group(),
+    composerSearchGroup = composerSearchDim.group(),
+    orchestraGroup = orchestraDim.group(),
+    cityGroup = cityDim.group(),
     yearGroup = yearDim.group().reduceCount(),
-    cityGroup = cityDim.group().reduceCount(),
     cityYearGroup = cityYearDim.group().reduceCount();
 
 
@@ -58,41 +58,71 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 
 
 	// CONFIGURE CHART ATTRIBUTES
+
+  composite.width(800).height(100)
+    //.x(d3.scaleOrdinal())                             // auto - works for individual charts but not composite
+    //.x(d3.scaleOrdinal().domain(composerSearchDim))     // specify DIM - works for individual charts but not composite
+    .x(d3.scaleOrdinal().domain(composerSearchGroup.top(Infinity).map(d => d.key)))  // sorted list of composers
+    .xUnits(dc.units.ordinal)
+    //.ordering(d => -d.value)              // order by value not name
+    .compose([
+        new dc.BarChart(composite)
+            .dimension(composerSearchDim)
+            .group(composerSearchGroup, "all")
+            .centerBar(true)
+            .colors('#ccc'),
+        new dc.BarChart(composite)
+            .dimension(composerDim)
+            .group(composerGroup, "selected")
+            .centerBar(true)
+            .colors('#3498DB')
+        ])
+    .brushOn(false)
+    .yAxis().ticks(2);                 // --> less ticks! setter so can't chain ie must be last!
+    composite.xAxis().tickValues([]); // no ticks or labels
+
+
   timeBarChart.width(800).height(100)
       .dimension(yearDim)
       .group(yearGroup)
       .ordinalColors(colours) 	         // my range of colours
       // old style .x(d3.scale.linear().domain([1840, 1900])) // d3v3 not d3v4
-      //.x(d3.scaleLinear().domain([1810, 1900]))  // fixed. london data range
-      .x(d3.scaleLinear().domain([1839, 1901]))    // fixed. dummy data range +/- 1
+      .x(d3.scaleLinear().domain([1812, 1901]))   // extra or 1st bar cut off
       .centerBar(true)
       .elasticY(true)
-      .on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
       .margins({top:10,bottom:20,right:20,left:70})   // margin to match bubbles
+      .on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
       .xAxis().tickFormat(d3.format('d'));    // 1900 not 1,900
-   timeBarChart.yAxis().ticks(3);         // --> less ticks! setter so can't chain ie must be last!
+      // NB elastic means rescale axis; may want to turn this off
+  timeBarChart.yAxis().ticks(3);         // --> less ticks! setter so can't chain ie must be last!
 
 
-   // SEARCH COMPOSERS v2: filterable set of checkboxes
-   var filterComposers = new dc.CboxMenu("#filterComposers")
-       //.dimension(composerYearDim)     // new DIM - graph updates BUT loose all
-       //.group(composerYearGroup)
-       //start with just composers
-       .dimension(composerDim)     // new DIM - graph updates BUT loose all
-       .group(composerGroup)
-       .order(function (a,b) {
-         return a.value > b.value ? 1 : b.value > a.value ? -1 : 0; // order by value (lowest first) not group key (label)
-       })
-       //.title(d => d.key)       // DOESNT WORK
-       .on("filtered", updateTitle)    // update comosper title + bubbles is non-dc.js so update manually
-       .multiple(false);          // only single select aka radio
+  // SEARCH COMPOSERS (v1 dc.js text filter)
+  //var mysearch = new dc.TextFilterWidget("#search").dimension(composerDim);
+  //mysearch.placeHolder('Search composers');
+
+  // SEARCH COMPOSERS v2: filterable set of checkboxes
+  var filterComposers = new dc.CboxMenu("#filterComposers")
+      //.dimension(composerDim)             // same DIM as graph - graph DONT update (so see all)
+      //.group(composerGroup)
+      .dimension(composerSearchDim)     // new DIM - graph updates BUT loose all
+      .group(composerSearchGroup)
+      .order(function (a,b) {
+        return a.value < b.value ? 1 : b.value < a.value ? -1 : 0; // order by value not group key (label)
+      })
+      //.title(d => d.key)       // DOESNT WORK
+      //.on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
+      .on("filtered", updateComposer)    // update Title + bubbles is non-dc.js so update manually
+      .multiple(true);
+
+
 
 
 	// CONFIGURE DATA TABLE          // yearDIM = sort by year ?
 	dataSummaryTable.dimension(yearDim)
 	    .group(d => d.year)          // group by year??
       .size(Infinity)				       // need all the records & let pagination handle display & offset
-    	.columns(['Composer', 'Symphony', 'Year', 'Orchestra', 'City'])      // can change labels & format of data if desired
+    	.columns(['Composer', 'Symphony', 'Date', 'Orchestra', 'City'])  // can change labels & format of data if desired
       .on('preRender', update_offset)     // pagination
       .on('preRedraw', update_offset)     // pagination
       .on('pretransition', display);      // pagination
@@ -115,6 +145,7 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
                   });
                   return row;
               });
+          //}
 
           //console.log  ("data...");
           //console.log (data); //  -> i have the right data here
@@ -131,85 +162,72 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 	dc.renderAll();
 
 
-
-  // MY FIND COMPOSER (ie filter LIs)
-  $(document).ready(function(){
-    $("#filter").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $("#filterComposers li").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-      });
-    });
-  });
-
-
-
-  // NON DC.JS BUBBLE CHART
-  // ===========================================================================
+  // NON DC.JS BUBBLE CHART 2: CITIES per YEAR
+  // =========================================
   // https://www.d3-graph-gallery.com/graph/bubble_color.html
 
   // set the dimensions and margins of the graph
-  var margin = {top: 10, right: 20, bottom: 30, left: 70},
-    width = 800 - margin.left - margin.right,
-    height = 300 - margin.top - margin.bottom;
+  var margin = {top: 10, right: 20, bottom: 20, left: 70},
+    width2 = 800 - margin.left - margin.right,
+    height2 = 300 - margin.top - margin.bottom;          //100 to match year?
 
   var svg = d3.select("#chart-bubbles-time")
   .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", width2 + margin.left + margin.right)
+    .attr("height", height2 + margin.top + margin.bottom)
   .append("g")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
   // Add X axis
-  // want auto scale so can make eleastic ie change on update...
-  var distinctYears = [...new Set(composerYearDim.top(Infinity).map(d => d.Year))].sort();
+  // want auto scale so can make elastic ie change on update...
+  var distinctYears = [...new Set(cityYearDim.top(Infinity).map(d => d.Year))].sort();
   var firstyear = distinctYears[0];
   var lastyear = distinctYears[distinctYears.length - 1];
-  x = d3.scaleLinear()
+  x2 = d3.scaleLinear()
     //.domain(distinctYears)   //nOPe       // years from current dataset (unique; sorted)
     .domain([firstyear, lastyear])          // years from current dataset (unique; sorted)
     //.domain([1810, 1900])                 // fixed. london data range
     //.domain([1839, 1901])                 // fixed. dummy data range +/- 1
-    .range([ 0, width]);
-  xAxis = svg.append("g")
-    .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x).tickFormat(d3.format('d')));    // tickformat 1900 not 1,900
+    .range([ 0, width2]);
+  xAxis2 = svg.append("g")
+    .attr("transform", "translate(0," + height2 + ")")
+    .call(d3.axisBottom(x2).tickFormat(d3.format('d')));    // tickformat 1900 not 1,900
 
   // Add Y axis
-  y = d3.scaleBand()
+  y2 = d3.scaleBand()
     .domain(cityGroup.top(Infinity).map(d => d.key).sort())        // ALL cities
-    .range([ 0, height]);                           // biggest total at top (svg 0)
-  svg.append("g").call(d3.axisLeft(y));
-  ypad = y.bandwidth() / 2;     // want half the width of the band to plot in center of band
+    .range([ 0, height2]);                           // biggest total at top (svg 0)
+  yAxis2 = svg.append("g").call(d3.axisLeft(y2));
+  ypad2 = y2.bandwidth() / 2;     // want half the width of the band to plot in center of band
 
   // add gridlines https://bl.ocks.org/wadefagen/ce5d308d8080130de10f21254273e30c
-  function make_gridlines() {
-      return d3.axisLeft(y)
+  function make_gridlines2() {
+      return d3.axisLeft(y2)
           .ticks(5)
-          .tickSize(-width)
+          .tickSize(-width2)
           .tickFormat("")
   }
-  svg.append("g").attr("stroke-opacity", 0.2).call(make_gridlines())
+  svg.append("g").attr("stroke-opacity", 0.2).call(make_gridlines2())
 
 
   // Add a scale for bubble size
-  maxZ = Math.max.apply(Math, cityYearGroup.top(Infinity).map(function(o) { return o.value; }));
+  maxZ2 = Math.max.apply(Math, cityYearGroup.top(Infinity).map(function(o) { return o.value; }));
   //z = d3.scaleLinear().domain([0, maxZ]).range([0, 10]);
   // want 0=0; 1 = visible; linear not ideal see https://bl.ocks.org/guilhermesimoes/e6356aa90a16163a6f917f53600a2b4a
-  z = d3.scaleSqrt()
-     .domain([0, maxZ])   // counts from cityYearGroup ie per city
-     .range([0, 15]);
+  z2 = d3.scaleSqrt()
+     .domain([0, maxZ2])   // counts from cityYearGroup ie per city
+     .range([0, 10]);
 
 
   // Add a scale for bubble color - all cities from cityGroup
-  myColor = d3.scaleOrdinal()
+  myColor2 = d3.scaleOrdinal()
       .domain(cityGroup.top(Infinity).map(d => d.key).sort())   // all cities; sorted az
       .range(colours4);
 
 
   // tooltip 1. Create a tooltip div that is hidden by default:
-   tooltip = d3.select("#chart-bubbles-time")
+   tooltip2 = d3.select("#chart-bubbles-time")
      .append("div")
        .style("opacity", 0)
        .attr("class", "tooltip")
@@ -221,22 +239,22 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
 
    // tooltip 2. Create 3 functions to show / update (when mouse move but stay on same circle) / hide the tooltip
    var showTooltip = function(d) {
-     tooltip
+     tooltip2
        .transition()
        .duration(200)
-     tooltip
+     tooltip2
        .style("opacity", 1)
        .html(d.key[0] + " " + d.key[1] + ": " + d.value )         // city: count
-       .style("left", (d3.mouse(this)[0]+200) + "px")
-       .style("top", (d3.mouse(this)[1]+30) + "px")
+       .style("left", (d3.mouse(this)[0] + 90) + "px")
+       .style("top", (d3.mouse(this)[1] + 150) + "px")
    }
    var moveTooltip = function(d) {
-     tooltip
-       .style("left", (d3.mouse(this)[0]+60) + "px")
-       .style("top", (d3.mouse(this)[1]+5) + "px")
+     tooltip2
+       .style("left", (d3.mouse(this)[0] + 90) + "px")
+       .style("top", (d3.mouse(this)[1] + 150) + "px")
    }
    var hideTooltip = function(d) {
-     tooltip
+     tooltip2
        .transition()
        .duration(200)
        .style("opacity", 0)
@@ -251,14 +269,14 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
      .data(cityYearGroup.top(Infinity))       // data = cityYearGroup
      .enter()
      .append("circle")
-       .attr("cx", function (d) { return x(d.key[1]); } )           // x = year
-       .attr("cy", function (d) { return y(d.key[0]) + ypad; } )    // y = city + pad to center of band
+       .attr("cx", function (d) { return x2(d.key[1]); } )           // x = year
+       .attr("cy", function (d) { return y2(d.key[0]) + ypad2; } )    // y = city + pad to center of band
        //.attr("r", function (d) { return z(d.value); } )           // r = value
        .attr("r", function (d) {
             //console.log(d.key[1], d.key[0], "value ", d.value, " scale ", z(d.value));
             //return d.value * 5})
-            return z(d.value); } )         // TEST
-       .style("fill", function (d) { return myColor(d.key[0]); } )  // colour = city
+            return z2(d.value); } )         // TEST
+       .style("fill", function (d) { return myColor2(d.key[0]); } )  // colour = city
        //.style("opacity", "0.7")
        .attr("stroke", "white")
        .style("stroke-width", "2px")
@@ -266,24 +284,6 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
        .on("mouseover", showTooltip )
        .on("mousemove", moveTooltip )
        .on("mouseleave", hideTooltip )
-
-
-
-/*
-console.log("composer year DIM")
-//data = composerYearDim.top(Infinity);                    // all rows; all fields
-data = composerYearDim.top(Infinity).map(d => d.Year);   // all rows; just years
-distinctYears = [...new Set(data)].sort();
-firstyear = distinctYears[0];
-lastyear = distinctYears[distinctYears.length - 1];
-
-console.log(distinctYears);
-console.log("1st year ", firstyear, " last year ", lastyear);
-*/
-
-
-
-
 
 
 
@@ -295,144 +295,111 @@ console.log("1st year ", firstyear, " last year ", lastyear);
 }); /* close load data */
 
 
+// MY FIND COMPOSER (ie filter LIs)
+$(document).ready(function(){
+  $("#filter").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#filterComposers li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
 
 
 
 // FUNCTIONS
-// =============================================================================
+// =========
 
 // UPDATE COMPOSER + FIRST PERFORMANCE TITLE if filtered
-function updateTitle() {
+function updateComposer() {
 
   // check if filtered / has been called as reset filters
-  if (composerDim.currentFilter()) {
-    //console.log("filtered: ", composerDim.currentFilter());
+  if (composerSearchDim.currentFilter()) {
+    //console.log("filtered: ", composerSearchDim.currentFilter());
 
-    // sort by year
-    var data = yearDim.top(Infinity).sort(function(x, y){
-      return d3.ascending(x.Year, y.Year);
-    });
-
-    // sort by date (may be multiple in each year)
-    //   -- Date needs to be "date" not string?
-    // d3.ascending sorts by natural order which includes dates
-    // https://observablehq.com/@d3/d3-ascending
-  /*  var data = yearDim.top(Infinity).sort(function(x, y){
-      return d3.ascending(x.Date, y.Date);
-    }); */
-
-    var firstrow = data[0];
-    //console.log("firstrow");
-    //console.log (JSON.stringify(firstrow))
-
-    $("#this-composer").html(firstrow["Composer"]);
-    var firststring = "First performance: <span>" + firstrow["Year"] + " " + firstrow["City"] + ": <i>" + firstrow["Symphony"] + "</i></span>";
-    $("#first").html(firststring);
-
-
-    // additionally filter by year to start +30 (so more focus)
-    var distinctYears = [...new Set(composerYearDim.top(Infinity).map(d => d.Year))].sort();
-    var firstyear = Math.floor((distinctYears[0] - 1)/10) * 10;     // floor to decade; -1 incase already decade
-    var lastyear = firstyear + 30;             // extra focus on the start
-
-    yearDim.filterRange([firstyear, lastyear]);
-
-
-    // ^^^^^^ yearSearchDim works (get data i want on cityYear bubbles iem 30 years)
-    //        but get just these 30years on year barChart (ie loose others)
-    //        -- really want comopsite like at top of comospes3?
-
-    //        yearDim works (get data i want on cityYear bubbles iem 30 years)
-    //        year barChart shows all years
-    //          BUT no highlight (composite like at top comospers?)
-
-
-
-
-
-
-
+    // luckily on populates if SINGLE selected composer
+    $("#this-composer").html(composerSearchDim.currentFilter());
 
 
 
   } else {
     // reset
     $("#this-composer").html("");
-    $("#first").html("");
   }
-
 
   updateBubbles();    //bubbles is non-dc.js so update manually
 }
 
 
 
-
-
-// UPDATE BUBBLES
 function updateBubbles() {
   // bubbles is non DC.JS so have to update manually when other charts are filtered
   // https://stackoverflow.com/questions/22392134/is-there-a-way-to-attach-callback-what-fires-whenever-a-crossfilter-dimension-fi
-  // update bubbles like https://www.d3-graph-gallery.com/graph/scatter_buttonXlim.html
+  //
+  //console.log("update bubbles. new filtered composerGroup");
+  //console.log(JSON.stringify(cityComposerGroup.top(Infinity)));
 
-
+  // BUBBLES2: per CITY per YEAR
   // rescale and redraw xAxis
-  var distinctYears = [...new Set(composerYearDim.top(Infinity).map(d => d.Year))].sort();
+  var distinctYears = [...new Set(cityYearDim.top(Infinity).map(d => d.Year))].sort();
   var firstyear = parseInt(distinctYears[0]);
   ////var firstyear = Math.floor((distinctYears[0] - 1)/10) * 10;     // floor to decade; -1 incase already deacde
   var lastyear = parseInt(distinctYears[distinctYears.length - 1]);         // full range
   //// var lastyear = firstyear + 30;             // dont focus here - filter the year instead
   // set new domain & redraw xAxis
-  x.domain([firstyear,lastyear]);
-  xAxis
-    .transition().duration(1000).call(d3.axisBottom(x))     // update new scale
-    .call(d3.axisBottom(x).tickFormat(d3.format('d')));     // tickformat 1900 not 1,900
-
-  // recalculate z scale - bubble size - to max of _current_ selection
-  maxZ = Math.max.apply(Math, cityYearGroup.top(Infinity).map(function(o) { return o.value; }));
-  z = d3.scaleSqrt()
-     .domain([0, maxZ])   // counts from cityYearGroup ie per city
-     .range([0, 15]);
-  //console.log("maxZ ", maxZ);
-
-  var bubbles = d3.select("#chart-bubbles-time svg")
-    .selectAll("circle")
-    .data(cityYearGroup.top(Infinity));
-
-  // enter selection
-  //bubbles.enter().append("circle");
-
-  // update selection
-  bubbles
-    .transition()
-    .duration(300)
-    .attr("cx", function (d) { return x(d.key[1]); } )           // x = year
-    .attr("cy", function (d) { return y(d.key[0]) + ypad; } )    // y = city + pad to center of band
-    //.attr("r", function (d) { return z(d.value); } )           // r = value
-    .attr("r", function (d) {
-         //console.log(d.key[1], d.key[0], "value ", d.value, " scale ", z(d.value));
-         //return d.value * 5})
-         return z(d.value); } )         // TEST
-    .style("fill", function (d) { return myColor(d.key[0]); } )  // colour = city
+  x2.domain([firstyear,lastyear]);
+  xAxis2
+    .transition().duration(1000).call(d3.axisBottom(x2))     // update new scale
+    .call(d3.axisBottom(x2).tickFormat(d3.format('d')));     // tickformat 1900 not 1,900
 
 
-    // just FYI ...
-    //console.log(distinctYears);
-    //console.log("1st year ", firstyear, " last year ", lastyear);
+    // recalculate z scale - bubble size - to max of _current_ selection
+    maxZ2 = Math.max.apply(Math, cityYearGroup.top(Infinity).map(function(o) { return o.value; }));
+    z2 = d3.scaleSqrt()
+       .domain([0, maxZ2])   // counts from cityYearGroup ie per city
+       .range([0, 15]);
+    //console.log("maxZ ", maxZ);
+
+    var bubbles = d3.select("#chart-bubbles-time svg")
+      .selectAll("circle")
+      .data(cityYearGroup.top(Infinity));
+
+    // enter selection
+    //bubbles.enter().append("circle");
+
+    // update selection
+    bubbles
+      .transition()
+      .duration(300)
+      .attr("cx", function (d) { return x2(d.key[1]); } )           // x = year
+      .attr("cy", function (d) { return y2(d.key[0]) + ypad2; } )    // y = city + pad to center of band
+      //.attr("r", function (d) { return z(d.value); } )           // r = value
+      .attr("r", function (d) {
+           //console.log(d.key[1], d.key[0], "value ", d.value, " scale ", z(d.value));
+           //return d.value * 5})
+           return z2(d.value); } )         // TEST
+      .style("fill", function (d) { return myColor2(d.key[0]); } )  // colour = city
 
 
-  // exit selection
-  // bubbles.exit().remove();
 
-}
+  }
+
+
+
+
+
+
+
+
+
+
 
 
 
 // PAGINATION
-////////////////////////////////////////////////////////////////////////////////
 // https://github.com/dc-js/dc.js/blob/develop/web-src/examples/table-pagination.html
 
-var ofs = 0, pag = 10;          // start 0; 20 per page
+var ofs = 0, pag = 20;          // start 0; 20 per page
 
 function update_offset() {
     var totFilteredRecs = ndx.groupAll().value();

@@ -22,7 +22,7 @@ var x, y, z, myColor, xpad, ypad, tooltip, xAxis;
 // LOAD DATA
 ///////////////////////////////////////////////////////////////////////////////
 // NB  special chars so try this? https://stackoverflow.com/questions/38304384/d3-js-read-csv-file-with-special-characters-%C3%A9-%C3%A0-%C3%BC-%C3%A8
-d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
+d3.csv('/assets/PerformanceDatabaseMock.London.csv').then(data => {
 	// might want to format data a bit here eg calculate month or year from timestamp
 
 
@@ -64,7 +64,7 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
       .ordinalColors(colours) 	         // my range of colours
       // old style .x(d3.scale.linear().domain([1840, 1900])) // d3v3 not d3v4
       //.x(d3.scaleLinear().domain([1810, 1900]))  // fixed. london data range
-      .x(d3.scaleLinear().domain([1839, 1901]))    // fixed. dummy data range +/- 1
+      .x(d3.scaleLinear().domain([1813, 1901]))    // fixed. dummy data range +/- 1
       .centerBar(true)
       .elasticY(true)
       .on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
@@ -199,7 +199,7 @@ d3.csv('/assets/PerformanceDatabaseMock.csv').then(data => {
   // want 0=0; 1 = visible; linear not ideal see https://bl.ocks.org/guilhermesimoes/e6356aa90a16163a6f917f53600a2b4a
   z = d3.scaleSqrt()
      .domain([0, maxZ])   // counts from cityYearGroup ie per city
-     .range([0, 15]);
+     .range([0, 10]);
 
 
   // Add a scale for bubble color - all cities from cityGroup
