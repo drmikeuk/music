@@ -217,7 +217,7 @@ d3.csv('/assets/PerformanceDatabaseMock.London.csv').then(data => {
   // want 0=0; 1 = visible; linear not ideal see https://bl.ocks.org/guilhermesimoes/e6356aa90a16163a6f917f53600a2b4a
   z2 = d3.scaleSqrt()
      .domain([0, maxZ2])   // counts from cityYearGroup ie per city
-     .range([0, 10]);
+     .range([2, 15]);     // start at 2 so smallest not too small (won't call for zero)
 
 
   // Add a scale for bubble color - all cities from cityGroup
@@ -275,7 +275,14 @@ d3.csv('/assets/PerformanceDatabaseMock.London.csv').then(data => {
        .attr("r", function (d) {
             //console.log(d.key[1], d.key[0], "value ", d.value, " scale ", z(d.value));
             //return d.value * 5})
-            return z2(d.value); } )         // TEST
+            //return z2(d.value); } )         // TEST
+            if (d.value == 0) {
+              return 0;                // 0 so wont show
+            }
+            else {
+              return z2(d.value);      // scale 3-10 so 1 is not too small
+            }
+       })
        .style("fill", function (d) { return myColor2(d.key[0]); } )  // colour = city
        //.style("opacity", "0.7")
        .attr("stroke", "white")
@@ -357,7 +364,7 @@ function updateBubbles() {
     maxZ2 = Math.max.apply(Math, cityYearGroup.top(Infinity).map(function(o) { return o.value; }));
     z2 = d3.scaleSqrt()
        .domain([0, maxZ2])   // counts from cityYearGroup ie per city
-       .range([0, 15]);
+       .range([2, 15]);     // start at 2 so smallest not too small (won't call for zero)
     //console.log("maxZ ", maxZ);
 
     var bubbles = d3.select("#chart-bubbles-time svg")
@@ -377,7 +384,14 @@ function updateBubbles() {
       .attr("r", function (d) {
            //console.log(d.key[1], d.key[0], "value ", d.value, " scale ", z(d.value));
            //return d.value * 5})
-           return z2(d.value); } )         // TEST
+           //return z2(d.value); } )         // TEST
+           if (d.value == 0) {
+             return 0;                // 0 so wont show
+           }
+           else {
+             return z2(d.value);      // scale 3-10 so 1 is not too small
+           }
+      })           
       .style("fill", function (d) { return myColor2(d.key[0]); } )  // colour = city
 
 
