@@ -33,6 +33,7 @@ h1, h2, h3              {font-weight: 300}
 #chart-composite-composers #this-composer     {position: absolute; right: 50%}
 
 #chart-bubbles-time .grid .domain {opacity: 0;}  /* hide axis and so 1st grid line */
+#chart-bubble-composers .grid .domain {opacity: 0;}  /* hide axis and so 1st grid line */
 
 
 /* first */
