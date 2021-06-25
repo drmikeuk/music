@@ -1,8 +1,8 @@
 ---
 layout: dashboard
-title: "Composers4Lon"
+title: "C4L"
 nav: "yes"
-sortTitle: "l"
+sortTitle: "d"
 customjs:
   - /vendor/d3-5.16.0.min.js
   - /vendor/crossfilter-1.5.4.min.js

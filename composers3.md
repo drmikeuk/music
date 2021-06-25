@@ -1,6 +1,6 @@
 ---
 layout: dashboard
-title: "Composers3"
+title: "C3"
 nav: "yes"
 sortTitle: "b"
 customjs:

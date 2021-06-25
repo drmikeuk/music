@@ -1,8 +1,8 @@
 ---
 layout: dashboard
-title: "Composers4"
+title: "C4"
 nav: "yes"
-sortTitle: "b"
+sortTitle: "c"
 customjs:
   - /vendor/d3-5.16.0.min.js
   - /vendor/crossfilter-1.5.4.min.js

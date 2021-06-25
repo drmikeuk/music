@@ -1,19 +1,21 @@
 ---
 layout: dashboard
-title: "J2L"
+title: "Composers5"
 nav: "yes"
-sortTitle: "g"
+sortTitle: "l"
 customjs:
   - /vendor/d3-5.16.0.min.js
   - /vendor/crossfilter-1.5.4.min.js
   - /vendor/dc-4.2.7.min.js
-  - /assets/first2London.js
+  - /assets/composers5.js
 ---
 
 <div class="banner">
   <div class="container-fluid">
   	<div class="header">
-  	 	 <div class="title"><h1>Journeys v2</h1></div>
+  	 	  	<div class="title">
+  					<h1>Composers v5 London & New York</h1>
+  				</div>
   	</div>
     <div class="row">
       <div class="col-md-3">
@@ -26,6 +28,7 @@ customjs:
   </div>
 </div>
 
+
 <!-- DATA -->
 <div class="container-fluid dashboard">
 	<div class="row">
@@ -37,19 +40,17 @@ customjs:
     </div>
 
     <div class="col-md-9">
-      <h3 id="this-composer"></h3>
-      <p id="first"></p>
 
+      <div id="chart-composite-composers"><div id="this-composer"></div></div>
 
 
       <h3>Performances per city</h3>
       <div id="chart-bubbles-time"></div>
 
-      <div id="chart-stream-time"></div>
-
       <p>Total performances</p>
       <div id="chart-bar-time"></div>
 
+      <!--<h3>Datatable</h3>-->
       <table id="table-datasummary" class="table data-table "></table>
 
       <div id="paging">
@@ -59,6 +60,7 @@ customjs:
 
         <button type="button" class="btn btn-secondary" id="download">Download this list <i class="fa fa-download" aria-hidden="true"></i></button>
       </div>
+
 
     </div>
   </div>

@@ -1,8 +1,8 @@
 ---
 layout: dashboard
-title: "Places5Lon"
+title: "P5L"
 nav: "yes"
-sortTitle: "m"
+sortTitle: "e"
 customjs:
   - /vendor/d3-5.16.0.min.js
   - /vendor/crossfilter-1.5.4.min.js

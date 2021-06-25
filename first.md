@@ -1,8 +1,8 @@
 ---
 layout: dashboard
-title: "Journeys"
+title: "J1"
 nav: "yes"
-sortTitle: "e"
+sortTitle: "g"
 customjs:
   - /vendor/d3-5.16.0.min.js
   - /vendor/crossfilter-1.5.4.min.js
