@@ -201,17 +201,17 @@ d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(data => {
     .range([ 0, width2]);
   xAxis2 = svg.append("g")
     .attr("transform", "translate(0," + height2 + ")")
-    .call(d3.axisBottom(x2).tickFormat(d3.format('d')));    // tickformat 1900 not 1,900
+    .call(d3.axisBottom(x2).tickSizeOuter(0).tickFormat(d3.format('d')));    // tickformat 1900 not 1,900
 
   // Add Y axis
   y2 = d3.scaleBand()
     .domain(cityGroup.top(Infinity).map(d => d.key).sort())        // ALL cities
     .range([ 0, height2]);                           // biggest total at top (svg 0)
-  yAxis2 = svg.append("g").call(d3.axisLeft(y2));
+  yAxis2 = svg.append("g").call(d3.axisLeft(y2).tickSizeOuter(0));
   ypad2 = y2.bandwidth() / 2;     // want half the width of the band to plot in center of band
 
   // add gridlines https://bl.ocks.org/wadefagen/ce5d308d8080130de10f21254273e30c
-  gridlines = svg.append("g").attr("stroke-opacity", 0.2).call(make_gridlines2())
+  gridlines = svg.append("g").attr("stroke-opacity", 0.2).attr("class", "grid").call(make_gridlines2())
 
 
   // Add a scale for bubble size
@@ -343,7 +343,6 @@ function updateComposer() {
 
 function make_gridlines2() {
     return d3.axisLeft(y2)
-        .ticks(5)
         .tickSize(-width2)
         .tickFormat("")
 }
@@ -365,14 +364,15 @@ function updateBubbles() {
   x2.domain([firstyear,lastyear]);
   xAxis2
     .transition().duration(1000).call(d3.axisBottom(x2))     // update new scale
-    .call(d3.axisBottom(x2).tickFormat(d3.format('d')));     // tickformat 1900 not 1,900
+    .call(d3.axisBottom(x2).tickSizeOuter(0).tickFormat(d3.format('d')));     // tickformat 1900 not 1,900
 
 
   // rescale and redraw yAxis
   var distinctCities = [...new Set(cityYearDim.top(Infinity).map(d => d.City))].sort();
   y2.domain(distinctCities)        // current cities
+  //console.log (distinctCities)
   yAxis2
-    .transition().duration(1000).call(d3.axisLeft(y2))     // update new scale
+    .transition().duration(1000).call(d3.axisLeft(y2).tickSizeOuter(0))     // update new scale
   ypad2 = y2.bandwidth() / 2;     // want half the width of the band to plot in center of band
 
   // redraw gridlines on new scale
