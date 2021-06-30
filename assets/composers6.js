@@ -17,7 +17,7 @@ var timeBarChart = dc.barChart("#chart-bar-time"),
     dataCount = dc.dataCount("#datacount"),
     dataSummaryTable = dc.dataTable("#table-datasummary");
 
-var composite = new dc.CompositeChart("#chart-composite-composers");
+// REMOVED var composite = new dc.CompositeChart("#chart-composite-composers");
 
 
 var ndx;            // NB now paginating need to define outside of load data
@@ -73,6 +73,7 @@ d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(data => {
 
 	// CONFIGURE CHART ATTRIBUTES
 
+/* REMOVED 
   composite.width(830).height(100)
     //.x(d3.scaleOrdinal())                             // auto - works for individual charts but not composite
     //.x(d3.scaleOrdinal().domain(composerSearchDim))     // specify DIM - works for individual charts but not composite
@@ -94,7 +95,7 @@ d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(data => {
     .brushOn(false)
     .yAxis().ticks(2);                 // --> less ticks! setter so can't chain ie must be last!
     composite.xAxis().tickValues([]); // no ticks or labels
-
+*/
 
   timeBarChart.width(800).height(100)
       .dimension(yearDim)

@@ -89,8 +89,10 @@ customjs:
       </div> <!-- /info -->
 
       <div id="graphs" class="hidden">
-        <div id="chart-composite-composers"><div id="this-composer"></div></div>
+        <!-- removed chart-composite-composers
+        <div id="chart-composite-composers"><div id="this-composer"></div></div> -->
 
+        <h2 id="this-composer"></h2>
 
         <h3>Performances per city</h3>
         <div id="chart-bubbles-time"></div>
