@@ -13,7 +13,7 @@ var colours4 = ["#ff4f8a","#007e19","#6263ff","#abb13d","#800078","#e37f00","#00
 // CREATE OBJECTS & TIE TO HTML ie match to div IDs in the html
 //var composersBarChart1 = dc.barChart("#chart-bar-composers1"),
 //    composersBarChart2 = dc.barChart("#chart-bar-composers2"),
-var //secondCities = dc.barChart("#chart-bar-secondCities"),
+var secondCitiesBarChart = dc.barChart("#chart-bar-secondCities"),
     timeBarChart = dc.barChart("#chart-bar-time"),
     dataCount = dc.dataCount("#datacount"),
     dataSummaryTable = dc.dataTable("#table-datasummary");
@@ -42,10 +42,13 @@ d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(data => {
 	// CREATE CROSSFILTER DIMENSIONS AND GROUPS
 	ndx = crossfilter(data),
     citySearchDim = ndx.dimension(d => d.City),
+    cityDim = ndx.dimension(d => d.City),
 		yearDim = ndx.dimension(d => d.Year),
     cityYearDim = ndx.dimension(d => [d.City, d.Year]),
 		all = ndx.groupAll(),
     citySearchGroup = citySearchDim.group(),
+    cityGroup = cityDim.group().reduceCount(),
+    //cityGroup = cityDim.group(),
     yearGroup = yearDim.group().reduceCount(),
     cityYearGroup = cityYearDim.group().reduceCount();
 
@@ -63,11 +66,17 @@ d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(data => {
 
 
   // SECOND CITY BAR CHART
-
-
-
-
-
+  // **TEST** just draw ALL cities
+  secondCitiesBarChart.width(800).height(400)
+    .dimension(cityDim)
+    .group(cityGroup)
+    .x(d3.scaleBand())
+    .xUnits(dc.units.ordinal)
+    .ordinalColors(colours) 	         // my range of colours
+    //.centerBar(true)  // not req with scaleBand
+    .elasticY(true)
+    .margins({top:10,bottom:70,right:20,left:40})   // big bottom margin for labels (rotate after render)
+    //.on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
 
 
 // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -81,7 +90,7 @@ d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(data => {
       .x(d3.scaleLinear().domain([1812, 1901]))   // extra or 1st bar cut off
       .centerBar(true)
       .elasticY(true)
-      .margins({top:10,bottom:20,right:20,left:70})   // margin to match bubbles
+      .margins({top:10,bottom:20,right:20,left:40})   // margin to match bars aboves
       //.on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
       .xAxis().tickFormat(d3.format('d'));    // 1900 not 1,900
       // NB elastic means rescale axis; may want to turn this off
@@ -92,8 +101,8 @@ d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(data => {
   var filterCities = new dc.CboxMenu("#filterCities")
       //.dimension(composerDim)             // same DIM as graph - graph DONT update (so see all)
       //.group(composerGroup)
-      .dimension(citySearchDim)     // new DIM - graph updates BUT loose all
-      .group(citySearchGroup)
+      .dimension(cityDim)     // new DIM - graph updates BUT loose all
+      .group(cityGroup)
       .order(function (a,b) {
         return a.value < b.value ? 1 : b.value < a.value ? -1 : 0; // order by value not group key (label)
       })
@@ -155,6 +164,16 @@ d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(data => {
 	// RENDERING
 	dc.renderAll();
 
+  // rotate x labels
+  // see http://www.d3noob.org/2016/08/rotating-text-labels-for-graph-axis-in.html
+  // and https://stackoverflow.com/questions/51818345/how-to-rotate-d3-chart-xaxis-label-in-vertical
+  var secondCities = d3.select("#chart-bar-secondCities");
+  secondCities.select('.axis.x')
+    .attr("text-anchor", "end")
+    .selectAll("text")
+    .attr("transform", "rotate(-65)")
+    .attr("dx", "-0.8em")
+    .attr("dy", "-0.5em");
 
 }); /* close load data */
 
@@ -167,6 +186,11 @@ $(document).ready(function(){
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
+
+  // TEMPO SHOW GRAPH AT START
+  $('#info').addClass('hidden')
+  $('#graphs').removeClass('hidden')
+
 });
 
 
