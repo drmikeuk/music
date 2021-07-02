@@ -134,30 +134,33 @@ d3.csv('/assets/test.csv').then(data => {
       .xAxis().ticks(5);                 // --> less ticks! setter so can't chain ie must be last!
 	    // NB elastic means rescale axis; may want to turn this off
 
+
   // secondCities composite chart: background chart = initial values as static, grey bars
   //                               foreground chart = filtered values as blue bars
-
   secondCitiesComposite.width(400).height(400)
     //.x(d3.scaleOrdinal())                             // auto - works for individual charts but not composite
     //.x(d3.scaleOrdinal().domain(composerSearchDim))     // specify DIM - works for individual charts but not composite
-    .x(d3.scaleOrdinal().domain(secondCityGroup.top(Infinity).map(d => d.key)))  // sorted list of cities
+    .x(d3.scaleBand().domain(secondCityGroup.top(Infinity).map(d => d.key).sort()))  // sorted list of cities
     .xUnits(dc.units.ordinal)
     //.ordering(d => -d.value)              // order by value not name
     .compose([
         new dc.BarChart(secondCitiesComposite)
             .dimension(secondCityDim)
             .group(secondCityStaticGroup, "all")
-            .centerBar(true)
+            .barPadding(0.1)
+            .outerPadding(0.05)
             .colors('#ccc'),                          // grey static bars
         new dc.BarChart(secondCitiesComposite)
             .dimension(secondCityDim)
             .group(secondCityGroup, "selected")
-            .centerBar(true)
+            .barPadding(0.1)
+            .outerPadding(0.05)
             .colors('#3498DB')                        // blue filtered bars
-        ]);
+        ])
     //.brushOn(false)
-    //.yAxis().ticks(2);                 // --> less ticks! setter so can't chain ie must be last!
+    .yAxis().ticks(5);                 // --> less ticks! setter so can't chain ie must be last!
     //composite.xAxis().tickValues([]); // no ticks or labels
+
 
 
 

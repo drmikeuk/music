@@ -1,7 +1,7 @@
 ---
 layout: dashboard
 title: "Journeys3"
-nav: "yes"
+nav: "no"
 sortTitle: "o"
 customjs:
   - /vendor/d3-5.16.0.min.js
