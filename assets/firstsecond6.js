@@ -27,30 +27,56 @@ var ndx;            // NB now paginating need to define outside of load data
 // LOAD DATA
 // =========
 // NB  special chars so try this? https://stackoverflow.com/questions/38304384/d3-js-read-csv-file-with-special-characters-%C3%A9-%C3%A0-%C3%BC-%C3%A8
-d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(data => {
-	// might want to format data a bit here
-	// eg calculate month or year from timestamp
+d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(original => {
+	// might want to format data a bit here eg calculate month or year from timestamp
 
+  // reshape data to find first and second cities
+  // from composer, city, year
+  // to composer, firstcity, firstyear, secondcity
+  var nested = d3.nest()
+    .key(function(d) { return d.Composer; })
+    .key(function(d) { return d.Year; }).sortKeys(d3.ascending)
+    .entries(original);
 
-// calc year from date so don't need to diy when prep data
+  var data = nested.map(function(element){
+    //console.log (" got", element)
+    //console.log ("  - first item", element["values"][0]["values"][0])
+    var firstcity = element["values"][0]["values"][0]["City"]
+    var firstYear = element["values"][0]["values"][0]["Year"]
+    var secondcity =  '', secondYear = ''; // crossfilter can cope with blanks; but not if  endefined
+    // check each city until get a different one - ie 2nd city
+    element["values"].every(element => {
+      //console.log ("    - ", element["values"][0]["city"])
+      if (element["values"][0]["City"] != firstcity) {
+        //console.log ("      -> ", element["values"][0]["city"] + " is second city")
+        secondcity = element["values"][0]["City"];
+        secondYear = element["values"][0]["Year"];
+        return false; // we have 2nd city so exit
+      }
+      return true;
+    });
 
-
-
-
+    return {
+      Composer: element["values"][0]["values"][0]["Composer"],
+      firstCity: firstcity,
+      firstYear: firstYear,
+      secondCity: secondcity,
+      secondYear: secondYear
+    }
+  });
+  //console.log("reshaped data")
+  //console.dir(data)
 
 
 	// CREATE CROSSFILTER DIMENSIONS AND GROUPS
 	ndx = crossfilter(data),
-    citySearchDim = ndx.dimension(d => d.City),
-    cityDim = ndx.dimension(d => d.City),
-		yearDim = ndx.dimension(d => d.Year),
-    cityYearDim = ndx.dimension(d => [d.City, d.Year]),
+    cityDim = ndx.dimension(d => d.firstCity),
+    secondCityDim = ndx.dimension(d => d.secondCity),
+		yearDim = ndx.dimension(d => d.firstYear),
 		all = ndx.groupAll(),
-    citySearchGroup = citySearchDim.group(),
-    cityGroup = cityDim.group().reduceCount(),
-    //cityGroup = cityDim.group(),
-    yearGroup = yearDim.group().reduceCount(),
-    cityYearGroup = cityYearDim.group().reduceCount();
+    cityGroup = cityDim.group(),
+    secondCityGroup = secondCityDim.group().reduceCount(),
+    yearGroup = yearDim.group().reduceCount();
 
 
 	// CONFIGURE DATA COUNT (x out of y records shown)
@@ -64,12 +90,9 @@ d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(data => {
 
 	// CONFIGURE CHART ATTRIBUTES
 
-
-  // SECOND CITY BAR CHART
-  // **TEST** just draw ALL cities
-  secondCitiesBarChart.width(800).height(400)
-    .dimension(cityDim)
-    .group(cityGroup)
+  secondCitiesBarChart.width(800).height(300)
+    .dimension(secondCityDim)
+    .group(secondCityGroup)
     .x(d3.scaleBand())
     .xUnits(dc.units.ordinal)
     .ordinalColors(colours) 	         // my range of colours
@@ -77,10 +100,7 @@ d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(data => {
     .elasticY(true)
     .margins({top:10,bottom:70,right:20,left:40})   // big bottom margin for labels (rotate after render)
     //.on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
-
-
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
+    secondCitiesBarChart.yAxis().ticks(3);         // --> less ticks! setter so can't chain ie must be last!
 
   timeBarChart.width(800).height(100)
       .dimension(yearDim)
@@ -93,8 +113,10 @@ d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(data => {
       .margins({top:10,bottom:20,right:20,left:40})   // margin to match bars aboves
       //.on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
       .xAxis().tickFormat(d3.format('d'));    // 1900 not 1,900
-      // NB elastic means rescale axis; may want to turn this off
-  timeBarChart.yAxis().ticks(3);         // --> less ticks! setter so can't chain ie must be last!
+
+  //timeBarChart.yAxis().tickFormat(d3.format("d"));    // oops - get 1,1,1,2,2,2
+
+  timeBarChart.yAxis().ticks(2);         // --> less ticks! setter so can't chain ie must be last!
 
 
   // SEARCH CITIES v2: filterable set of checkboxes
@@ -111,21 +133,11 @@ d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(data => {
       .multiple(true);
 
 
-	// CONFIGURE SECOND CITY BAR CHART
-
-
-
-
-
-
-// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
 	// CONFIGURE DATA TABLE          // yearDIM = sort by year ?
 	dataSummaryTable.dimension(yearDim)
-	    .group(d => d.year)          // group by year??
+	    .group(d => d.firstYear)          // group by year??
       .size(Infinity)				       // need all the records & let pagination handle display & offset
-    	.columns(['Composer', 'Symphony', 'Date', 'Orchestra', 'City'])  // can change labels & format of data if desired
+    	.columns(['Composer', 'firstCity', 'firstYear', 'secondCity', 'secondYear'])  // can change labels & format of data if desired
       .on('preRender', update_offset)     // pagination
       .on('preRedraw', update_offset)     // pagination
       .on('pretransition', display);      // pagination
@@ -187,9 +199,6 @@ $(document).ready(function(){
     });
   });
 
-  // TEMPO SHOW GRAPH AT START
-  $('#info').addClass('hidden')
-  $('#graphs').removeClass('hidden')
 
 });
 
@@ -202,10 +211,10 @@ $(document).ready(function(){
 function updateCity() {
   // check if filtered / has been called as reset filters
   // NB currentFilter returns: null / string for single / array for range / function
-  if (typeof citySearchDim.currentFilter() === 'string') {
+  if (typeof cityDim.currentFilter() === 'string') {
     // console.log("filtered: ", citySearchDim.currentFilter());
     // (luckily only populates if SINGLE selected composer) not relevent as checked is stringf
-    $("#this-city").html("First performance: " + citySearchDim.currentFilter());
+    $("#this-city").html("First performance: " + cityDim.currentFilter());
   } else {
     // reset
     $("#this-city").html("");

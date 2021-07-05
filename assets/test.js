@@ -92,6 +92,9 @@ var ndx;            // NB now paginating need to define outside of load data
 
 // LOAD DATA
 d3.csv('/assets/test.csv').then(data => {
+
+  console.log(data)
+
 	// CREATE CROSSFILTER DIMENSIONS AND GROUPS
 	ndx = crossfilter(data),
     composerDim = ndx.dimension(d => d.Composer),
