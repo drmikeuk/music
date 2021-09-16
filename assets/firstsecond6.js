@@ -27,7 +27,7 @@ var ndx;            // NB now paginating need to define outside of load data
 // LOAD DATA
 // =========
 // NB  special chars so try this? https://stackoverflow.com/questions/38304384/d3-js-read-csv-file-with-special-characters-%C3%A9-%C3%A0-%C3%BC-%C3%A8
-d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(original => {
+d3.csv('/assets/PerformanceDatabaseMock.LondonNYParis.csv').then(original => {
 	// might want to format data a bit here eg calculate month or year from timestamp
 
   // reshape data to find first and second cities
@@ -83,7 +83,7 @@ d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(original => {
 	dataCount.dimension(ndx)
 	    .group(all)
 	    .html({
-	    	some: 'Showing <span class="filter-count">%filter-count</span> out of <span class="total-count">%total-count</span> performances. <a href="javascript:reset();">Reset</a>',
+	    	some: 'Showing <span class="filter-count">%filter-count</span> out of <span class="total-count">%total-count</span> first performances. <a href="javascript:reset();">Reset</a>',
      		all: ' '
 		});
 

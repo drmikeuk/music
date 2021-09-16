@@ -14,7 +14,7 @@ customjs:
   <div class="container-fluid">
   	<div class="header">
   	 	  	<div class="title">
-  					<h1>Composers v6 London & New York</h1>
+  					<h1>Composers v6 London, New York, Paris</h1>
   				</div>
   	</div>
     <div class="row">

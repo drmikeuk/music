@@ -30,7 +30,7 @@ var margin = {top: 10, right: 20, bottom: 20, left: 70},
 // LOAD DATA
 
 // NB  special chars so try this? https://stackoverflow.com/questions/38304384/d3-js-read-csv-file-with-special-characters-%C3%A9-%C3%A0-%C3%BC-%C3%A8
-d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(data => {
+d3.csv('/assets/PerformanceDatabaseMock.LondonNYParis.csv').then(data => {
 	// might want to format data a bit here eg calculate month or year from timestamp
 
 
