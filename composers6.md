@@ -97,7 +97,7 @@ customjs:
         <h3>Performances per city</h3>
         <div id="chart-bubbles-time"></div>
 
-        <p>Total performances</p>
+        <p style="margin-top: 10px">Total performances per year</p>
         <div id="chart-bar-time"></div>
 
         <!--<h3>Datatable</h3>-->

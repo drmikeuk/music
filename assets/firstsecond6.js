@@ -102,12 +102,21 @@ d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(original => {
     //.on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually
     secondCitiesBarChart.yAxis().ticks(3);         // --> less ticks! setter so can't chain ie must be last!
 
+
+    var distinctYears = [...new Set(yearDim.top(Infinity).map(d => d.firstYear))].sort();
+    var firstyear = distinctYears[0];
+    var lastyear = distinctYears[distinctYears.length - 1];
+
+    console.log("firstyear: ", firstyear)
+    console.log("lastyear: ", lastyear)
+
   timeBarChart.width(800).height(100)
       .dimension(yearDim)
       .group(yearGroup)
       .ordinalColors(colours) 	         // my range of colours
       // old style .x(d3.scale.linear().domain([1840, 1900])) // d3v3 not d3v4
-      .x(d3.scaleLinear().domain([1812, 1901]))   // extra or 1st bar cut off
+      //.x(d3.scaleLinear().domain([1812, 1901]))   // extra or 1st bar cut off
+      .x(d3.scaleLinear().domain([firstyear, lastyear]))          // years from current dataset (unique; sorted)
       .centerBar(true)
       .elasticY(true)
       .margins({top:10,bottom:20,right:20,left:40})   // margin to match bars aboves

@@ -97,7 +97,7 @@ customjs:
         <h3>Next city </h3>
         <div id="chart-bar-secondCities"></div>
 
-        <p>Total first performances</p>
+        <p>Total first performances per year</p>
         <div id="chart-bar-time"></div>
 
         <!--<h3>Datatable</h3>-->

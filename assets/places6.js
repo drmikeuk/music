@@ -68,12 +68,18 @@ d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(data => {
 
 
 	// CONFIGURE CHART ATTRIBUTES
+
+  var distinctYears = [...new Set(yearDim.top(Infinity).map(d => d.Year))].sort();
+  var firstyear = distinctYears[0];
+  var lastyear = distinctYears[distinctYears.length - 1];
+
   timeBarChart.width(800).height(100)
       .dimension(yearDim)
       .group(yearGroup)
       .ordinalColors(colours) 	         // my range of colours
       // old style .x(d3.scale.linear().domain([1840, 1900])) // d3v3 not d3v4
-      .x(d3.scaleLinear().domain([1812, 1901]))
+      //.x(d3.scaleLinear().domain([1812, 1901]))
+      .x(d3.scaleLinear().domain([firstyear, lastyear]))          // years from current dataset (unique; sorted)
       .centerBar(true)
       .elasticY(true)
       .on("filtered", updateBubbles)    // bubbles is non-dc.js so update manually

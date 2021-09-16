@@ -73,7 +73,7 @@ d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(data => {
 
 	// CONFIGURE CHART ATTRIBUTES
 
-/* REMOVED 
+/* REMOVED
   composite.width(830).height(100)
     //.x(d3.scaleOrdinal())                             // auto - works for individual charts but not composite
     //.x(d3.scaleOrdinal().domain(composerSearchDim))     // specify DIM - works for individual charts but not composite
@@ -97,12 +97,28 @@ d3.csv('/assets/PerformanceDatabaseMock.LondonNY.csv').then(data => {
     composite.xAxis().tickValues([]); // no ticks or labels
 */
 
+  var distinctYears = [...new Set(yearDim.top(Infinity).map(d => d.Year))].sort();
+  var firstyear = distinctYears[0];
+  var lastyear = distinctYears[distinctYears.length - 1];
+/* i dont need all this extra padding
+console.log("firstyear: ", firstyear)
+first = Math.floor(firstyear / 10) * 10;
+console.log("first: ", first)
+
+console.log("lastyear: ", lastyear)
+last = Math.ceil(lastyear / 10) * 10;
+console.log("last: ", last)
+*/
+
   timeBarChart.width(800).height(100)
       .dimension(yearDim)
       .group(yearGroup)
       .ordinalColors(colours) 	         // my range of colours
       // old style .x(d3.scale.linear().domain([1840, 1900])) // d3v3 not d3v4
-      .x(d3.scaleLinear().domain([1812, 1901]))   // extra or 1st bar cut off
+      //.x(d3.scaleLinear().domain([1812, 1901]))   // extra or 1st bar cut off
+      //.x(d3.scaleLinear().domain(yearDim))        // calc from min/max of dimension?
+      //.x(d3.scaleLinear().domain(composerSearchDim))
+      .x(d3.scaleLinear().domain([firstyear, lastyear]))          // years from current dataset (unique; sorted)
       .centerBar(true)
       .elasticY(true)
       .margins({top:10,bottom:20,right:20,left:70})   // margin to match bubbles

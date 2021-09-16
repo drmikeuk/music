@@ -10,7 +10,7 @@ It doesn't reflect the final site design, colours, etc.
 
 We are interested in _patterns_ in the data, in time & space, not on finding a particular item.
 
-They key research questions the database should be able to answer are:
+The key research questions the database should be able to answer are:
 
 ### Composers
 
