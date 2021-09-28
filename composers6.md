@@ -40,7 +40,7 @@ customjs:
     </div>
 
     <div class="col-md-9">
-
+      <!-- RH -->
       <div id="info">
         <h2>Getting started</h2>
 
