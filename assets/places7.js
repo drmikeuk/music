@@ -519,8 +519,43 @@ function updateBubbles() {
   xpad = x.bandwidth() / 2;     // want half the width of the band to plot in center of band
 
   // rescale and redraw yAxis
-  var distinctComposers = [...new Set(composerDim.top(Infinity).map(d => d.Composer))].sort();
+
+  // v1: sort on composer name so Adolf Hesse is first  **NB forename**
+  // filtered rows -> map composer; then sort by composer
+  //var distinctComposers = [...new Set(composerDim.top(Infinity).map(d => d.Composer))].sort();
+
+  // v2: no sort so random
+  //var distinctComposers = [...new Set(composerDim.top(Infinity).map(d => d.Composer))];
+
+  // v3: sort on value
+  // group key = composer; value = (filtered) count including zeros; auto sorts by value
+  //var distinctComposers = [...new Set(composerGroup.top(Infinity).map(d => d.key))];
+
+  // v4: sort on value + remove zeros (ie elastic axis)
+  // group key = composer; value = (filtered) count including zeros; auto sorts by value
+  var distinctComposers = [...new Set(composerGroup.top(Infinity).map(d => {
+    if (d.value > 0) {
+      return d.key;
+    }
+  }))];
+
+
+//console.log("composerDim.top(Infinity)");
+//console.log(composerDim.top(Infinity));
+
+//console.log("composerGroup");
+//console.log(composerGroup.top(Infinity));
+
+
+
+
+
+
   y.domain(distinctComposers)        // current composers only
+
+
+
+
 
   yAxis
     .transition().duration(1000).call(d3.axisLeft(y))     // update new scale
