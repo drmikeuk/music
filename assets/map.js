@@ -8,8 +8,8 @@ var svg = d3.select("#citiesMap").append("svg")
     .attr("height", height);
 
 var projection = d3.geoMercator()
-    .scale(350)                             // zoom in
-    .center([-40, 40 ]);                    // center to focus on EU + US
+    .scale(280)                             // zoom in
+    .center([-60, 30 ]);                    // center to focus on EU + US
 
 var path = d3.geoPath()
     .projection(projection);
@@ -17,7 +17,7 @@ var path = d3.geoPath()
 //d3.json('/assets/countries-110m.topojson.json').then(world => {
 
 var mapurl = '/assets/countries-110m.topojson.json';
-var placesurl = '/assets/cities.csv';
+var placesurl = '/assets/cities.csv';       // just copy off google maps
 Promise.all([d3.json(mapurl), d3.csv(placesurl)]).then(function(data) {
     //if (error) throw error;
 

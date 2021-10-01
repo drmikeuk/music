@@ -1,5 +1,5 @@
 /* my styles */
-/*body         {background: #efefef;} */
+body          {background: #f6f6f6; /* #f2f2f2 */}
 .footer       {background: #ACB5BB; padding: 3em 0 2em;   margin-top: 2em}
 
 .navbar                 {padding-left: 0px}
@@ -29,14 +29,27 @@ h1, h2, h3              {font-weight: 300}
 .tick li::before     {content: "\f14a"; font-family: 'Font Awesome 5 free'; font-weight: 900; margin:0 10px 0 -20px; color: #6c757d}
 .chevron li::before     {content: "\f138"; font-family: 'Font Awesome 5 free'; font-weight: 900; margin:0 10px 0 -20px; color: #6c757d}
 
+.paddedRow              {margin-top:2rem; }
+.BAN                    {font-size: 4rem; font-weight: 100; color: #666; line-height: 1; text-align: center; margin-bottom: 1.7rem}
+.BAN .label             {font-size: 1.2rem}
+
+
+.card             {border: none; border-radius: 0; min-height: 260px}
+.card-img-top     {height: 8rem; width:auto; object-fit: cover; border-top-left-radius: 0; border-top-right-radius: 0}
+.card p           {margin-bottom: 0}
+.card i           {color: #85C1E9; padding-left: 10px; position: absolute; bottom: 12px; right: 12px}
+.card:hover i     {color: #1092e8}
+
+
+
 
 /* blank slate info panel */
 .hidden                 {display: none}
 #info                   {padding: 3em}
 
 .steps                  {margin-top: 25px}
-.steps .card-img-top    {padding: 0 40px}
-.steps .card            {float:left; width: 30%; text-align: center; border: 0}
+.steps .card-img-top    {padding: 0 40px; object-fit: contain;}
+.steps .card            {float:left; width: 30%; text-align: center; border: 0; background: #f6f6f6;}
 .steps h3               {margin-top: 30px}
 
 
@@ -101,7 +114,22 @@ table>tbody+tbody      { border-top: 0px !important; }
 
 
 
+/* MEDIUM DEVICES */
+@media (min-width:  768px) {
+  .card                   {min-height: 260px}
+}
 
+/* LARGE DEVICES */
+@media (min-width:  992px) {
+  .BAN                    {font-size: 5rem;}
+  .BAN .label             {font-size: 1rem}
+  .card                   {min-height: 280px}
+}
+
+/* EXTRA LARGE DEVICES */
+@media (min-width: 1200px) {
+  .card                   {min-height: 260px}
+}
 
 
 
