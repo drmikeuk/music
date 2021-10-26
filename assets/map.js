@@ -44,4 +44,20 @@ Promise.all([d3.json(mapurl), d3.csv(placesurl)]).then(function(data) {
        	.attr("opacity", 0.5)
 
 
+
+    // TEST calc svg x,y from lat,lng
+    /*
+    places.forEach(place => {
+      //console.log(place);
+      console.log("city: ", place["city"], ", x:", projection([place["lng"], place["lat"]])[0], ", y:", projection([place["lng"], place["lat"]])[1]);
+      //console.log(projection( [place["lng"], place["lat"]] ));  // note  longitude, latitude]
+    });
+
+    */
+
+
+
+
+
+
 });
