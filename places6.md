@@ -1,6 +1,6 @@
 ---
 layout: dashboard
-title: "Places6"
+title: "P6"
 nav: "yes"
 sortTitle: "m"
 customjs:

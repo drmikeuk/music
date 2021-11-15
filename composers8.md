@@ -1,20 +1,20 @@
 ---
 layout: dashboard
-title: "C6"
+title: "Composers"
 nav: "yes"
-sortTitle: "ll"
+sortTitle: "x"
 customjs:
   - /vendor/d3-5.16.0.min.js
   - /vendor/crossfilter-1.5.4.min.js
   - /vendor/dc-4.2.7.min.js
-  - /assets/composers6.js
+  - /assets/composers8.js
 ---
 
 <div class="banner">
   <div class="container-fluid">
   	<div class="header">
   	 	  	<div class="title">
-  					<h1>Composers v6 London, New York, Paris</h1>
+  					<h1>Composers</h1>
   				</div>
   	</div>
     <div class="row">

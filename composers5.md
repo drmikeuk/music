@@ -1,6 +1,6 @@
 ---
 layout: dashboard
-title: "Composers5"
+title: "C5"
 nav: "yes"
 sortTitle: "l"
 customjs:

@@ -1,8 +1,8 @@
 ---
 layout: dashboard
-title: "FirstSecond6"
+title: "FS6"
 nav: "yes"
-sortTitle: "z"
+sortTitle: "u"
 customjs:
   - /vendor/d3-5.16.0.min.js
   - /vendor/crossfilter-1.5.4.min.js

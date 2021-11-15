@@ -1,20 +1,20 @@
 ---
 layout: dashboard
-title: "P7"
+title: "Places"
 nav: "yes"
-sortTitle: "m"
+sortTitle: "y"
 customjs:
   - /vendor/d3-5.16.0.min.js
   - /vendor/crossfilter-1.5.4.min.js
   - /vendor/dc-4.2.7.min.js
-  - /assets/places7.js
+  - /assets/places8.js
 ---
 
 <div class="banner">
   <div class="container-fluid">
   	<div class="header">
   	 	  	<div class="title">
-  					<h1>Places v7 London, New York, Paris</h1>
+  					<h1>Places</h1>
   				</div>
   	</div>
     <div class="row">
