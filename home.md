@@ -44,11 +44,11 @@ customjs:
 
   <div class="row paddedRow">
     <div class="col-md-3 col-6 BAN">
-      100 <div class="label">Composers</div>
+      110 <div class="label">Composers</div>
     </div>
 
     <div class="col-md-3 col-6 BAN">
-      35 <div class="label">Places</div>
+      50 <div class="label">Places</div>
     </div>
 
     <div class="col-md-3 col-6 BAN">
@@ -56,7 +56,7 @@ customjs:
     </div>
 
     <div class="col-md-3 col-6 BAN">
-      3250 <div class="label">Performances</div>
+      4150 <div class="label">Performances</div>
     </div>
   </div>
 
